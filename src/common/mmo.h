@@ -64,7 +64,7 @@
 // 20120307 - 2012-03-07aRagexeRE+ - 0x970
 
 #ifndef PACKETVER
-	#define PACKETVER 20141022
+	#define PACKETVER 20150513
 #endif // PACKETVER
 
 //Uncomment the following line if your client is ragexeRE instead of ragexe (required because of conflicting packets in ragexe vs ragexeRE).
@@ -202,12 +202,12 @@
 #define MAX_BANK_ZENY INT_MAX
 
 #ifndef MAX_LEVEL
-#define MAX_LEVEL 175
+#define MAX_LEVEL 999
 #endif
 #define MAX_FAME 1000000000
 #define MAX_CART 100
 #ifndef MAX_SKILL_DB
-#define MAX_SKILL_DB 1510 ///< Maximum number of skills in the skill DB (compacted array size)
+#define MAX_SKILL_DB 1478 ///< Maximum number of skills in the skill DB (compacted array size)
 #endif
 #ifndef MAX_SKILL_ID
 #define MAX_SKILL_ID 10015   // [Ind/Hercules] max used skill ID
@@ -226,13 +226,13 @@
 #define MAX_WALK_SPEED 1000
 #endif
 #ifndef MAX_STORAGE
-#define MAX_STORAGE 600
+#define MAX_STORAGE 1000
 #endif
 #ifndef MAX_GUILD_STORAGE
 #define MAX_GUILD_STORAGE 600
 #endif
 #ifndef MAX_PARTY
-#define MAX_PARTY 12
+#define MAX_PARTY 24
 #endif
 #ifndef BASE_GUILD_SIZE
 #define BASE_GUILD_SIZE 16               // Base guild members (without GD_EXTENSION)

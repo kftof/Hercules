@@ -887,7 +887,8 @@
 
 // 2013-08-07aRagexe, 2013-08-07aRagexeRE
 #if PACKETVER == 20130807
-	packetKeys(0x7e241de0,0x5e805580,0x3d807d80);
+	//packetKeys(0x7e241de0,0x5e805580,0x3d807d80);
+	packetKeys(0x1DB09964, 0x554A125B, 0x1732C8D7); /* Thanks to Shakto */// CUSTOM HR KEY
 #endif
 
 // 2013-08-14aRagexe, 2013-08-14aRagexeRE
@@ -1203,7 +1204,8 @@
 
 // 2014-10-22aRagexeRE, 2014-10-22bRagexe
 #if PACKETVER == 20141022
-	packetKeys(0x290551ea,0x2b952c75,0x2d67669b);
+	//packetKeys(0x290551ea,0x2b952c75,0x2d67669b);
+	packetKeys(0x1DB09964, 0x554A125B, 0x1732C8D7); /// CUSTOM HR KEY
 #endif
 
 // 2014-10-29aRagexe, 2014-10-29aRagexeRE
@@ -1352,7 +1354,8 @@
 
 // 2015-05-13aRagexe, 2015-05-13aRagexeRE
 #if PACKETVER == 20150513
-	packetKeys(0x62c86d09,0x75944f17,0x112c133d);
+	//packetKeys(0x62c86d09,0x75944f17,0x112c133d);
+	packetKeys(0x1DB09964, 0x554A125B, 0x1732C8D7); /// CUSTOM HR KEY
 #endif
 
 // 2015-05-20aRagexe, 2015-05-20aRagexeRE

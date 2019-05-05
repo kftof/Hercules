@@ -615,10 +615,10 @@ CREATE TABLE IF NOT EXISTS `inventory` (
 --
 
 CREATE TABLE IF NOT EXISTS `ipbanlist` (
-  `list` VARCHAR(255) NOT NULL DEFAULT '',
+  `list` VARCHAR(190) NOT NULL DEFAULT '',
   `btime` DATETIME NULL,
   `rtime` DATETIME NULL,
-  `reason` VARCHAR(255) NOT NULL DEFAULT '',
+  `reason` VARCHAR(190) NOT NULL DEFAULT '',
   KEY (`list`)
 ) ENGINE=MyISAM;
 
