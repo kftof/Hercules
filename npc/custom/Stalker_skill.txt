@@ -1,0 +1,54 @@
+gonryun,174,143,5	script	Stalker#123	4_F_HIMEL,{
+if ( Class != Job_Stalker)close;
+	mes "[Stalker]";
+	mes "Vous devez disposer du skill plagiarisme pour pouvoir copier un skill, celui déjà existant sera remplacé.";
+	next;
+	mes "[Stalker]";
+	mes "Selectionnez le skill que vous voulez copier.";
+	set .@menu, select(.menu$) -1;
+	if ( getskilllv(.skill$[.@menu * 3 +1]) ) {
+		mes "[Stalker]";
+		mes "Vous avez déjà une copie de ce skill.";
+		close;
+	}
+	mes "^FF0000ATTENTION:^000000";
+	mes "^FF0000VOUS ALLEZ DEVOIR VOUS DECONNECTER / RECONNECTER.^000000";
+	next;
+	if ( select ( "Oui", "Annuler" ) == 2 ) close;
+	set CLONE_SKILL, .skill$[.@menu * 3 +1];
+	set CLONE_SKILL_LV, .skill$[.@menu * 3 +2];
+	dispbottom "RECONNECTEZ VOUS !";
+	//atcommand "@kick "+ strcharinfo(0);
+	close;
+	end;
+	
+	
+OnInit:
+	setarray .skill$,
+		"< Remove >", 0, 0,
+		"Fire Bolt", 19, 10,
+		"Cold Bolt", 14, 10,
+		"Lightning Bolt", 20, 10,
+		"Jupiter Thunder", 84, 10,
+		"Meteor Storm", 83, 10,
+		"Lord of Vermillon", 85, 10,
+		"Storm Gust", 89, 10,
+		"Focused Arrow Strike", 382, 5,		
+		"B.S Sacramenti", 69, 5,
+		"Bowling Bash", 62, 10,
+		"Bash", 5, 10,
+		"Turn Undead", 77, 10,
+		"North Wind", 542, 5,
+		"Flying Side Kick", 421, 7,
+		"Pressure", 367, 5,
+		"Sacrifice", 368, 5,
+		"Soul Breaker", 379, 10,
+		"Meteor Assault", 406, 10,		
+		"Acid Demonstration", 490, 10,
+		"Magnus Exorcismus", 79, 10;
+	set .@skillsize, getarraysize(.skill$);
+	for ( set .@i,0; .@i < .@skillsize; set .@i, .@i +3 )
+		set .menu$, .menu$ + .skill$[.@i] +":";
+		
+	end;
+}

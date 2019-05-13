@@ -1,0 +1,102 @@
+-	script	restock_npc	-1,{
+	
+Onused:
+do{
+	mes "Restock Liste :";
+	set .@current_restock$,"|";
+	for( set .@i,0; .@i < .restock_item_count; set .@i,.@i + 1 ){
+		set .@item,getd( "@restock_list_"+.@i );
+		set .@qty,getd( "@restock_qty_"+.@i );
+		mes "^0055FF[No. "+( .@i + 1 )+"] ^000000"+( ( .@item )?"^FF0000"+getitemname( .@item )+" x "+.@qty:"^777777vide" )+"^000000";
+		set .@current_restock$, .@current_restock$ + .@item + "|";
+	}
+	next;
+	switch( select( "Ajouter des items à Restock","Reset le Restock" ) ){
+		case 1:
+			getinventorylist;
+			set .@i,0;
+			set .@size,0;
+			set .@menu$,"";
+			while( .@i < @inventorylist_count ){
+				set .@item_info,getiteminfo( @inventorylist_id[.@i],2 );
+				if( ( .@item_info == IT_USABLE || .@item_info == IT_HEALING ) && !compare( .@current_restock$,"|"+@inventorylist_id[.@i]+"|" ) ){
+					set .@menu$,.@menu$ + getitemname( @inventorylist_id[.@i] ) + ":";
+					set .@item_list[ .@size ],@inventorylist_id[.@i];
+					dispbottom "Slot "+.@size+" = "+getitemname( @inventorylist_id[.@i] );
+					set .@size,.@size + 1;
+				}
+				set .@i,.@i + 1;
+			}
+
+			if( !.@size ){
+				mes "Vous n'avez pas d'objets utilisables, ou vous les avez déjà ajouté au Restock.";
+			}else{ 
+				mes "Choisissez un item :";
+				set .@select,select( .@menu$ ) - 1;
+				mes "Vous avez séléctionné ^0055FF"+getitemname( .@item_list[ .@select ] )+"^000000";
+				mes "Restock tous les combiens ?";
+				input .@amount,1,500;
+				mes "Quel slot ?";
+				set .@restock_menu$,"";
+				for( set .@restock,0; .@restock < .restock_item_count; set .@restock,.@restock + 1 ){
+					set .@item,getd( "@restock_list_"+.@restock );
+					set .@qty,getd( "@restock_qty_"+.@restock );
+					set .@restock_menu$,.@restock_menu$ + "[No. "+( .@restock+1 )+"] ";
+					if( .@item )
+						set .@restock_menu$,.@restock_menu$ + "^0055FF"+getitemname( .@item )+" x "+.@qty+"^000000";
+					else
+						set .@restock_menu$,.@restock_menu$ + "^777777vide^000000";
+					set .@restock_menu$,.@restock_menu$ +":";
+				}
+				set .@slot,select( .@restock_menu$ ) - 1;
+				set @current_restock$,.@current_restock$ + .@item_list[ .@select ] + "|";
+				setd( "@restock_list_"+.@slot ),.@item_list[ .@select ];
+				setd( "@restock_qty_"+.@slot ),.@amount;
+				mes "Restock de ^0055FF"+getitemname( .@item_list[ .@select ] )+"^000000 en ^FF0000slot "+( .@slot+1 )+"^000000";
+				mes " ";
+				mes "Vous ne pouvez pas Restock si...";
+				mes "^FF0000~La limite de poids est atteinte.^000000";
+				mes "^FF0000~Rupture d'item en storage.^000000";
+			}
+			break;
+		case 2:
+			set .@i,0;
+			while( .@i < .restock_item_count ){
+				setd( "@restock_list_"+.@i ),0;
+				setd( "@restock_qty_"+.@i ),0;
+				set .@i,.@i + 1;
+			}
+			mes "Les items en restock ont été enlevé.";
+		default: break;
+	}
+	next;
+}while( select( "Continuer","Annuler" ) == 1 );
+close;
+
+OnPCConsumeEvent:
+announce "OnPCConsumeEvent", bc_all;
+if( !countitem( @consumed_id ) && compare( @current_restock$,"|"+@consumed_id+"|"  ) )
+	while( .@i < .restock_item_count ){
+		set .@item,getd( "@restock_list_"+.@i );
+		set .@qty,getd( "@restock_qty_"+.@i );
+		if( .@item && .@qty && .@item == @consumed_id )
+			if( !countitem( .@item ) && checkweight( .@item,.@qty ) ){
+				restock( .@item,.@qty );
+				announce "[ Restock - "+( .@qty )+ " x " +getitemname( .@item )+ " ]",bc_self;
+				break;
+			}
+		set .@i,.@i + 1;
+	}
+end;
+
+OnInit:
+	// how many item can restock each char
+	set .restock_item_count,3;
+	bindatcmd( "restock",strnpcinfo(0)+"::Onused",0,10 );
+	end;
+}
+
+
+gonryun,171,113,4	script	Restock Manager#restock	4_F_SITDOWN,{
+	doevent "restock_npc::Onused";
+}

@@ -1,0 +1,80 @@
+// Light of Darkness Crown
+//============================================================
+yuno,360,309,4	script	Brokk	4_M_DWARF,{
+	mes "[^FF4000Brokk^000000]";
+	mes "Je suis Brokk, frère d'Eitri.";
+	mes "J'ai fait de nombreux voyages, mais Yuno reste mon berceau.";
+	next;
+	mes "[^FF4000Brokk^000000]";
+	mes "Je suppose que, comme tous les autres, tu viens pour me demander de te fabriquer un attribut digne d'un Draupnir.";
+	next;
+	switch(select("C'est exact.:Euh...non.")) {
+	case 1:
+		mes "[^FF4000Brokk^000000]";
+		mes "Je vais avoir besoin de beaucoup de matériaux. Un tel chef d'oeuvre ne se fait pas comme cela.";
+		next;
+		switch(select("De quoi as-tu besoin ?:Ah vraiment ?")) {
+		case 1:
+			mes "[^FF4000Brokk^000000]";
+			mes "500 Black Dyestuffs";
+			mes "500 White Dyestuffs";
+			mes "2500 Piece of Black Cloth";
+			mes "2500 Old White Cloth";
+			mes "2 Angel Wing Ears [1]";
+			mes "2 Evil Wing Ears [1]";
+			mes "1 God Furnace";
+			mes "3 Silver Coin";
+			next;
+			mes "[^FF4000Brokk^000000]";
+			mes "Alors ?";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1: // (zeny > 99999999) && 
+				if ((countitem(675) > 2) && (countitem(983) > 499) && (countitem(982) > 499) && (countitem(7205) > 2499) && (countitem(7751) > 2499) && (countitem(29291) > 1) && (countitem(29292) > 1) && (countitem(7809) > 0)) {
+					mes "[^FF4000Brokk^000000]";
+					mes "Magnifique, mettons-nous au travail.";
+					next;
+					specialeffect EF_EXIT;
+					next;
+					mes "[^FF4000Brokk^000000]";
+					mes "Laisse moi te montrer l'etendue de mon talent !";
+					next;
+					specialeffect EF_LORD;
+					next;
+					specialeffect EF_LIGHTSPHERE;
+					next;
+					delitem 983,500;
+					delitem 982,500;
+					delitem 7205,2500;
+					delitem 7751,2500;
+					delitem 29291,2;
+					delitem 29292,2;
+					delitem 7809,1;
+					delitem 675,3;
+					getitem 29372,1;
+					mes "[^FF4000Brokk^000000]";
+					mes "Prends en soin.";
+					close;
+				}
+				else {
+					mes "[^FF4000Brokk^000000]";
+					mes "Malheureusement, il manque des objets.";
+					close;
+				}
+			case 2:
+				mes "[^FF4000Brokk^000000]";
+				mes "Je ne comprends pas, pourquoi me faire perdre du temps ?";
+				close;	
+			}
+		case 2:
+			mes "[^FF4000Brokk^000000]";
+			mes "Oui vraiment !";
+			close;
+		}
+	case 2:
+		mes "[^FF4000Brokk^000000]";
+		mes "Hmm.";
+		close;
+	}
+	end;
+}

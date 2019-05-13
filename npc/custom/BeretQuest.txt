@@ -1,0 +1,102 @@
+// Emblem of the sun God / Moon Goddess
+//============================================================
+gonryun,109,160,4	script	Malik	4_M_RACHOLD,{		
+	mes "[^8A2908Malik^000000]";
+	mes "Et bien, pourquoi venir déranger un vieillard comme moi ?";
+	next;
+	switch(select("Qui êtes-vous ?:...")) {
+	case 1:
+		mes "[^8A2908Malik^000000]";
+		mes "Je suis Malik, un militaire à la retraite.";
+		mes "Il y a fort longtemps, j'étais considéré comme un héro, un haut gradé de l'armée que l'on respectait.";
+		next;
+		mes "[^8A2908Malik^000000]";
+		mes "Maintenant, je ne suis plus qu'un vieillard que l'on vient déranger lorsque l'on s'ennuie.";
+		mes "Ce que les gens ignorent, c'est que j'ai des ressources, des Berets rares que je tiens de l'armée.";
+		next;
+		switch(select("Seriez-vous pret à les céder ?")) {
+		case 1:
+			mes "[^8A2908Malik^000000]";
+			mes "Et bien, je ne sais pas. C'est vrai que mon stock de Beret est bientôt épuisé, et j'en ai besoin pour continuer à fournir mes clients.";
+			next;
+			mes "[^8A2908Malik^000000]";
+			mes "Je sais, apporte moi 100 Beret et je te proposerai des Berets rares, un ^FF0000Rouge^000000 ou un ^0000FFBleu^000000.";
+			next;
+			switch(select("100 Berets ?!:Je peux peut être vous aider.")) {
+			case 1:
+				mes "[^8A2908Malik^000000]";
+				mes "Allez-vous en, vous n'êtes décidement vraiment d'aucune utilité !";
+				close;
+			case 2:
+				if ((countitem(5172) > 99)) {
+				mes "[^8A2908Malik^000000]";
+				mes "Et bien, c'est un sacré stock de Beret que vous avez là !";
+				next;
+				mes "[^8A2908Malik^000000]";
+				mes "Un marché et un marché, voilà ce que j'ai :";
+				next;
+					switch(select("Prendre le Beret ^FF0000Rouge^000000:Prendre le Beret ^0000FFBleu^000000")) {
+					case 1:
+						mes "[^8A2908Malik^000000]";
+						mes "Tu es certain de vouloir le ^FF0000Rouge^000000 ? Je garderai l'autre !";
+						next;
+						switch(select("Oui, je veux le ^FF0000Rouge^000000.:Finalement, non.")) {
+						case 1:
+							if ((countitem(5172) > 99)) {
+							mes "[^8A2908Malik^000000]";
+							mes "Marché conclu !";
+							delitem 5172,100; //Beret
+							getitem 5580,1; //Red Beret
+							close;							
+							}
+							else {
+							mes "[^8A2908Malik^000000]";
+							mes "Essayerais-tu de tricher ?";
+							close;
+							} 
+						case 2:
+							mes "[^8A2908Malik^000000]";
+							mes "Nous avions un marché !";
+							close;
+						}
+					case 2:
+						mes "[^8A2908Malik^000000]";
+						mes "Tu es certain de vouloir le ^0000FFBleu^000000 ? Je garderai l'autre !";
+						next;
+						switch(select("Oui, je veux le ^0000FFBleu^000000.:Finalement, non.")) {
+						case 1:
+							if ((countitem(5172) > 99)) {
+							mes "[^8A2908Malik^000000]";
+							mes "Marché conclu !";
+							delitem 5172,100; //Beret
+							getitem 5773,1; //Blue Beret
+							close;
+							}
+							else {
+							mes "[^8A2908Malik^000000]";
+							mes "Essayerais-tu de tricher ?";
+							close;
+							}
+						case 2:
+							mes "[^8A2908Malik^000000]";
+							mes "Nous avions un marché !";
+							close;
+						}
+					}
+					}
+					else {
+						mes "[^8A2908Malik^000000]";
+						mes "Vous n'avez pas les Berets...";
+						close;
+						}
+	
+			}
+
+		}
+	case 2:
+		mes "[^8A2908Malik^000000]";
+		mes "Allez, déguerpissez !";
+		close;
+		}
+	end;
+	}

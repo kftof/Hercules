@@ -1902,6 +1902,11 @@
 	packetKeys(0x50564acd,0x79ca4e15,0x405f4894);
 #endif
 
+	// 2017-06-14bRagexe, 2017-06-14bRagexeRE
+#if PACKETVER == 20170612
+	packetKeys(0x5ed10a48, 0x667f4301, 0x2e5d761f);
+#endif
+
 // 2017-06-14bRagexe, 2017-06-14bRagexeRE
 #if PACKETVER == 20170614
 	packetKeys(0x5ed10a48,0x667f4301,0x2e5d761f);
@@ -2087,6 +2092,10 @@
 // 2018-03-14nRagexe
 #if PACKETVER == 20180314
 	packetKeys(0x2ff07149,0x00596ea3,0x2b853026);
+#endif
+
+#if PACKETVER == 20180418
+	packetKeys(0x00000000, 0x00000000, 0x00000000);
 #endif
 
 

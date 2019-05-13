@@ -1,0 +1,137 @@
+// Add(1,29114,1,0,0,509,300,749,200,995,200,660,5,718,300,990,100,991,100,2700,3,7174,100);
+	
+// enculez vos morts
+//============================================================
+
+// ^CC3333Groumie^000000
+//============================================================
+xmas,86,291,6	script	Groumie	4_F_06,{
+	mes "[^CC3333Groumie^000000]";
+	mes "Coucou toi !";
+	next;
+	switch(select("Qui es-tu ?:Bye.")) {
+	case 1:
+		mes "[^CC3333Groumie^000000]";
+		mes "Je suis la soeur de ^29AFD6Dorie^000000 ! Nous avons une maison à ^FF9331Gonryun^000000, tu connais ? ";
+		mes "Je suis venue pour voir un mariage et rencontrer la célèbre ^DD75DDCéleste^000000. Mais je n'ai pas pris le bon train ...";
+		mes "Je me retrouve ici, alors que le mariage est a ^32DF00Hugel^000000 ...";
+		next;
+		mes "[^CC3333Groumie^000000]";
+		mes "Tant pis, je vais profiter du paysage en attendant le prochain !";
+		next;
+		mes "[^CC3333Groumie^000000]";
+		mes "Mais dis-moi, tu n'as pas froid ?";
+		next;
+		switch(select("Maintenant que tu le dis ...:Un échange ?")) {
+		case 1:
+			mes "[^CC3333Groumie^000000]";
+			mes "Hmm, laisse-moi te faire un bonnet, tu verras, ils sont géniaux !";
+			mes "Mais je vais avoir besoin de deux trois petits trucs. Rapporte-moi :";
+			next;
+			mes "[^CC3333Groumie^000000]";
+			mes "5 Red Silk Seal";
+			mes "20 Rose Quartz";
+			mes "200 Pinafore";
+			mes "5 Forbidden Red Candle";
+			mes "100 Garnet";
+			mes "100 Red Blood";
+			mes "100 Crystal Blue";
+			mes "2000 Soft Feather";
+			mes "50 Wrapping Lace";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(2700) > 4)	&&	(countitem(7293) > 19)	
+					&&	(countitem(7269) > 199)	&&	(countitem(660) > 4)	
+					&&	(countitem(718) > 99)	&&	(countitem(990) > 99)	
+					&&	(countitem(991) > 99)	&&	(countitem(7039) > 1999)	
+					&&	(countitem(7174) > 49)) {
+					mes "[^CC3333Groumie^000000]";
+					mes "Attends un peu, je n'en ai pas pour longtemps !";
+					mes "Et si tu n'aimes pas la couleur, reviens me voir !";
+					delitem 2700,5; //red silk
+					delitem 7293,20; //rose quartz
+					delitem 7269,200; //pinafore
+					delitem 660,5; //Forbidden Red Candle
+					delitem 718,100; //Garnet
+					delitem 990,100; //Red Blood
+					delitem 991,100; //Crystal Blue
+					delitem 7039,2000; //soft feather
+					delitem 7174,50; //Wrapping Lace
+					getitem 29114,1; //Snow Cap
+					close;
+				}
+				else {
+					mes "[^CC3333Groumie^000000]";
+					mes "Il t'en manque encore !";
+					close;
+				}
+			case 2:
+				mes "[^CC3333Groumie^000000]";
+				mes "Oh, d'accord !";
+				close;	
+			}
+		case 2:
+		mes "[^CC3333Groumie^000000]";
+		mes "^DF0101ATTENTION^000000";
+		mes "^DF0101Toutes les cards se trouvant dans le Hat seront perdues !^000000";
+		next;
+		mes "[^CC3333Groumie^000000]";
+		mes "Biensûr, quelle couleur voudrais-tu ?";
+		next;
+			switch(select("Noir:Blue:White:En fait non")) {
+			case 1:
+				if ((countitem(29114) > 0) && (countitem(983) > 199)) {
+					mes "[^CC3333Groumie^000000]";
+					mes "C'est parti !";
+					delitem 29114,1; //snow cap
+					delitem 983,200; //Black_Dyestuffs
+					getitem 29300,1; //Black snow
+					close;
+				}
+				else {
+					mes "[^CC3333Groumie^000000]";
+					mes "Mais ! Tu n'as pas de Snow Cap !";
+					close;
+				}
+			case 2:
+				if ((countitem(29114) > 0) && (countitem(978) > 199)) {
+					mes "[^CC3333Groumie^000000]";
+					mes "C'est parti !";
+					delitem 29114,1; //Snow Cap
+					delitem 978,200; //Cobaltue
+					getitem 29301,1; //Blue Snow
+					close;
+				}
+				else {
+					mes "[^CC3333Groumie^000000]";
+					mes "Mais ! Tu n'as pas de Snow Cap !";
+					close;
+				}
+			case 3:
+				if ((countitem(29114) > 0) && (countitem(982) > 199)) {
+					mes "[^CC3333Groumie^000000]";
+					mes "C'est parti !";
+					delitem 29114,1; //Snow Cap
+					delitem 982,200; //White
+					getitem 29306,1; //White Snow 
+					close;
+				}
+				else {
+					mes "[^CC3333Groumie^000000]";
+					mes "Mais ! Tu n'as pas de Snow Cap !";
+					close;
+				}
+			case 4:
+				mes "[^CC3333Groumie^000000]";
+				mes "Tant pis !";
+				close;
+			}
+		}
+	case 2:
+		mes "[^CC3333Groumie^000000]";
+		mes "Oki !";
+		close;
+	}
+	end;
+}

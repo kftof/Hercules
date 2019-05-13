@@ -1,0 +1,59 @@
+//============================================================
+// Garm Hat Quest
+//============================================================
+xmas_fild01,190,113,4	script	Garmy	4_M_FROZEN,{
+	mes "[Garmy]";
+	mes "...Qu'est ce que c'est?";
+	next;
+	switch(select("Besoin d'aide ?:Rien.")) {
+	case 1:
+		mes "[Garmy]";
+		mes "Pas le moins du monde ! J'essayais mon nouveau hat que je viens tout juste de confectionner ! J'ai decouvert qu'il contenait un puissant pouvoir. Veux-tu que j'essaye de t'en faire un  ?";
+		next;
+		switch(select("De quoi as-tu besoin ?:Non.")) {
+		case 1:
+			mes "[Garmy]";
+			mes "25 Fang of Garm.";
+			mes "600 Mystic Frozen.";
+			mes "1000 Ice Cubic.";
+			mes "C'est tout ce dont j'ai besoin.";
+			next;
+			mes "[Garmy]";
+			mes "As-tu rassembler les items ?";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(7036) > 24) && (countitem(995) > 599) && (countitem(7066) > 999)) {
+					mes "[Garmy]";
+					mes ".....Hm.";
+					mes "Parfait, voici ton Garm Hat. Prends en soin.";
+					delitem 7036,25; //Fang_Of_Garm
+					delitem 995,600; //Mistic_Frozen
+					delitem 7066,1000; //Ice_Piece
+					getitem 29108,1; //Garm_hat
+					close;
+				}
+				else {
+					mes "[Garmy]";
+					mes "...Le compte n'est pas bon.";
+					close;
+				}
+			case 2:
+				mes "[Garmy]";
+				mes "Fais ce que tu veux...";
+				close;	
+			}
+		case 2:
+			mes "[Garmy]";
+			mes "Hm. D'accord.";
+			mes "Nous nous reverrons.";
+			close;
+		}
+	case 2:
+		mes "[Garmy]";
+		mes "Hm.";
+		mes "Tant pis.";
+		close;
+	}
+	end;
+}

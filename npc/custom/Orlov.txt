@@ -1,0 +1,28 @@
+// Lingot d'or
+//============================================================
+einbroch,55,198,4	script	MrOrlov	4_M_YURI,{
+	mes "[^DF0101Mr.Orlov^000000]";
+	mes "Je peux transformer tes Gold en Lingôt d'Or.";
+	mes "J'ai besoin de 500 Gold pour faire un Lingôt.";
+	next;
+	switch(select("C'est d'accord.:Non.")) {
+	case 1:
+			if ((countitem(969) > 499)) {
+				mes "[^DF0101Mr.Orlov^000000]";
+				mes "Deal.";
+				delitem 969,500; //Gold
+				getitem 7228,1; //Lingot
+				close;
+				}
+			else {
+				mes "[^DF0101Mr.Orlov^000000]";
+				mes "Il manque des Gold.";
+				close;
+				}
+	case 2:
+		mes "[^DF0101Mr.Orlov^000000]";
+		mes "Je n'ai pas de temps à perdre avec des enfants.";
+		close;
+		}
+	end;
+}

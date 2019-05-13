@@ -1,0 +1,547 @@
+// EXP QUEST
+
+// NPC 01
+//=======================================================================
+
+alberta,196,130,4	script	Kutimi	4_F_SHAMAN,{
+	if (baselvl <= 150) {
+	mes "[Kutimi]";
+	mes "C'est fabuleux ! Vraiment, cette boisson est divine.";
+	mes "Hey ! Toi ! Tu pourrais m'aider ?";
+	next;
+		if ((countitem(12101) > 0)) {
+			mes "[Kutimi]";
+			mes "Alors, ^0101DFM.Bretzel^000000 était content ?";
+			mes "Oh mais, c'est un citron ! Et pas n'importe quelle espèce, c'est une espèce rare avec un potentiel exceptionnel !";
+			next;
+			mes "[Kutimi]";
+			mes "Tu me le donnes ?";
+			switch(select("C'est de la part de Rob.:Non.")) {
+				case 1:
+					mes "[Kutimi]";
+					mes "Oh, merci ! Je vais pouvoir l'ajouter à mes cookies pour en faire quelque chose d'absolument fabuleux !";
+					mes "Hmm... Je m'en veux un peu de te demander ce service, mais tu pourrais y apporter à ^0101DFHector^000000 à ^0101DFUmbala^000000 ?";
+					delitem 12101,1; // citron
+					getitem 12130,1; // Cookie
+					close;
+				case 2:
+					mes "[Kutimi]";
+					mes "Tant pis !";
+					close;	
+			}
+		}
+		else {
+		switch(select("Oui ?:Non.")) {
+		case 1:
+			if ((countitem(12078) < 1)) {
+			mes "[Kutimi]";
+			mes "J'aurais besoin que tu donnes cela à ^0101DFM.Bretzel^000000, à ^0101DFHugel^000000. Vraiment, il va adorer. Peux-tu le faire ?";
+			next;
+				switch(select("Oui. :Non.")) {
+					case 1:
+					mes "[Kutimi]";
+					mes "Oh, merci ! J'imagine déjà le plaisir se dessiner sur son visage en goûtant ce thé !";
+					getitem 12078,1; // thé	
+					close;
+					case 2:
+					mes "[Kutimi]";
+					mes "Tant pis !";
+					close;	
+				}
+			}
+			else {
+				mes "[Kutimi]";
+				mes "Et Bien, qu'est-ce que tu attends pour amener ça à ^0101DFM.Bretzel^000000, à ^0101DFHugel^000000 ?";
+				close;
+				}
+		case 2:
+		mes "[Kutimi]";
+		mes "Oh, ce petit ^0101DFHector^000000 à ^0101DFUmbala^000000 adore les cookies !";
+		close;	
+			}
+		}
+
+		
+	}
+	else { 
+	mes	"[Kutimi]";
+	mes	"Je n'ai pas besoin de toi.";
+	close;
+	}
+	
+	
+end;
+}
+
+// NPC 02
+//=======================================================================
+
+hugel,214,225,4	script	M.Bretzel	4_M_BRZ_MAN2,{
+	if (baselvl <= 150) {
+	mes "[M.Bretzel]";
+	mes "Salut !";
+	next;
+		if ((countitem(590) < 1)	&&	(countitem(12078) > 0)) {
+			mes "[M.Bretzel]";
+			mes "Oui ?";
+			next;
+			switch(select("J'ai ça pour vous.:Rien.")) {
+			case 1:
+				mes "[M.Bretzel]";
+				mes "Oh mais ! C'est le fameux thé de Kutimi !";
+				next;
+				mes "[M.Bretzel]";
+				mes "Hmm ... Je m'en veux de te demander ça, mais j'aurais peut être besoin d'aide ...";
+				mes "Je viens tout juste de finir de confectionner mon ultime BRETZEL, et il en rafolle. Peux-tu amener cette BRETZEL à ^0101DFJoul^000000, à ^0101DFGeffen^000000 ?";
+				next;
+					switch(select("Oui.:Non.")) {
+						case 1:
+						if ((countitem(12078) > 0)) {
+						mes "[M.Bretzel]";
+						mes "Oh, merci ! Tu me sauves la vie !";
+						delitem 12078,1; // Thé
+						getitem 590,1; // Bretzel
+						close;						
+						}
+						else {
+							mes "[M.Bretzel]";
+							mes "Mais ? Où est passé le thé ?";
+							close;
+							}
+						case 2:
+							mes	"[M.Bretzel]";
+							mes	"Bye";
+							close;
+					}
+			case 2:
+				mes	"[M.Bretzel]";
+				mes	"Bye";
+				close;
+			}
+		}
+		else {
+		mes	"[M.Bretzel]";
+		mes	"Oh, ^0101DFJoul^000000, je sais qu'il n'y a pas de Bretzel à ^0101DFGeffen^000000, j'espère que tu n'es pas trop malheureux...";
+		close;
+			}
+	}
+	else { 
+	mes	"[M.Bretzel]";
+	mes	"J'ai plein d'amis, mais ils habitent tellement loin ...";
+	close;
+	}
+	
+end;
+}
+// NPC 03
+//=======================================================================
+
+geffen,128,198,4	script	Joul	4_M_06,{
+	if (baselvl <= 150) {
+	mes "[Joul]";
+	mes "Salut !";
+	next;
+		if ((countitem(7813) < 1)	&&	(countitem(590) > 0)) {
+			mes "[Joul]";
+			mes "Cette odeur... OUI ! C'est une BRETZEL !";
+			next;
+			switch(select("Oui...:Eeeet non.")) {
+				case 1:
+					mes "[Joul]";
+					mes "Ce goût, c'est absolument fabuleux ! Vraiment, vous devriez goûter, dommage que vous n'en avez pas pour vous !";
+					next;
+					mes "[Joul]";
+					mes "C'est vraiment sympa de m'apporter ce Bretzel.";
+					mes "Tu ne devrais pas t'arrêter sur une bonne action, tu ne crois pas ?";
+					next;
+					switch(select("Oui...:Non.")) {
+						case 1:
+						if ((countitem(590) > 0)) {
+							mes "[Joul]";
+							mes "Tu as bien raison ! Tu peux apporter cet Anneau à ^0101DFKillya^000000, à ^0101DFProntera^000000 ?";
+							delitem 590,1; // Bretzel
+							getitem 7813,1; // Anneau
+							close;
+						}
+						else {
+						mes "[Joul]";
+						mes "Mais ? Où est le Bretzel ?";
+						close;
+						}
+						case 2:
+						mes	"[Joul]";
+						mes	"Oki.";
+						close;
+					}
+				case 2:
+				mes	"[Joul]";
+				mes	"Mais, pourquoi ?!";
+				close;
+			}
+		}
+		else {
+		mes	"[Joul]";
+		mes	"Oh, ^0101DFKillya^000000, pourquoi es-tu partie pour ^0101DFProntera^000000 en me laissant seul ici ?";
+		close;
+		}
+	}
+	else { 
+	mes	"[Joul]";
+	mes	"Bretzel, bretzel, bretzel, bretzel.";
+	close;
+	}
+	
+end;
+}
+// NPC 04
+//=======================================================================
+
+prontera,116,82,4	script	Killya	4_F_JP_CYNTHIA,{
+	if (baselvl <= 150) {
+	mes "[Killya]";
+	mes "Salut !";
+	next;
+		if ((countitem(6128) < 1)	&&	(countitem(7813) > 0)) {
+			mes "[Killya]";
+			mes "Oh ! Cet Anneau ! Il est manigifique.";
+			next;
+			switch(select("C'est de la part de Joul.:Mais il n'est pas pour toi.")) {
+			case 1:
+			mes "[Killya]";
+			mes "Quelle charmante attention ! Quel ange ! Vous ne trouvez pas ?";
+			next;
+			mes "[Killya]";
+			mes "Maintenant que j'y pense, c'est vrai que je devais faire quelque chose ... Mais je n'arrive pas à me souvenir.";
+			next;
+			mes "[Killya]";
+			mes "Bon sang ! Mais oui ! Je devais apporter l'antidote à ^0101DFMami Huguette^000000 ! J'espère qu'il n'est pas trop tard...";
+			next;
+				switch(select("Donnez-moi vite cet antidote !:C'est n'importe quoi.")) {
+					case 1:
+						if ((countitem(7813) > 0)) {				
+							mes "[Killya]";
+							mes "L'anti-quoi ? Ah, oui, tiens, apporte-le à ^0101DFMami Huguette^000000 à ^0101DFRachel^000000. Je vais aller admirer ce magnifique bijou en attendant !";
+							delitem 7813,1; // Anneau
+							getitem 6128,1; // Antidote	
+							close;
+						}
+						else {
+							mes "[Killya]";
+							mes "Mais ? Où est l'anneau ?";
+							close;	
+						}
+					case 2:
+						mes "[Killya]";
+						mes "Elle est vieille, personne ne s'en apercevra.";
+						next;
+						mes "[Killya]";
+						mes "Enfin, j'espère...";
+						close;	
+				}
+			case 2:
+			mes	"[Killya]";
+			mes	"Quel toupet !";
+			close;
+			}
+		}
+		else {
+		mes	"[Killya]";
+		mes	"C'est vrai qu'il faudrait que je rende visite à ^0101DFMami Huguette^000000, mais ^0101DFRachel^000000 est tellement loin d'ici...";
+		close;
+			}
+	}
+	else { 
+	mes	"[Killya]";
+	mes	"Tu veux ma photo ?";
+	close;
+	}
+	
+end;
+}
+// NPC 05
+//=======================================================================
+
+rachel,83,215,4	script	Mami Huguette	8_F_GRANDMOTHER,{
+	if (baselvl <= 150) {
+	mes "[Mami Huguette]";
+	mes "*Tousse*";
+	next;
+		if ((countitem(7227) < 1)	&&	(countitem(6128) > 0)) {
+			mes "[Mami Huguette]";
+			mes "*Tousse*";
+			next;
+			switch(select("Tenez, prenez cet Antidote !:...")) {
+			case 1:
+			mes "[Mami Huguette]";
+			mes "Oh, merci ! C'est l'antidote de ^0101DFKillya^000000. Qu'elle est gentille cette petite. Je lui offrirai un cadeau encore plus cher que l'ancien pour son anniversaire !";
+			next;
+			mes "[Mami Huguette]";
+			mes "Dites-moi, je m'en voudrais d'abuser de votre patience, mais je viens de me souvenir que je devais offrir un cadeau à mon petit fils. Pourrais-tu lui apporter ?";
+			next;
+				switch(select("Oui, je suppose...:Malheuresement, je n'ai pas le temps.")) {
+					case 1:
+					if ((countitem(6128) > 0)) {
+					mes "[Mami Huguette]";
+					mes "C'est si gentil de votre part ! Il se trouve à ^0101DFUmbala, et il s'appelle ^0101DFHector^000000.";
+					delitem 6128,1; // Antidote	
+					getitem 7227,1; // TCG card	
+					close;
+					}
+					else {
+					mes "[Mami Huguette]";
+					mes "Mais ? Où est l'antidote ?";
+					close;
+						}
+					case 2:
+					mes	"[Mami Huguette]";
+					mes	"C'est dommage...";
+					close;
+				}
+			case 2:
+			mes	"[Mami Huguette]";
+			mes	"*Tousse*";
+			close;
+			}
+		}
+		else {
+		mes	"[Mami Huguette]";
+		mes	"J'ai un petit fils, ^0101DFHector^000000, qui vit à ^0101DFUmbala^000000, dommage qu'il ne me rende plus visite...";
+		close;
+			}
+	}
+	else { 
+	mes	"[Mami Huguette]";
+	mes	"J'ai une petite fille à Prontera, elle est si gentille !";
+	close;
+	}
+	
+end;
+}
+// NPC 06
+//=======================================================================
+
+umbala,137,200,4	script	Hector	4_M_DEWBOY,{
+	if (baselvl <= 150) {
+		mes "[Hector]";
+		mes "Salut toi !";
+		next;
+		if ((countitem(12130) > 0)) {
+			mes "[Hector]";
+			mes "OH ! CE SONT DES COOKIES ?! POUR MOI ???";
+			next;
+			switch(select("Oui !:Hahaha, non.")) {
+			case 1:
+				mes "[Hector]";
+				mes "GENIAAAAAAAL !";
+				next;
+				mes "[Hector]";
+				mes "Zetes vraiment sympa ! Vous pourriez me rendre un dernier petit service ?";
+				next;
+				switch(select("Avec plaisir !:Euh, non.")) {
+					case 1:
+						if ((countitem(12130) > 0)) {
+							mes "[Hector]";
+							mes "Merci ! J'ai mon amoureuse à ^0101DFSplendide^000000, elle s'appelle ^0101DFCecilia^000000, et je voudrais lui offrir ces Poring Ball pour son anniversaire !";
+							delitem 12130,1; // Cookie	
+							getitem 6345,1; // poring ball
+							close;
+						}
+						else {
+						mes "[Hector]";
+						mes "Mais ? Où sont les cookies ?";
+						close;
+						}			
+					case 2:
+						mes "[Hector]";
+						mes "*sob*";
+						close;	
+				}
+			case 2:
+				mes	"[Hector]";
+				mes	"Bouhouhou :(";
+				close;
+			}
+		}
+	else {
+			if ((countitem(6185) < 1)	&&	(countitem(7227) > 0)) {
+			mes "[Hector]";
+			mes "OH ! C'EST UNE CARTE MAGIC ?! POUR MOI ???";
+			next;
+				switch(select("C'est un cadeau de ta grand mere.:Hahaha, non.")) {
+					case 1:
+						mes "[Hector]";
+						mes "GENIAAAAAAAL. Elle est pas super forte, mais pas grave, je pourrai l'échanger contre des billes ou quelque zeny !";
+						next;
+						mes "[Hector]";
+						mes "Dites moi, vous pourriez donner ce truc à mon papa ? Il fait des recherches pour quelque chose d'important, je crois.";
+						next;
+						switch(select("Avec plaisir !:Euh, non.")) {
+						case 1:
+							if ((countitem(7227) > 0)) {
+								mes "[Hector]";
+								mes "Ooooh, merci ! Il se trouve à ^0101DFMorroc^000000, et il s'appelle ^0101DFRob^000000. Vous verrez, il est grand et fort, vous ne pouvez pas le rater !";
+								delitem 7227,1; // TCG card	
+								getitem 6185,1; // ANCIEN DOCUMENT	
+								close;
+							}
+							else {
+								mes "[Hector]";
+								mes "Mais ? Où est la carte ?";
+								close;
+								}
+						case 2:
+							mes "[Hector]";
+							mes "*sob*";
+							close;	
+						}
+					case 2:
+						mes	"[Hector]";
+						mes	"Bouhouhou :(";
+						close;
+				}
+			}		
+			else {
+				mes	"[Hector]";
+				mes	"Et ben moi, mon Papa est grand et fort, et puis il fait un travail super important. Il est à ^0101DFMorroc^000000 pour un voyage d'affaire !";
+				close;
+				}
+		}
+	}
+	else { 
+	mes	"[Hector]";
+	mes	"J'ai mon amoureuse, à Splendide. Elle s'appelle Cecillia !";
+	close;
+		}
+	
+end;
+}
+// NPC 07
+//=======================================================================
+
+morocc,104,246,4	script	Rob	2_M_SWORDMASTER,{
+	if (baselvl <= 150) {
+	mes "[Rob]";
+	mes "Et bien, qui va là ?.";
+	next;
+		if ((countitem(6185) > 0)) {
+			mes "[Rob]";
+			mes "Et ! Mais c'est le document que je cherchais !";
+			next;
+			switch(select("C'est pour vous.:Ah ? Je ne crois pas.")) {
+				case 1:
+				if ((countitem(6185) > 0)) {
+					mes "[Rob]";
+					mes "Ce document est extrêmement precieux pour mes recherches, je te remercie.";
+					mes "Hmm... Je m'en veux un peu de te demander ce service, mais tu pourrais apporter cela à ma vieille amie ^0101DFKutimi^000000, à ^0101DFAlberta^000000 ?";
+					delitem 6185,1; // document
+					getitem 12101,1; // citron
+					close;
+				}
+					else {
+					mes "[Rob]";
+					mes "Mais où est le document ?";
+					close;
+					}
+				case 2:
+					mes "[Rob]";
+					mes "Et bien, quel culot.";
+					close;
+			}
+		}
+		else {
+			mes "[Rob]";
+			mes "Oh, ^0101DFKutimi^000000, je ne t'oublie pas, tu sais.";
+			close;
+			}
+		
+	}
+	else { 
+		mes	"[Rob]";
+		mes	"Je n'ai pas besoin de toi !";
+		close;
+		}
+end;
+}
+// NPC 07
+//=======================================================================
+
+splendide,178,26,4	script	Cecilia	4_F_JPNCHIBI,{
+	if (baselvl <= 150) {
+	mes "[Cecilia]";
+	mes "...";
+	next;
+		if ((countitem(6345) > 0)	&&	(countitem(7803) < 1)	&&	(countitem(12263) < 1)	&&	(countitem(14532) < 1)) {
+			mes "[Cecilia]";
+			mes "Oh ! Mais ! Ce sont des Poring Ball !";
+			next;
+				switch(select("C'est de la part d'Hector !:Pas touche !")) {
+					case 1:
+						mes "[Cecilia]";
+						mes "Qu'il est gentil ! Elles sont geniales !";
+						next;
+						mes "[Cecilia]";
+						mes "Vous avez l'air d'avoir fait un long chemin. Tenez, prenez un de ces livres, pour vous remonter le moral !";
+						next;
+							switch(select("Un Manuel lvl 100 et moins:Un Manuel lvl 100-125:Un Manuel lvl 125-150:Partir")) {
+								case 1:
+								if (countitem(6345) > 0) {
+									mes "[Cecilia]";
+									mes "Tenez";
+									delitem 6345,1; // Poring Ball
+									getitem 7803,1; // Book lvl 1
+									close;
+								}
+								else {
+									mes "[Cecilia]";
+									mes "Mais ? Où sont les Poring Ball ?";
+									close;
+								}
+								case 2:
+								if (countitem(6345) > 0) {
+									mes "[Cecilia]";
+									mes "Tenez";
+									delitem 6345,1; // Poring Ball
+									getitem 12263,1; // Book lvl 2
+									close;
+								}
+								else {
+									mes "[Cecilia]";
+									mes "Mais ? Où sont les Poring Ball ?";
+									close;
+								}
+								case 3:
+								if (countitem(6345) > 0) {
+									mes "[Cecilia]";
+									mes "Tenez";
+									delitem 6345,1; // Poring Ball
+									getitem 14532,1; // Book lvl 3
+									close;
+								}
+								else {
+									mes "[Cecilia]";
+									mes "Mais ? Où sont les Poring Ball ?";
+									close;
+								}	
+								case 4:			
+								mes "[Cecilia]";
+								mes "...";
+								close;								
+							}
+					case 2:
+						mes	"[Cecilia]";
+						mes	"Bouhouhou *sob*";
+						close;
+					}
+		}
+		else {
+		mes	"Elle semble vous ignorer. Comme si vous aviez déjà ce pour quoi vous étiez venu, ou si vous n'aviez pas ce qu'elle cherche.";
+		close;
+			}
+	}
+	else { 
+	mes	"[Cecilia]";
+	mes	"Et ben mon amoureux, il habite à Umbala !";
+	close;
+	}
+end;
+}

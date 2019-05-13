@@ -1,0 +1,55 @@
+//============================================================
+ein_in01,164,152,4	script	Bibi#18	4_M_BIBI,{
+	mes "[Bibi]";
+	mes "Je suis un des frêres de Bibi.";
+	next;
+	switch(select("Besoin d'aide ?:Rien.")) {
+		case 1:
+			mes "[Bibi]";
+			mes "J'aurais bien besoin de quelque chose ...";
+			mes "Oui, peux-tu me rapporter ces objets ?";
+			next;
+			mes "[Bibi]";
+			mes "4 Morpheus Ring";
+			mes "4 Morpheus Bracelet";
+			mes "4 Morpheus Hood";
+			mes "4 Morpheus Shawl";
+			mes "20 000 000 Zeny";
+			mes "C'est tout ce dont j'ai besoin.";
+			next;
+			mes "[Bibi]";
+			mes "Alors ?";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(2648) > 3)	&&	(countitem(2649) > 3)	&&	(countitem(5126) > 3)	&&	(countitem(2518) > 3)	&&	(Zeny > 19999999)) {
+					mes "[Bibi]";
+					mes "C'est parfait ! Tiens, voilà pour te remercier.";
+					delitem 2648,4;
+					delitem 2649,4;
+					delitem 5126,4;
+					delitem 2518,4;
+					set Zeny,Zeny-20000000;
+					getitem 7378,1; //ball1
+	specialeffect(EF_FLOWERLEAF, AREA, playerattached());
+	specialeffect(EF_ELECTRIC, AREA, playerattached());
+	specialeffect(EF_MVP, AREA, playerattached());
+					close2;
+				}
+				else {
+					mes "[Bibi]";
+					mes "Il manque quelque chose.";
+					close;
+				}
+			case 2:
+				mes "[Bibi]";
+				mes "Comme tu veux.";
+				close;	
+			}
+		case 2:
+			mes "[Bibi]";
+			mes "...";
+			close;
+		}
+	end;
+}

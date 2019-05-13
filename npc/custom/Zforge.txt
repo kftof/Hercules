@@ -1,0 +1,7 @@
+//CRM PVP
+gonryun,192,95,1	script	Forge#456	2_M_OLDBLSMITH,{
+end;
+OnInit:
+waitingroom "Forge",0;
+end;
+}

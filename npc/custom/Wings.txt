@@ -1,0 +1,117 @@
+// Brynhildr
+//============================================================
+gonryun,135,113,5	script	Brynhildr#1	4_F_VALKYRIE,{
+	mes "[Brynhildr]";
+	mes "Je suis Brynhild.";
+	mes "J'ai le pouvoir de confectionner des ailes. Que veux-tu ?";
+	next;
+	switch(select("Que dois-je faire ?:Rien.")) {
+	case 1:
+		mes "[Brynhildr]";
+		mes "Quel est ton souhait ?";
+		switch(select("Valkyrie Wings:Butterfly Wings:Animated Wings:Little Wings:En fait, non.")) {
+		next;
+		case 1:
+			mes "[Brynhildr]";
+			mes "Tu dois d'abord me prouver ta valeur. Apporte-moi les objets suivants :";
+			next;
+			mes "4000 Little Evil Wing";
+			mes "1000 Bloody Rune";
+			mes "2000 Rune Of Darkness";
+			mes "1000 Wing of Dragonfly";
+			next;
+				if ((countitem(1039) > 3999) && (countitem(7563) > 999) && (countitem(7511) > 1999) && (countitem(7064) > 999)) {
+					delitem 1039,4000; //Petite_DiablOfs_Wing
+					delitem 7563,1000; //Bloody_Rune
+					delitem 7511,2000; //Rune_Of_Darkness
+					delitem 7064,1000; //Dragon_Fly_Wing
+					getitem 29169,1; //Black_fairy_wings
+					close;
+				}
+				else {
+					mes "Reviens quand tu auras tous les objets.";
+					close;
+				}
+		case 2:
+			mes "[Brynhildr]";
+			mes "Tu dois d'abord me prouver ta valeur. Apportes-moi les objets suivants :";
+			next;
+			mes "4000 Little Evil Wing";
+			mes "1000 Bloody Rune";
+			mes "2000 Rune Of Darkness";
+			mes "1000 Wing of Dragonfly";
+			next;
+				if ((countitem(1039) > 3999) && (countitem(7563) > 999) && (countitem(7511) > 1999) && (countitem(7064) > 999)) {
+					delitem 1039,4000; //Petite_DiablOfs_Wing
+					delitem 7563,1000; //Bloody_Rune
+					delitem 7511,2000; //Rune_Of_Darkness
+					delitem 7064,1000; //Dragon_Fly_Wing
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "Reviens quand tu auras tous les objets.";
+					close;
+				}
+		case 3:
+			mes "[Brynhildr]";
+			mes "Tu dois d'abord me prouver ta valeur. Apportes-moi les objets suivants :";
+			next;
+			mes "500 Little Evil Horn";
+			mes "300 Litthe Ghost Doll";
+			mes "3 Dragon Wing";
+			mes "3 Ixion Wing";
+			mes "500 Wing Of Red Bat";
+			mes "500 Wing of Dragonfly";
+			next;
+				if ((countitem(1038) > 499) && (countitem(7268) > 299) && (countitem(1724) > 2) && (countitem(1737) > 2) && (countitem(7006) > 499) && (countitem(7064) > 499)) {
+					delitem 1038,500; //Petite_DiablOfs_Horn
+					delitem 7268,300; //Little_Blacky_Ghost
+					delitem 1724,3; //Dragon_Wing
+					delitem 1737,3; //Ixion_Wing
+					delitem 7006,500; //Wing_Of_Red_Bat
+					delitem 7064,500; //Wing of Dragonfly 
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "Reviens quand tu auras tous les objets.";
+					close;
+				}
+		case 4:
+			mes "[Brynhildr]";
+			mes "Tu dois d'abord me prouver ta valeur. Apportes-moi les objets suivants :";
+			next;
+			mes "500 Little Evil Horn";
+			mes "300 Litthe Ghost Doll";
+			mes "3 Dragon Wing";
+			mes "3 Ixion Wing";
+			mes "500 Wing Of Red Bat";
+			mes "500 Wing of Dragonfly";
+			next;
+				if ((countitem(1038) > 499) && (countitem(7268) > 299) && (countitem(1724) > 2) && (countitem(1737) > 2) && (countitem(7006) > 499) && (countitem(7064) > 499)) {
+					delitem 1038,500; //Petite_DiablOfs_Horn
+					delitem 7268,300; //Little_Blacky_Ghost
+					delitem 1724,3; //Dragon_Wing
+					delitem 1737,3; //Ixion_Wing
+					delitem 7006,500; //Wing_Of_Red_Bat
+					delitem 7064,500; //Wing of Dragonfly 
+					getitem 29395,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "Reviens quand tu auras tous les objets.";
+					close;
+				}
+				case 5:
+			mes "[Brynhildr]";
+			mes "Tant pis.";
+			close;
+		}
+	case 2:
+		mes "[Brynhildr]";
+		mes "Tant pis.";
+		close;
+	}
+	end;
+}

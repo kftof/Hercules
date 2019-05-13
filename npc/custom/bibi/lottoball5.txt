@@ -1,0 +1,60 @@
+//============================================================
+moc_fild16,199,289,4	script	Bibi#05	4_M_BIBI,{
+	mes "[Bibi]";
+	mes "Je suis un des frêres de Bibi.";
+	next;
+	switch(select("Besoin d'aide ?:Rien.")) {
+		case 1:
+			mes "[Bibi]";
+			mes "J'aurais bien besoin de quelque chose ...";
+			mes "Oui, peux-tu me rapporter ces objets ?";
+			next;
+			mes "[Bibi]";
+			mes "5 Green Salad";
+			mes "5 Mastela Fruit Wine";
+			mes "5 Lutie Lady's Pancake";
+			mes "5 Steamed Bat Wing in Pumpkin";
+			mes "5 Spicy Fried Bao";
+			mes "5 Fried Scorpion Tails";
+			mes "C'est tout ce dont j'ai besoin.";
+			next;
+			mes "[Bibi]";
+			mes "Alors ?";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(12065) > 4)	&&	(countitem(12050) > 4)	&&	(countitem(12045) > 4)	&&	(countitem(12055) > 4)	&&	(countitem(12060) > 4)	&&	(countitem(12070) > 4)) {
+					mes "[Bibi]";
+					mes "C'est parfait ! Tiens, voilà pour te remercier.";
+					delitem 12045,5;
+					delitem 12050,5;
+					delitem 12055,5;
+					delitem 12060,5;
+					delitem 12065,5;
+					delitem 12070,5;
+					getitem 7365,1; //ball1
+	specialeffect(EF_FLOWERLEAF, AREA, playerattached());
+	specialeffect(EF_ELECTRIC, AREA, playerattached());
+	specialeffect(EF_MVP, AREA, playerattached());
+					close2;
+					//// specialeffect2 EF_FLOWERLEAF;
+					//// specialeffect2 EF_ELECTRIC;
+					end;
+				}
+				else {
+					mes "[Bibi]";
+					mes "Il manque quelque chose.";
+					close;
+				}
+			case 2:
+				mes "[Bibi]";
+				mes "Comme tu veux.";
+				close;	
+			}
+		case 2:
+			mes "[Bibi]";
+			mes "...";
+			close;
+		}
+	end;
+}

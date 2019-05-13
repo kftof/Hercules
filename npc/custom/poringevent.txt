@@ -1,0 +1,26 @@
+//
+//HR Event heaven's coin
+//
+
+-	script	PoringEvent	FAKE_NPC,{
+
+//OnMinute480:
+OnClock1000:
+OnClock1300:
+OnClock1700:
+OnClock2000:
+OnClock2300:
+   .Town_popo$ = .Town$[rand(getarraysize(.Town$))];
+    monster .Town_popo$,0,0,"Poring Event",.mobs[rand(getarraysize(.mobs))],2,strnpcinfo(3)+"::OnMobKill";
+    announce "Deux poring sont apparues à "+ .Town_popo$ +" !",0;
+    end;
+OnMobKill:
+    announce strcharinfo(0)+" vient de tuer un poring et gagne un Heaven's Coin !",0;
+    getitem 29400,1;
+    end;
+
+OnInit:
+	setarray .Town$[0],"prontera","izlude","geffen","payon","alberta","aldebaran","yuno","comodo","umbala","amatsu","gonryun","ayothaya","louyang","hugel","rachel","veins";
+    setarray .mobs[0],1002; //etc.
+    end;
+}

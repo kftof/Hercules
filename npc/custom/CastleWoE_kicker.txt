@@ -1,0 +1,57 @@
+-	script	WoE_Kick	FAKE_NPC,{
+end;
+
+OnKick:
+warp "gonryun",159,124;
+end;
+
+OnPCLoadMapEvent:
+//ACTIF EN WOE SEULEMENT
+//LVL MAX LIMITATION
+if (agitcheck() == 1 || agitcheck2() == 1)
+{
+	if( strcharinfo(3) == "payg_cas05" && BaseLevel > 99 ){
+		announce "Restriction : Château pour perso lvl 99 Maximum !", bc_self;
+		addtimer 1000, "WoE_Kick::OnKick";}
+
+else if( strcharinfo(3) == "payg_cas01" && BaseLevel > 200 ){
+    announce "Restriction : Château pour perso lvl 200 Maximum !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+//Restriction de stats
+else if( strcharinfo(3) == "payg_cas05" && (readparam(bStr)>=100 || readparam(bInt)>=100 
+|| readparam(bAgi)>=100 || readparam(bDex)>=100 || readparam(bVit)>=100 || readparam(bLuk)>=100) ){
+    announce "Vos bases stats ne peuvent excéder 99 !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+
+//GUILD LIMITATION
+else if( strcharinfo(3) == "payg_cas05" && !getcharid(2) ){
+    announce "Restriction : Guilde obligatoire pour participer à la WoE !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+
+else if( strcharinfo(3) == "payg_cas01" && !getcharid(2) ){
+    announce "Restriction : Guilde obligatoire pour participer à la WoE !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+
+else if( strcharinfo(3) == "arug_cas05" && !getcharid(2) ){
+    announce "Restriction : Guilde obligatoire pour participer à la WoE !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+}
+
+//PVP 99
+else if( strcharinfo(3) == "guild_vs2" && (readparam(bStr)>=100 || readparam(bInt)>=100 
+|| readparam(bAgi)>=100 || readparam(bDex)>=100 || readparam(bVit)>=100 || readparam(bLuk)>=100) ){
+    announce "Vos bases stats ne peuvent excéder 99 !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+} 
+end;
+}
+
+payg_cas01	mapflag	loadevent
+payg_cas05	mapflag	loadevent
+arug_cas05	mapflag	loadevent
+guild_vs2	mapflag	loadevent

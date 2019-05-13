@@ -1,0 +1,525 @@
+//gonryun,186,119,3	script	Enfant Caché	4_M_MIKID,{
+gonryun,186,119,3	script	Enfant Caché	4_M_MIKID,{
+	mes "[^B40431Enfant Caché^000000]";
+	mes "...";
+	next;
+	switch(select("Un problème ?")) {
+	case 1:
+		mes "[^B40431Enfant Caché^000000]";
+		mes "C'est la Coach... Je la trouve tellement belle, mais je n'arrive pas à l'aborder.";
+		next;
+		mes "[^B40431Enfant Caché^000000]";
+		mes "Je sais ! Apporte moi les objets qu'elle demande, ça me fera un sujet pour engager la conversation avec elle !";
+		next;
+		switch(select("Pourquoi pas !:Non.")) {
+		case 1:
+			if ((countitem(7203) > 49) && (countitem(714) > 4) && (countitem(997) > 49) && (countitem(12043) > 49)) {
+				mes "[^B40431Enfant Caché^000000]";
+				mes "Merci beaucoup ! Maintenant que tu m'as aidé, je vais te rendre la pareille.";
+				mes "Attention, note bien ce que je vais te dire, je ne le répéterai pas !";
+				delitem 7203,50; //Strong Branch
+				delitem 714,5; //Emperium
+				delitem 997,50; //Great Nature
+				delitem 12043,50; //Bomber Steak
+				getitem 7776,1; // Gym pass
+				getitem 29478,1; // Event Candy
+				next;
+				mes "[^B40431Enfant Caché^000000]";
+				mes "J'ai perdu mon frère, retrouve-le.";
+				mes "^0101DFIl aime se balader près des barques des marchands de fruits et de poissons.^000000";
+				next;
+				mes "[^B40431Enfant Caché^000000]";
+				mes "Ah, oui, et n'oublie pas, si tu le vois, dis lui ^B40431HA^000000 de ma part, c'est très important.";
+				close;
+				}
+				else {
+					mes "[^B40431Enfant Caché^000000]";
+					mes "Mais, qu'est-ce que c'est ? Ce ne sont pas les objets qu'elle demande ?";
+					close;
+				}
+		case 2:
+			mes "[^B40431Enfant Caché^000000]";
+			mes "Alors va t-en !";
+			close;	
+		}
+	}
+	end;
+}
+// ENFANT NUMÃ‰RO DEUX, AYATHOYA
+//ayathoya,183,105,3	script	Enfant Vagabond	4W_KID,{
+ayothaya,207,102,3	script	Enfant Vagabond	4W_KID,{
+	if ((countitem(29478) > 0)) {
+		switch(select("Bonjour !")) {
+		case 1:
+			mes "[^B40431Enfant Vagabond^000000]";
+			mes "Mais ?! Qui êtes-vous ?";
+			next;
+			mes "[^B40431Enfant Vagabond^000000]";
+			mes "Prouvez-moi que je peux vous faire confiance, ou partez !";
+			next;
+			input .@input$;
+			if (.@input$ == "HA") {
+			mes "[^B40431Enfant Vagabond^000000]";
+			mes "Oh ! Alors c'est mon frère qui vous envoie ?";
+			next;
+			mes "[^B40431Enfant Vagabond^000000]";
+			mes "Il devait s'en faire pour moi. Mais je vais très bien !";
+			mes "Je suis parti à la recherche du légendaire Wandering Minstrel !";
+			next;
+			mes "[^B40431Enfant Vagabond^000000]";
+			mes "Mais jusque là, je n'ai rien trouvé, peut-être que mon troisième frère en sait plus ?";
+			next;
+
+			switch(select("Un indice ?")) {
+				mes "[^B40431Enfant Vagabond^000000]";
+				mes "Hmm... Ce bonbon que tu as là contre l'indice !";
+				next;
+				if ((countitem(29478) > 0)) {
+					delitem 29478,1;
+					getitem 29479,1;
+					mes "[^B40431Enfant Vagabond^000000]";
+					mes "Si tu le trouves, ^0101DFdis lui ce que tu m'as dit^000000, et dis lui également ^0101DFRI^000000 de ma part";
+					next;
+					mes "[^B40431Enfant Vagabond^000000]";
+					mes "La dernière fois que je l'ai vu, ^0101DFil commençait une partie de Cache-Cache avec Cécilia^000000.";
+					mes "Et tiens, donne lui également ça, si tu le trouves !";
+					close;
+				}
+				else {
+					mes "[^B40431Enfant Vagabond^000000]";
+					mes "Mais ? Où est-il passé ?";
+					close;
+					}
+				}
+			}
+			else {
+			mes "[^B40431Enfant Vagabond^000000]";
+			mes "Aller ! Du balai !";	
+			close;			
+			}
+		}
+	}	
+	else {
+	mes "[^B40431Enfant Vagabond^000000]";
+	mes "Qui êtes-vous ?";	
+	close;
+	}
+end;
+}
+// ENFANT NUMÃ‰RO TROIS, SPLENDIDE
+//splendide,378,36,3	script	Enfant Vagabond	4_KID01,{
+splendide,378,36,3	script	Enfant Camouflé	4_KID01,{
+	if (countitem(29479) > 0) {
+		switch(select("Salut !")) {
+		case 1:
+			mes "[^B40431Enfant Camouflé^000000]";
+			mes "Mais ?! Partez ! Vous allez me faire repérer !";
+			next;
+			mes "[^B40431Enfant Camouflé^000000]";
+			mes "A moins que...";
+			next;
+			input .@input$;
+			if (.@input$ == "HARI") {
+			mes "[^B40431Enfant Camouflé^000000]";
+			mes "Oui... Je vois.";
+			next;
+			mes "[^B40431Enfant Camouflé^000000]";
+			mes "Alors comme ça, vous aussi, vous cherchez à trouver le légendaire Wandering Minstrel ?";
+			next;
+			mes "[^B40431Enfant Camouflé^000000]";
+			mes "Et qu'est-ce que j'y gagne, en retour ?";
+			next;
+				if (countitem(29479) > 0) {
+				mes "[^B40431Enfant Camouflé^000000]";
+				mes "Ah ! Je sais, ton bonbon, contre ce que je sais.";
+					switch(select("Ok.:Non.")) {
+					case 1:
+					if (countitem(29479) > 0) {
+						delitem 29479,1;
+						getitem 29480,1;
+						mes "Mais jusque là , mon enquête m'a simplement mené à des rumeurs, qui disent qu'^0101DFil adorerait faire des bonhommes de neiges^000000.";
+						mes "Mais il paraît également qu'^0101DFil ne réagirait qu'en entendant le son des trois plus mélodieuses syllabes qui existent au monde^000000.";
+						next;
+						mes "[^B40431Enfant Camouflé^000000]";
+						mes "Mes frères et moi avons cherchés, et jusque là , il semblerait que nous soyons tombés dans une impasse.";
+						next;
+						mes "[^B40431Enfant Camouflé^000000]";
+						mes "^0101DFNous n'arrivons pas à trouver la dernière syllabe, mais nous sommes certains d'une chose, c'est que les deux premières sont ^B40431HARI^000000.";
+						next;
+						mes "[^B40431Enfant Camouflé^000000]";
+						mes "Certains disent que ^0101DFcela aurait un rapport avec son goût prononcé pour le sucre ?^000000";
+						next;
+						mes "[^B40431Enfant Camouflé^000000]";
+						mes "Je me suis donc procuré ça, au cas où. Garde-le, tu en auras sûrement plus besoin que moi.";
+						next;
+						mes "[^B40431Enfant Camouflé^000000]";
+						mes "Maintenant ouste ! Je suis toujours en plein cache-cache !";
+						close;	
+						}
+					else {
+						mes "[^B40431Enfant Camouflé^000000]";
+						mes "Mais ?! Où est passé le bonbon ?!";	
+						close;			
+						}
+					case 2:
+					mes "[^B40431Enfant Camouflé^000000]";
+					mes "Tant pis pour toi.";	
+					close;
+					}
+			}
+			else {
+			mes "[^B40431Enfant Camouflé^000000]";
+			mes "Aller ! Partez avant que je me fasse repérer !";	
+			close;			
+			}
+			}
+			else {
+			mes "[^B40431Enfant Camouflé^000000]";
+			mes "Aller ! Partez avant que je me fasse repérer !";
+			close;			
+			}			
+		}
+	}
+	else {
+		mes "[^B40431Enfant Camouflé^000000]";
+		mes "Aller ! Partez avant que je me fasse repérer !";
+		close;			
+		}	
+end;
+}
+// Wandering Minstrel Hat Main
+xmas,252,120,5	script	Wandering Minstrel	1_M_BARD,{
+		if (countitem(29480) > 0) {
+			mes "[^0489B1Wandering Minstrel^000000]";
+			mes "Oui ?";
+			next;
+			input .@input$;
+			if (.@input$ == "HARIBO") {
+			mes "[^0489B1Wandering Minstrel^000000]";
+			mes "Et bien ! Voilà  un son qui rechauffe le corps et l'esprit !";
+			mes "J'ai beau chanté du matin au soir, aucunes de mes chansons n'égalent de près ou de loin ces 3 syllabes magiques !";
+			next;
+			mes "[^0489B1Wandering Minstrel^000000]";
+			mes "Je suppose que tu es venu pour que je te donne la recette de mon célébre Hat !";
+			next;
+				switch(select("Tout à fait !:Non, je m'ennuyais juste, salut.")) {
+				case 1:
+					mes "[^FF8000Wandering Minstrel^000000]";
+					mes "Et bien, la voici :";
+					mes "3 Feather Bonnet.";
+					mes "3 Straw Hat.";
+					mes "1 Gentle Breeze Guitar.";
+					mes "3 Lute [3].";
+					mes "5 Wanderer Card.";
+					mes "20 Loner's Guitar.";
+					mes "100 Zircon.";
+					mes "100 Emerald.";
+					mes "200 Darkgreen Dyestuff.";
+					mes "500 Large Jellopy.";
+					mes "2000 Harpy's Feather.";
+					mes "Ainsi que le ^FF8000Guarana Candy^000000 que tu as là.";
+					next;
+					mes "[^FF8000Wandering Minstrel^000000]";
+					mes "C'est donné, pour un tel Hat, non ?";
+					next;
+					mes "[^FF8000Wandering Minstrel^000000]";
+					mes "Et en plus, mon frère te proposera même un service de coloration une fois terminé !";
+					next;
+					switch(select("J'ai le tout !:Il me manque deux trois items, je reviens...")) {
+					case 1:
+						if ((countitem(29480) > 0) && (countitem(979) > 199) && 
+						(countitem(5018) > 2) && (countitem(5062) > 2) && 
+						(countitem(7115) > 1999) && (countitem(721) > 99) && 
+						(countitem(1917) > 0) && (countitem(1915) > 19) && (countitem(1906) > 2) && 
+						(countitem(729) > 99) && (countitem(4210) > 4) && (countitem(7126) > 499)) {
+							mes "[^FF8000Wandering Minstrel^000000]";
+							mes "Épatant ! Donne moi un petit instant... Hop !";
+							delitem 979,200;
+							delitem 5018,3;
+							delitem 5062,3;
+							delitem 7115,2000;
+							delitem 721,100;
+							delitem 1917,1;
+							delitem 1915,20;
+							delitem 1906,3;
+							delitem 729,100;
+							delitem 4210,5;
+							delitem 7126,500;
+							delitem 29480,1;
+							getitem 5188,1; //Wandering Mintrel Hat
+							close;
+						}
+						else {
+							mes "[^0489B1Wandering Minstrel^000000]";
+							mes "Non, il manque des items !";
+							close;
+							}
+					case 2:
+						mes "[^0489B1Wandering Minstrel^000000]";
+						mes "A la prochaine !";
+						close;
+					}
+				case 2:
+					mes "[^0489B1Wandering Minstrel^000000]";
+					mes "Euh, d'accord...";
+					close;
+				}
+			}
+			else {
+			mes "[^0489B1Wandering Minstrel^000000]";
+			mes "Hmm... Je crois que je vais retourner à mes bonhommes de neige.";
+			close;
+			}
+		}
+		else {
+		mes "Il semble faire un bonhomme de neige sans vous remarquer.";
+		close;
+		}
+	end;
+	}
+// Wandering Minstrel Hat Main
+xmas,259,127,3	script	Minstrel	1_M_BARD,{
+	if (countitem(5188) > 0 || countitem(29340) > 0 || countitem(29341) > 0 || countitem(5427) > 0 || countitem(5426) > 0 || countitem(29344) > 0 || countitem(29345) > 0 || countitem(29346) > 0) {
+		mes "[^0489B1Minstrel^000000]";
+		mes "Ah ! Quel beau hat tu as là.";
+		mes "Moi ? Je suis le frère du Wandering Minstrel";
+		next;
+		mes "[^0489B1Minstrel^000000]";
+		mes "Je m'occupe de la customisation, de quoi as-tu besoin ?";
+		next;
+			switch(select("Je voudrais le colorer.:J'aimerais le décolorer.")) {
+				case 1:
+				mes "[^0489B1Minstrel^000000]";
+				mes "De quelle couleur souhaites-tu le colorer ?";
+				mes "Je vais avoir besoin de 150 dyestuffs de la couleur que tu souhaites.";
+				mes "Au passage, je peux uniquement colorer le Wandering Minstrel de base.";
+				next;
+				switch(select("Noir:Blue:Cyan:Gold:Purple:Red:White:Non merci.")) {
+					case 1:
+					if ((countitem(5188) > 0) && (countitem(983) > 149)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5188,1; //Minstrel Hat  
+						delitem 983,150; //Black_Dyestuffs
+						close2;
+						getitem 29340,1; //Black Minstrel Hat
+						end;
+						}
+						else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas les ingrédients requis !";
+						close;
+						}
+					case 2:
+					if ((countitem(5188) > 0) && (countitem(978) > 149)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5188,1; //Minstrel Hat  
+						delitem 978,150; //Cobaltue
+						close2;
+						getitem 29341,1; //Blue Minstrel Hat
+						end;
+						}
+						else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas les ingrédients requis !";
+						close;
+						}
+					case 3:
+					if ((countitem(5188) > 0) && (countitem(978) > 149) && (countitem(982) > 149)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5188,1; //Minstrel Hat  
+						delitem 978,150; //Cyan_Dyestuffs
+						delitem 982,150; //White_Dyestuffs
+						close2;
+						getitem 5427,1; //Cyan Minstrel Hat
+						end;
+						}
+						else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas les ingrédients requis !";
+						close;
+						}
+					case 4:
+					if ((countitem(5188) > 0) && (countitem(976) > 149)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5188,1; //Minstrel Hat  
+						delitem 976,150; //Lemon_Dyestuffs
+						close2;
+						getitem 5426,1; //Gold Minstrel Hat
+						end;
+						}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas les ingrédients requis !";
+						close;
+						}
+					case 5:
+					if ((countitem(5188) > 0) && (countitem(981) > 149)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5188,1; //Minstrel Hat  
+						delitem 981,150; //Violet_Dyestuffs
+						close2;
+						getitem 29344,1; //Purple Minstrel Hat
+						end;
+						}
+						else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas les ingrédients requis !";
+						close;
+						}
+					case 6:
+					if ((countitem(5188) > 0) && (countitem(975) > 149)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5188,1; //Minstrel Hat  
+						delitem 975,150; //Red_Dyestuffs
+						close2;
+						getitem 29345,1; //Red Minstrel Hat
+						end;
+						}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas les ingrédients requis !";
+						close;
+						}
+					case 7:
+					if ((countitem(5188) > 0) && (countitem(982) > 199)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5188,1; //Minstrel Hat  
+						delitem 982,150; //White_Dyestuffs
+						close2;
+						getitem 29346,1; //White Minstrel Hat 
+						end;
+						}
+						else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas les ingrédients requis !";
+						close;
+						}
+					case 9:
+						mes "[^0489B1Minstrel^000000]";
+						mes "D'accord.";
+						close;
+				}
+			case 2:
+				mes "[^0489B1Minstrel^000000]";
+				mes "Quel type de couleur souhaites-tu décolorer ?";
+				next;
+				switch(select("Noir:Blue:Cyan:Gold:Purple:Red:White:Non merci.")) {
+					case 1:
+					if ((countitem(29340) > 0)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 29340,1; //Black Minstrel Hat
+						close2;
+						getitem 5188,1; //Minstrel Hat  
+						end;
+					}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas cette couleur de Minstrel Hat.";
+						close;
+					}
+					case 2:
+					if ((countitem(29341) > 0)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 29341,1; //Blue Minstrel Hat
+						close2;
+						getitem 5188,1; //Minstrel Hat  
+						end;
+					}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas cette couleur de Minstrel Hat.";
+						close;
+					}
+					case 3:
+					if ((countitem(5427) > 0)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5427,1; //Cyan Minstrel Hat				
+						close2;
+						getitem 5188,1; //Minstrel Hat  
+						end;
+					}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas cette couleur de Minstrel Hat.";
+						close;
+					}
+					case 4:
+					if ((countitem(5426) > 0)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 5426,1; //Gold Minstrel Hat
+						close2;
+						getitem 5188,1; //Minstrel Hat  
+						end;
+					}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas cette couleur de Minstrel Hat.";
+						close;
+					}
+					case 5:
+					if ((countitem(29344) > 0)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 29344,1; //Purple Minstrel Hat				
+						close2;
+						getitem 5188,1; //Minstrel Hat  
+						end;
+					}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas cette couleur de Minstrel Hat.";
+						close;
+					}
+					case 6:
+					if ((countitem(29345) > 0)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 29345,1; //Red Minstrel Hat				
+						close2;
+						getitem 5188,1; //Minstrel Hat  
+						end;
+					}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas cette couleur de Minstrel Hat.";
+						close;
+					}
+					case 7:
+					if ((countitem(29346) > 0)) {
+						mes "[^0489B1Minstrel^000000]";
+						mes "C'est parti !";
+						delitem 29346,1; //White Minstrel Hat 					
+						close2;
+						getitem 5188,1; //Minstrel Hat  
+						end;
+					}
+					else {
+						mes "[^0489B1Minstrel^000000]";
+						mes "Tu n'as pas cette couleur de Minstrel Hat.";
+						close;
+					}
+					case 8:
+					mes "[^0489B1Minstrel^000000]";
+					mes "D'accord.";
+					close;
+				}	
+			}
+	}
+	else {
+	mes "[^0489B1Minstrel^000000]";
+	mes "Reviens donc me parler une fois que tu auras un Wandering Minstrel Hat !";
+	close;
+	}
+	end;
+}

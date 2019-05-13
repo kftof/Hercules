@@ -37,15 +37,15 @@
 thor_v01,0,0,0,0	monster	Magmaring	1836,10,0,0,0
 thor_v01,0,0,0,0	monster	Fire Imp	1837,5,0,0,0
 thor_v01,0,0,0,0	monster	Fire Imp	1837,12,1800000,0,0
-thor_v01,80,255,65,35	monster	Fire Imp	1837,2,0,0,0
-thor_v01,240,250,50,30	monster	Fire Imp	1837,2,0,0,0
-thor_v01,90,100,50,50	monster	Fire Imp	1837,2,0,0,0
-thor_v01,210,110,50,30	monster	Fire Imp	1837,2,0,0,0
+thor_v01,0,0,0,0	monster	Fire Imp	1837,2,0,0,0
+thor_v01,0,0,0,0	monster	Fire Imp	1837,2,0,0,0
+thor_v01,0,0,0,0	monster	Fire Imp	1837,2,0,0,0
+thor_v01,0,0,0,0	monster	Fire Imp	1837,2,0,0,0
 thor_v01,0,0,0,0	monster	Kasa	1833,25,0,0,0
-thor_v01,80,255,65,35	monster	Kasa	1833,5,0,0,0
-thor_v01,240,250,50,30	monster	Kasa	1833,5,0,0,0
-thor_v01,90,100,50,50	monster	Kasa	1833,5,0,0,0
-thor_v01,210,110,50,30	monster	Kasa	1833,5,0,0,0
+thor_v01,0,0,0,0	monster	Kasa	1833,5,0,0,0
+thor_v01,0,0,0,0	monster	Kasa	1833,5,0,0,0
+thor_v01,0,0,0,0	monster	Kasa	1833,5,0,0,0
+thor_v01,0,0,0,0	monster	Kasa	1833,5,0,0,0
 thor_v01,0,0,0,0	monster	Sword Master	1829,5,420000,0,0
 thor_v01,0,0,0,0	monster	Bow Master	1830,5,420000,0,0
 thor_v01,0,0,0,0	monster	Salamander	1831,5,3600000,0,0
@@ -68,15 +68,15 @@ thor_v02,0,0,0,0	monster	Bow Master	1830,1,7200000,0,0
 
 //== thor_v03 - Thor Volcano Dungeon =======================
 thor_v03,0,0,0,0	monster	Kasa	1833,16,0,0,0
-thor_v03,95,220,64,55	monster	Kasa	1833,6,0,0,0
-thor_v03,223,224,65,60	monster	Kasa	1833,6,0,0,0
-thor_v03,80,90,60,60	monster	Kasa	1833,6,0,0,0
-thor_v03,218,81,60,60	monster	Kasa	1833,6,0,0,0
+thor_v03,0,0,0,0	monster	Kasa	1833,6,0,0,0
+thor_v03,0,0,0,0	monster	Kasa	1833,6,0,0,0
+thor_v03,0,0,0,0	monster	Kasa	1833,6,0,0,0
+thor_v03,0,0,0,0	monster	Kasa	1833,6,0,0,0
 thor_v03,0,0,0,0	monster	Salamander	1831,20,0,0,0
-thor_v03,95,220,64,55	monster	Salamander	1831,10,0,0,0
-thor_v03,223,224,65,60	monster	Salamander	1831,10,0,0,0
-thor_v03,80,90,60,60	monster	Salamander	1831,10,0,0,0
-thor_v03,218,81,60,60	monster	Salamander	1831,10,0,0,0
+thor_v03,0,0,0,0	monster	Salamander	1831,10,0,0,0
+thor_v03,0,0,0,0	monster	Salamander	1831,10,0,0,0
+thor_v03,0,0,0,0	monster	Salamander	1831,10,0,0,0
+thor_v03,0,0,0,0	monster	Salamander	1831,10,0,0,0
 thor_v03,0,0,0,0	monster	Sword Master	1829,5,0,0,0
 thor_v03,0,0,0,0	monster	Sword Master	1829,5,1800000,0,0
 thor_v03,0,0,0,0	monster	Bow Master	1830,5,0,0,0

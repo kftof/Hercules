@@ -1,0 +1,276 @@
+//============================================================
+// EVENT POTOW
+//============================================================
+gonryun,167,109,4	script	AnnonceEvent	2_BULLETIN_BOARD,{
+
+	mes "[^B4045FPanneau d'Affichage^000000]";
+	mes "^0000FFDate de fin de l'Event^000000 : Dimanche 17/04 à minuit.";
+	next;
+	mes "[^B4045FPanneau d'Affichage^000000]";
+	mes "^04B404Indice^000000 : Trouvez-moi dans la ville des Ninja, sous un cerisier.";
+	next;
+	mes "[^B4045FPanneau d'Affichage^000000]";
+	mes "^FF0000Règles^000000 : Une seule participation par personne.";
+	mes "Les récompenses seront distribuées Lundi 18/04 dans la journée/soirée.";
+	next;
+	mes "[^B4045FPanneau d'Affichage^000000]";
+	mes "Amusez-vous bien !";
+	close;
+	
+end;
+}
+
+//============================================================
+// EVENT POTOW
+//============================================================
+amatsu,270,239,4	script	Event1	4_MAN_NITT,{
+	if ((countitem(7461) < 1)) {
+	mes "[^0080FFEvent1^000000]";
+	mes "Oui ?";
+	next;
+	switch(select("Je viens pour l'event !:Rien.")) {
+	case 1:
+		mes "[^0080FFEvent1^000000]";
+		mes "D'accord ! C'est très simple, j'ai besoin que tu me ramènes une liste d'objet.";
+		next;
+		switch(select("De quoi as-tu besoin ?:Non.")) {
+		case 1:
+			mes "[^0080FFEvent1^000000]";
+			mes "500 Nose Ring";
+			mes "1000 Feather of Birds";
+			mes "20 Wool Scarf";
+			mes "200 Bitter Herb";
+			mes "500 Ice Cubic";
+			mes "200 Evil Horn";
+			mes "500 Bill of Birds";
+			mes "500 Rat Tail";
+			mes "C'est tout ce dont j'ai besoin.";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(941) > 499) && (countitem(916) > 999) && (countitem(2528) > 19) && (countitem(621) > 199) && (countitem(7066) > 499) && (countitem(923) > 199) && (countitem(925) > 499) && (countitem(1016) > 499)) {
+					mes "[^0080FFEvent1^000000]";
+					mes "Et bien, le compte est bon ! Tu dois maintenant retrouver l'un de mes deux frères.";
+					next;
+					mes "[^0080FFEvent1^000000]";
+					mes "Il se trouve dans la même ville qu'une personne ayant eu besoin de l'antidote de Killya.";
+					next;
+					mes "[^0080FFEvent1^000000]";
+					mes "Bonne chance !";
+					delitem 941,500; 
+					delitem 916,1000; 
+					delitem 2528,20;
+					delitem 621,200; 
+					delitem 7066,500; 
+					delitem 923,200; 
+					delitem 925,500; 
+					delitem 1016,500; 
+					getitem 7461,1; 
+					close;
+				}
+				else {
+					mes "[^0080FFEvent1^000000]";
+					mes "Il manque quelque chose !";
+					close;
+				}
+			case 2:
+				mes "[^0080FFEvent1^000000]";
+				mes "Tant pis pour toi !";
+				close;	
+			}
+		case 2:
+			mes "[^0080FFEvent1^000000]";
+			mes "Tant pis !";
+			close;
+		}
+	case 2:
+		mes "[^0080FFEvent1^000000]";
+		mes "Tant pis.";
+		close;
+	}
+	}
+	else {
+		mes "[^0080FFEvent1^000000]";
+		mes "Il se trouve dans la même ville qu'une personne ayant eu besoin de l'antidote de Killya.";
+		close;
+		}
+	end;
+}
+
+// NPC NUMEROUS DOS
+rachel,244,194,4	script	Event2	4_MAN_JERUTOO,{
+	if ((countitem(7713) < 1)) {
+		if ((countitem(7461) > 0)) {
+		mes "[^0080FFEvent2^000000]";
+		mes "Oui ?";
+		next;
+		switch(select("Je viens pour l'event !:Rien.")) {
+		case 1:
+			mes "[^0080FFEvent2^000000]";
+			mes "Et bien, félicitation, tu m'as retrouvé. Il ne te reste plus qu'à m'apporter quelque bricoles !";
+			next;
+			switch(select("De quoi as-tu besoin ?:Non.")) {
+			case 1:
+				mes "[^0080FFEvent2^000000]";
+				mes "500 Coral Reef";
+				mes "300 Fig Leaf";
+				mes "400 Yellow Plate";
+				mes "600 Tassel";
+				mes "500 Tengu Nose";
+				mes "500 Solid Peach";
+				mes "500 Hard Feeler";
+				mes "500 Black Bear skin";
+				mes "C'est tout ce dont j'ai besoin.";
+				next;
+				switch(select("Lui donner les items.:Ne pas lui donner.")) {
+				case 1:
+					if ((countitem(7013) > 499) && (countitem(7298) > 299) && (countitem(7149) > 399) && (countitem(7301) > 599) && (countitem(7159) > 499) && (countitem(7164) > 499) && (countitem(7163) > 499) && (countitem(7161) > 499) && (countitem(7461) > 0)) {
+						mes "[^0080FFEvent2^000000]";
+						mes "Et bien, le compte est bon ! Tu dois maintenant retrouver l'un de mes deux frères.";
+						next;
+						mes "[^0080FFEvent2^000000]";
+						mes "Mon frère se trouve là où les jeunes mariés célèbrent généralement leur noce.";
+						next;
+						mes "[^0080FFEvent2^000000]";
+						mes "Bonne chance !";
+						delitem 7013,500; 
+						delitem 7298,300; 
+						delitem 7149,400;
+						delitem 7301,600; 
+						delitem 7159,500; 
+						delitem 7164,500; 
+						delitem 7163,500; 
+						delitem 7161,500; 
+						delitem 7461,1;
+						getitem 7713,1; 
+						close;
+					}
+					else {
+						mes "[^0080FFEvent2^000000]";
+						mes "Il manque quelque chose !";
+						close;
+					}
+				case 2:
+					mes "[^0080FFEvent2^000000]";
+					mes "Tant pis pour toi !";
+					close;	
+				}
+			case 2:
+				mes "[^0080FFEvent2^000000]";
+				mes "Tant pis !";
+				close;
+			}
+		case 2:
+			mes "[^0080FFEvent2^000000]";
+			mes "Tant pis.";
+			close;
+		}
+		}
+		else {
+			mes "[^0080FFEvent2^000000]";
+			mes "...";
+			close;
+			}
+	}
+	else {
+			mes "[^0080FFEvent2^000000]";
+			mes "Mon frère se trouve là où les jeunes mariés célèbrent généralement leur noce.";
+			close;
+	}
+	end;
+}
+// NPC NUMEROUS TRES
+jawaii,198,296,4	script	Event3	4_MAN_LAVAIL,{
+	if ((countitem(6011) < 1)) {
+		if ((countitem(7713) > 0)) {
+		mes "[^0080FFEvent3^000000]";
+		mes "Oui ?";
+		next;
+		switch(select("Je viens pour l'event !:Rien.")) {
+		case 1:
+			mes "[^0080FFEvent3^000000]";
+			mes "Je suis le dernier des 3 frères, voici la dernière étape !";
+			next;
+			switch(select("De quoi as-tu besoin ?:Non.")) {
+			case 1:
+				mes "[^0080FFEvent3^000000]";
+				mes "1000 Shining Scale";
+				mes "100 Wind of Verdure";
+				mes "100 Aquamarine";
+				mes "700 White Mask";
+				mes "500 Brown Root";
+				mes "200 Candy";
+				mes "300 Horrendous Hair";
+				mes "10 Chain Mail[1]";
+				mes "500 Dragon's Mane";
+				mes "200 Slingshot";
+				mes "500 Rooten Meat";
+				mes "200 Tendon";
+				mes "3 Forbidden Red Candle";
+				mes "10 Loki's Whisper";
+				mes "300 Soft Blade of Grass";
+				mes "400 Hinalle Leaflet";
+				mes "C'est tout ce dont j'ai besoin.";
+				next;
+				switch(select("Lui donner les items.:Ne pas lui donner.")) {
+				case 1:
+					if ((countitem(954) > 999) && (countitem(992) > 99) && (countitem(720) > 99) && (countitem(7568) > 699) && (countitem(7188) > 499) && (countitem(529) > 199) && (countitem(1048) > 299) && (countitem(2315) > 9) && (countitem(6073) > 499) && (countitem(7195) > 199) && (countitem(7564) > 499) && (countitem(1050) > 199) && (countitem(660) > 2) && (countitem(7019) > 9) && (countitem(7194) > 299) && (countitem(520) > 399) && (countitem(7713) > 0)) {
+						mes "[^0080FFEvent3^000000]";
+						mes "Et bien, le compte est bon ! Tu n'as plus qu'à attendre la fin de l'Event.";
+						next;
+						mes "[^0080FFEvent3^000000]";
+						mes "Bonne chance !";
+						delitem 954,1000; 
+						delitem 992,100; 
+						delitem 720,100; 
+						delitem 7568,700;
+						delitem 7188,500; 
+						delitem 529,200; 
+						delitem 1048,300; 
+						delitem 2315,10; 
+						delitem 6073,500; 
+						delitem 7195,200;
+						delitem 7564,500; 
+						delitem 1050,200; 
+						delitem 660,3; 
+						delitem 7019,10; 
+						delitem 7194,300; 
+						delitem 520,400;
+						delitem 7713,1;
+						getitem 6011,1; 
+						close;
+					}
+					else {
+						mes "[^0080FFEvent3^000000]";
+						mes "Il manque quelque chose !";
+						close;
+					}
+				case 2:
+					mes "[^0080FFEvent3^000000]";
+					mes "Tant pis pour toi !";
+					close;	
+				}
+			case 2:
+				mes "[^0080FFEvent3^000000]";
+				mes "Tant pis !";
+				close;
+			}
+		case 2:
+			mes "[^0080FFEvent3^000000]";
+			mes "Tant pis.";
+			close;
+		}
+		}
+		else {
+			mes "[^0080FFEvent3^000000]";
+			mes "...";
+			close;
+			}
+	}
+	else {
+		mes "[^0080FFEvent3^000000]";
+		mes "Attends la fin de l'event et garde précieusement ton certificat, tu en auras besoin pour la récompense !";
+		close;
+	}
+	end;
+}

@@ -28,3 +28,165 @@
 //   for different monsters, override drop rate with Ratio=100 and edit
 //   base drop rates in mob_db.
 // - This file is reloaded by @reloadmobdb.
+
+747,100 // cristal mirror
+
+673,100 // copper coin
+675,100 // silver
+671,100 // gold
+677,100 // platine
+674,100 // mithril
+
+29291,100 // angel wing ears slot
+29292,100 // evil wing ears slot
+
+13412,100 // Twin_Edge_B: 9000
+13413,100 // Twin_Edge_R: 9000
+2542,100 // Flame_Manteau: 9000
+
+6245,100 // Black_Powder
+5017,100 // Bone_Helm
+
+621,100 // Bitter_Herb
+6110,100 // Vital_Flower
+
+2520,100 // goibne
+5128,100 // goibne
+2419,100 // goibne
+2354,100 // goibne
+7435,100 // Golden_Bracelet
+702,100 // Animal_Blood
+
+29400,100 // Heaven's_Coin
+14533,100 // Battle_Manual100
+12132,100 // Red_Bag
+12260,100 // Cool_Summer_Outfit
+
+990,100 // Boody_Red
+991,100 // Crystal_Blue
+992,100 // Wind_Of_Verdure
+993,100 // Yellow_Live
+
+7174,100 // Packing_Ribbon
+7175,100 // Packing_Paper
+
+2268,100 // Smoking_Pipe
+
+7478,100 // CookBook07
+7479,100 // Cookbook08
+7480,100 // Cookbook09
+
+2254,100 // Angelic_Chain
+2255,100 // Satanic_Chain
+
+718,100 // Dark_Red_Jewel
+719,100 // Violet_Jewel
+720,100 // Skyblue_Jewel
+721,100 // Azure_Jewel
+722,100 // Scarlet_Jewel
+723,100 // Cardinal_Jewel
+724,100 // Cardinal_Jewel_
+725,100 // Red_Jewel
+726,100 // Blue_Jewel
+727,100 // White_Jewel
+728,100 // Golden_Jewel
+729,100 // Bluish_Green_Jewel
+
+730,100 // 1 carat
+731,100 // 2 carat
+732,100 // 3 carat
+733,100 // cracked
+
+996,100 // rough wind
+1917,100 // Old Breeze Guitar
+7174,500 // Wrapping Lace
+635,100 // orc trophy
+660,100 // Fordidden Red Candle
+7023,100 // Blade lost in the darkness
+7510,100 // valkyrie flower
+7875,100 // pirate treasure
+7444,100 // Treasure_Box
+660,100 // Prohibition_Red_Candle
+995,100 // Mistic_Frozen
+7224,100 // Stone_Of_Intelligence_
+12040,100 // Stone_Of_Intelligence_
+749,100 // Frozen_Rose
+748,100 // Witherless_Rose
+1306,100 // War_Axe
+5124,100 // Fricca_Circlet
+2554,100 // niddog / Piece_Of_Angent_Skin
+2651,100 // Morrigane's_Pendant
+2519,100 // Morrigane's_Manteau
+2650,100 // Morrigane's_Belt
+2649,100 // Morpheus's_Armlet
+2648,100 // Morpheus's_Ring
+2518,100 // Morpheus's_Shawl
+5126,100 // Morpheus's_Hood
+7436,100 // frag thana
+7437,100 // frag thana
+7438,100 // frag thana
+7439,100 // frag thana
+7583,100 // Evil Mind
+1724,100 // Dragon Wing
+7036,100 // Fang of Garm
+7620,100 // Enriched Oridecon
+7619,100 // Enriched Elunium
+1737,100 // Ixion Wing
+2423,100 // Variant Shoes
+1231,100 // Bazerald
+1237,100 // Grimtooth
+1228,100 // Combat Knife
+2655,100 // BSB
+6004,100 // Cursed Baphomet Doll
+7832,100 // brynhild armor piece
+6071,100 // broken sword
+7807,100 // god mineral
+7808,100 // god hammer
+7806,100 // god anvil
+7102,100 // nightmare
+7809,100 // god furnace
+7830,100 // goddess tear
+29199,100 // maya hat
+6008,100 // sacred wood
+29278,100    // Orbe du Chaos (noire) - Valkyrie Randgris
+29411,100    // Orbe de Paradis (blanche) - White Lady
+29412,100    // Orbe de Glace (cyan) - Garm
+29350,100    // Orbe des Tempêtes (rose) - General Egnigem Cenia
+29413,100   //  Orbe de Vent (verte) - Gopinich
+29414,100    // Orbe Dorée (gold) - Golden Thief Bug
+29415,100    // Orbe Abyssale (violette) - Gloom Under Night
+29416,100    // Orbe Ciel (bleue) - Tao Gunka
+29410,100    // Orbe Infernale (rouge) - Ifrit
+29417,100    // Orbe de Feu (orange) - Détale
+29419,100   //  Orbe Bois (marron claire) - Maya
+29418,100   //  Orbe Terre (marron foncée) - Satan Morroc
+29420,100   //  Orbe du Soleil (jaune) - Beelzebub
+29409,100 // orbe Sang
+
+2115,100 // V shield
+5127,100 // morri helm
+5126,100 // morpheus hood
+2650,100 // morri
+2651,100 // morri
+2519,100 // morri
+
+13017,100 // House_Auger_
+1230,100 // Ice pick
+2701,100 // orlean's glove
+1228,100 // CK
+
+2537,100 // d manteau
+2729,100 // d ring
+2130,100 // cross shield
+2536,100 // skin of ventus
+
+5017,100 // bone head
+5162,100 // bone helm[1]
+1625,100 // healing staff
+1626,100 // piercing staff
+1261,100 // infiltrator
+
+5172,100 // beret
+
+2424,100 // tidal shoes
+2528,100 // wool scarf

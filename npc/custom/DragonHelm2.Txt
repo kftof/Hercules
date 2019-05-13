@@ -1,0 +1,179 @@
+// Pierre d'invocation
+5@tower,100,105,4	script	Magic Stone	2_MONEMUS,{
+	mes "Approcher l'anneau de la pierre ?";
+	next;
+	switch(select("Oui:Non")) {
+		case 1:
+			if (countitem(29497) > 0) {
+			mes "La pierre réagit au contact de l'anneau.";
+			delitem 29497,1;
+			getitem 29498,1;
+				if ( mobcount("<map name>","lol") > 0 ) {
+				mes "Je ne peux prodiguer de soin tant que la salle n'est pas vide.";
+				close;
+				}
+				else {
+				monster ("5@tower"),82,85,"Lost Dragon",2131,1,"lol";
+				close;
+				}
+			}
+			else
+			{
+			mes "Vous cherchez dans votre inventaire, mais l'anneau semble avoir disparu.";
+			close;
+			}			
+		case 2:
+		mes "Rien ne se passe.";
+		close;	
+	}
+	end;
+}
+// true npc de la mort
+hu_fild05,177,200,4	script	Horamros Dryadson	JP_SABIKU,{
+	// check si le joueur possède le ring de la victoire
+	if ((countitem(29499) > 0)) {
+	mes "Horamros Dryadson";
+	mes "Tu as donc réussi à vaincre cet incroyable Dragon.";
+	next;
+	mes "Horamros Dryadson";
+	mes "Tu mérites de porter le symbole de ton triomphe.";
+	next;	
+		switch(select("Allons-y.")) {
+			case 1:
+			if ((countitem(29499) > 0) && (countitem(29498) > 0)) {
+			mes "Horamros Dryadson";
+			mes "Toutes mes félicitations.";
+			delitem 29499,1;
+			delitem 29498,1;
+			getitem 29357,1;
+			close;
+			}
+			else {
+			mes "Horamros Dryadson";
+			mes "Il te manque des anneaux.";
+			close;
+			}
+		}
+	}
+	// première essai, check le premier dragon ring
+	else if ((countitem(29497) > 0)) { 
+	mes "Horamros Dryadson";
+	mes "Tu veux donc tenter ta chance et prouver ton courage ?";
+	next;
+	mes "Horamros Dryadson";
+	mes "Je dois d'abord te prévenir. Les rares survivants de ce monstre rapporte que mêmes les bombes des alchemistes le traversaient.";
+	mes "Tu devrais donc te munir d'enchantements et de toutes les potions que tu trouveras pour le vaincre, car sa puissance est redoutable.";
+	next;
+	mes "Horamros Dryadson";
+	mes "Alors, on y va ?";
+	next;
+		switch(select("Oui:Non")) {
+			case 1:
+			if ((countitem(29497) > 0)) {
+			mes "Horamros Dryadson";
+			mes "Bonne chance.";	
+			warp "5@tower",98,103;
+			close;
+			}
+			else {
+			mes "Horamros Dryadson";
+			mes "Tu n'as pas l'anneau qui prouve ta réussite à la première étape.";	
+			close;				
+			}
+			case 2:
+			mes "Horamros Dryadson";
+			mes "Comme tu voudras.";	
+			close;	
+		}
+	}
+	// check si le joueur a le ring de la défaite 
+	else if ((countitem(29498) > 0)) {
+	mes "Horamros Dryadson";
+	mes "Donc tu n'as pas réussi.";
+	next;
+	mes "Horamros Dryadson";
+	mes "Si tu veux essayer de nouveau, préviens-moi.";
+	next;
+		switch(select("Je veux ré-essayer.:Non.")) {
+			case 1:
+			if ((countitem(29498) > 0)) {
+			mes "Horamros Dryadson";
+			mes "Bonne chance.";	
+			warp "5@tower",100,105;
+			close;
+			}
+			else {
+			mes "Horamros Dryadson";
+			mes "Tu n'as pas l'anneau qui prouve ton échec.";	
+			close;				
+			}
+			case 2:
+			mes "Horamros Dryadson";
+			mes "Je comprends, cela demande du courage.";
+			close;			
+		}
+	}
+	else {
+		mes "Horamros Dryadson";
+		mes "Je me présente, Horamros Dryadson.";
+		next;
+		mes "Horamros Dryadson";
+		mes "Si je suis ici, c'est pour chercher un héros capable de vaincre un terrible cataclysme.";
+		next;
+		mes "Horamros Dryadson";
+		mes "Si tu penses être ce héros, il te faudra d'abord me prouver ta valeur en m'apportant les objets suivants :";
+		next;
+		mes "Horamros Dryadson";
+		mes "3 Bone Head [1]";
+		mes "1000 Dragon Horn";
+		mes "5 Dragon Breath [1]";
+		mes "1000 Dragon Canine";
+		mes "3 Dragon Killer [2]";
+		mes "10 Gold Acidus Card";
+		mes "50 Three-Headed Dragon's Head";
+		mes "50 Golden Ornament";
+		mes "3 Golden Anvil";
+		mes "100 Topaz";
+		next;
+		mes "Horamros Dryadson";
+		mes "Une fois la première étape terminée, tu passeras à la seconde et ultime étape. ";
+		mes "Cependant, je dois te prévenir, un niveau de 500 au moins est conseillé pour réussir cette épreuve.";
+		next;		
+		mes "Horamros Dryadson";
+		mes "Es-tu prêt pour la 1er étape ?";
+		next;
+		switch(select("Oui, j'ai les items.:Non, j'ai besoin de plus de temps.")) {
+			case 1:
+			if ((countitem(5398) > 2) && (countitem(7265) > 999)
+				&& (countitem(2527) > 4) && (countitem(1035) > 999)
+			    && (countitem(13030) > 2) && (countitem(4378) > 9)
+			    && (countitem(7443) > 49) && (countitem(7435) > 49)
+			    && (countitem(988) > 2) && (countitem(728) > 99)) {
+				mes "Horamros Dryadson";
+				mes "Je te félicite, tu vas pouvoir passer à la seconde et dernière étape.";
+				delitem 5398,3;
+				delitem 7265,1000;
+				delitem 2527,5;
+				delitem 1035,1000;
+				delitem 13030,3;
+				delitem 4378,10;
+				delitem 7443,50;
+				delitem 7435,50;
+				delitem 988,3;
+				delitem 728,100;
+				getitem 29497,1;
+				close;
+				}
+				else {
+				mes "Horamros Dryadson";
+				mes "Tu n'as pas tous les objets requis.";
+				close;				
+				}
+			case 2:
+			mes "Horamros Dryadson";
+			mes "D'accord.";
+			close;
+		}
+	}
+end;
+}

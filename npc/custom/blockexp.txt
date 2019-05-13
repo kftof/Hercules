@@ -1,0 +1,119 @@
+/* EXP Blocking System via @commands @blockexp & @blockexp2
+	Created by: Aeromesi
+	Version 1.1 (Trying to fix over 65k problem)
+	Version 1.1.1 (Custom HR)
+	Emulators Supported: Hercules/rAthena
+*/
+
+-	script	BindBlockExp#Sys	-,{
+end;
+	OnInit:
+	bindatcmd "blockexp",strnpcinfo(0)+"::OnBlockExpHelp"; // @blockexp d'information
+	bindatcmd "blockexp99",strnpcinfo(0)+"::OnBlockExp"; // @blockexp99
+	bindatcmd "blockexp200",strnpcinfo(0)+"::OnBlockExp2"; // @blockexp200
+	
+	// STOP L'EXP POUR @blockexp99
+	$@BaseChoice1 = 99;
+	$@JobChoice1 = 70;
+	
+	// STOP L'EXP POUR @blockexp200
+	$@BaseChoice2 = 200;
+	$@JobChoice2 = 90;
+end;
+
+OnBlockExpHelp:
+dispbottom "Utiliser :";
+dispbottom "@blockexp99 pour bloquer l’exp au lvl 99/70.";
+dispbottom "@blockexp200 pour bloquer l’exp au lvl 200/90.";
+dispbottom "Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.";
+end;
+
+OnBlockExp:
+if ( !BlockEXPActive ) {
+	if ( BaseLevel > $@BaseChoice1 || JobLevel > $@JobChoice1 ) {
+	dispbottom "Le Blocage d’exp est activé, lvl 99/70 max.";
+	dispbottom "Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.";
+		end;
+	}
+BlockEXPActive++;
+dispbottom "Le BlockExp est actuellement activé pour le lvl : "+$@BaseChoice1+" || Job Level: "+$@JobChoice1+".";
+dispbottom "Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.";
+end;
+} else
+BlockEXPActive = 0;
+dispbottom "Le Blockexp est désactivé.";
+dispbottom "Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.";
+end;
+
+OnBlockExp2:
+if ( ! BlockEXPActive2 ) {
+	if ( BaseLevel > $@BaseChoice2 || JobLevel > $@JobChoice2 ) {
+	dispbottom "Le Blocage d’exp est activé, lvl 200/90 max.";
+	dispbottom "Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.";
+		end;
+	}
+BlockEXPActive2++;
+dispbottom "Le BlockExp est actuellement activé pour le lvl : "+$@BaseChoice2+" || Job Level: "+$@JobChoice2+".";
+dispbottom "Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.";
+end;
+} else
+BlockEXPActive2 = 0;
+dispbottom "Le Blockexp est désactivé.";
+dispbottom "Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.";
+end;
+}
+function	script	Block9970	{
+if ( BaseLevel == $@BaseChoice1 ) {
+	BaseExp = 0;
+}
+if ( JobLevel == $@JobChoice1 ) {
+	JobExp = 0;
+}
+end;
+}
+
+function	script	Block20090	{
+if ( BaseLevel == $@BaseChoice2 ) {
+	BaseExp = 0;
+}
+if ( JobLevel == $@JobChoice2 ) {
+	JobExp = 0;
+}
+end;
+}
+
+// Killing check for @blockexp99
+-	script	KillingCheck9970	-,{
+OnNPCKillEvent:
+if ( !BlockEXPActive ) {
+end;
+} else
+callfunc Block9970;
+end;
+}
+// Killing check for @blockexp200
+-	script	KillingCheck20090	-,{
+OnNPCKillEvent:
+if ( !BlockEXPActive2 ) {
+end;
+} else
+callfunc Block20090;
+end;
+}
+-	script	BlockEXPReminder	-,{
+OnPCLoginEvent:
+if ( BlockEXPActive ) {
+announce "[Rappel] Vous avez toujours un @blockexp d'activé.",bc_self;
+announce "[Rappel] Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.",bc_self;
+end;
+} else
+end;
+}
+-	script	BlockEXPReminder2	-,{
+OnPCLoginEvent:
+if ( BlockEXPActive2 ) {
+announce "[Rappel] Vous avez toujours un @blockexp d'activé.",bc_self;
+announce "[Rappel] Merci de consulter la notice d'utilisation de cette commande sur le forum => Information du serveur.",bc_self;
+end;
+}
+}

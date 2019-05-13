@@ -1,0 +1,3488 @@
+// SCRIP DENCULER POTO
+gonryun,202,114,4	script	Costume Maker	4_F_NYDHOG,{
+	mes "[^FF8000Costume Maker^000000]";
+	mes "Bonjour, je suis la reine des costumes !";
+	mes "En effet, je suis connue dans tout Rune-Midgard pour être capable de transformer les Hat en Costumes.";
+	next;
+	switch(select("Comment ça marche ?:Annuler.")) {
+	case 1:
+		mes "[^FF8000Costume Maker^000000]";
+		mes "C'est simple, je peux gratuitement transformer un Hat en Costume. Cependant, une fois en costume,"; 
+		mes "ton Hat n'aura plus aucun effet ni de slot, et tu perdras les cards qui se trouvaient";
+		mes "dedans ainsi que ses refines dans le processus.";
+		next;
+		mes "[^FF8000Costume Maker^000000]";
+		mes "De plus, ce changement est ^FF0000irrémédiable^000000, tu ne pourras pas revenir en arrière et retransformer ton";
+		mes "costume en hat.";
+		next;
+		mes "[^FF8000Costume Maker^000000]";
+		mes "Alors, ça te tente ?";
+		next;
+		switch(select("Oui, montrez-moi la liste !:Euh, non.")) {
+		case 1:
+		mes "[^FF8000Costume Maker^000000]";
+		mes "Quel type de Hat souhaites-tu transformer ?";
+		next;
+			switch(select("Liste Hat Upper:Liste Hat Middle:Liste Hat Low:Rien")) {
+			case 1:
+			mes "[^FF8000Costume Maker^000000]";
+			mes "Dis-moi quel Hat tu souhaites transformer.";
+			next;
+				switch(select("A-B:C-D:E-H:I-M:N-R:S-T:U-Z:Aucun")) {
+				case 1: // A-B
+					switch(select("Alice Doll:Antlers:Angeling Hat:Anubis Helm:Aquarius Crown:Aquarius Diadem:Aries Crown:Aries Diadem:Ayam:Baby Dragon Helm:Bao Bao:Baseball Cap:Beanie:Bell Ribbon:Black Cat Ears:Black Top Hat:Blue Beanie:Blue Fish:Blue Hairband:Blue Pajama Hat:Boy Cap:Bride Corolla:Bride Mask:Bulb Band:Bunny Band:Rien")) {
+						case 1:
+							if ((countitem(5137) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5137,1; 
+							getitem 29521,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 2:
+							if ((countitem(2284) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2284,1; 
+							getitem 29522,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 3:
+							if ((countitem(5132) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5132,1; 
+							getitem 29523,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 4:
+							if ((countitem(5490) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5490,1; 
+							getitem 29524,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 5:
+							if ((countitem(5513) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5513,1; 
+							getitem 29728,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 6:
+							if ((countitem(5512) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5512,1; 
+							getitem 29727,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 7:
+							if ((countitem(5546) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5546,1; 
+							getitem 29730,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 8:
+							if ((countitem(5545) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5545,1; 
+							getitem 29729,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 9:
+							if ((countitem(5174) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5174,1; 
+							getitem 29525,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 10:
+							if ((countitem(5531) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5531,1; 
+							getitem 29526,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 11:
+							if ((countitem(5042) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5042,1; 
+							getitem 29527,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 12:
+							if ((countitem(5147) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5147,1; 
+							getitem 29528,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 13:
+							if ((countitem(5076) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5076,1; 
+							getitem 29529,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 14:
+							if ((countitem(5382) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5382,1; 
+							getitem 29530,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 15:
+							if ((countitem(5057) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5057,1; 
+							getitem 29532,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 16:
+							if ((countitem(29113) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29113,1; 
+							getitem 29533,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 17:
+							if ((countitem(5236) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5236,1; 
+							getitem 29534,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 18:
+							if ((countitem(5065) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5065,1; 
+							getitem 29535,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 19:
+							if ((countitem(5052) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5052,1; 
+							getitem 29536,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 20:
+							if ((countitem(5506) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5506,1; 
+							getitem 29537,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 21:
+							if ((countitem(5349) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5349,1; 
+							getitem 29551,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 22:
+							if ((countitem(5436) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5436,1; 
+							getitem 29552,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 23:
+							if ((countitem(5169) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5169,1; 
+							getitem 29553,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 24:
+							if ((countitem(5034) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5034,1; 
+							getitem 29554,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 25:
+							if ((countitem(2214) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2214,1; 
+							getitem 29555,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 26:	
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Ok.";
+							close;						
+					}
+				case 2: // C-D
+					switch(select("Cake Hat:Cancer Crown:Cancer Diadem:Candle:Cap of Concentration:Capricorn Crown:Capricorn Diadem:Cat Ear Beret:Charming Black Ribbon:Charming Ribbon:Chef Hat:Chinese Crown:Coppola:Cowboy Hat:Cross Hat:Crown:Crown of Ancient Queen:Crown of Mistress:Cresent Hairpin:Darkness Crown:Diadem:Decorative Golden Bell:Decorative Mushroom:Detective Hat:Deviling Hat:Deviruchi Hat:Doctor Band:^0000FFDragon Helm^000000:Dress Hat:Drooping Cat:Rien")) {
+						case 1:
+							if ((countitem(5024) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5024,1; 
+							getitem 29556,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 2:
+							if ((countitem(5582) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5582,1; 
+							getitem 29732,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 3:
+							if ((countitem(5581) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5581,1; 
+							getitem 29731,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 4:
+							if ((countitem(5028) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5028,1; 
+							getitem 29557,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 5:
+							if ((countitem(5073) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5073,1; 
+							getitem 29558,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 6:
+							if ((countitem(5744) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5744,1; 
+							getitem 29733,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 7:
+							if ((countitem(5745) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5745,1; 
+							getitem 29734,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 8:
+							if ((countitem(18600) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 18600,1; 
+							getitem 29559,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 9:
+							if ((countitem(29111) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29111,1; 
+							getitem 29561,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 10:
+							if ((countitem(5140) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5140,1; 
+							getitem 29783,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 11:
+							if ((countitem(5026) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5026,1; 
+							getitem 29562,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 12:
+							if ((countitem(5152) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5152,1; 
+							getitem 29563,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 13:
+							if ((countitem(5200) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5200,1; 
+							getitem 29564,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 14:
+							if ((countitem(5075) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5075,1; 
+							getitem 29565,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 15:
+							if ((countitem(5036) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5036,1; 
+							getitem 29566,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 16:
+							if ((countitem(2235) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2235,1; 
+							getitem 29725,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 17:
+							if ((countitem(5080) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5080,1; 
+							getitem 29567,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 18:
+							if ((countitem(5081) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5081,1; 
+							getitem 29568,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 19:
+							if ((countitem(5048) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5048,1; 
+							getitem 29569,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 20:
+							if ((countitem(29422) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29422,1; 
+							getitem 29640,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 21:
+							if ((countitem(5313) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5313,1; 
+							getitem 29726,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 22:
+							if ((countitem(5091) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5091,1; 
+							getitem 29570,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 23:
+							if ((countitem(5082) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5082,1; 
+							getitem 29571,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 24:
+							if ((countitem(5108) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5108,1; 
+							getitem 29580,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 25:
+							if ((countitem(5054) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5054,1; 
+							getitem 29572,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 26:
+							if ((countitem(5038) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5038,1; 
+							getitem 29573,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 27:
+							if ((countitem(2273) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2273,1; 
+							getitem 29583,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 28: // Dragon Helm
+							switch(select("Dragon Helm:Gold Dragon Helm:Green Dragon Helm:Purple Dragon Helm:Red Dragon Helm: White Dragon Helm:Rien")) {
+								case 1:
+									if ((countitem(29389) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29389,1; 
+									getitem 29574,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 2:
+									if ((countitem(29390) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29390,1; 
+									getitem 29575,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 3:
+									if ((countitem(29391) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29391,1; 
+									getitem 29576,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 4:
+									if ((countitem(29392) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29392,1; 
+									getitem 29577,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 5:
+									if ((countitem(29393) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29393,1; 
+									getitem 29578,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 6:
+									if ((countitem(29394) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29394,1; 
+									getitem 29579,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 7:
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Ok.";
+									close;
+							}
+						case 29:
+							if ((countitem(5211) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5211,1; 
+							getitem 29581,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 30:
+							if ((countitem(5058) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5058,1; 
+							getitem 29582,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 31:
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Ok.";
+							close;
+							}
+				case 3: // E-H
+					switch(select("Ear Muffs:Enhanced Dragon Helm:Fashionable Glasses:^0000FFFeather Beret^000000:Feather Bonnet:Flapping Angel Wing:Flower Crown:Flower Hairpin:Freya Crown:Garm Hat:Gemini Crown:Gemini Diadem:Gemmed Sallet:Giant Band Aid:Gold Sigrun's Wing:Grief For Greed:Gryphon Hat:Guardian Lion Mask:Hahoe Mask:Hat of Girl:Hat of the Sun:Headset:Headband of Power:Heart Hairpin:Helm of Angel:^0000FFHelm of Darkness^000000:Helmet of Orc Hero:Rien")) {
+						case 1:
+							if ((countitem(2283) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2283,1; 
+							getitem 29584,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 2:
+							if ((countitem(29357) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29357,1; 
+							getitem 29585,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 3:
+							if ((countitem(5047) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5047,1; 
+							getitem 29586,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 4: // Feather Beret
+							switch(select("Feather Beret:Black Feather Beret:Brown Feather Beret:Gold Feather Beret:Green Feather Beret:Light Blue Feather Beret:Orange Feather Beret:Pink Feather Beret:Purple Feather Beret:Red Feather Beret:Silver Feather Beret:White Feather Beret:Rien")) {
+								case 1:
+									if ((countitem(5170) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 5170,1; 
+									getitem 29587,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 2:
+									if ((countitem(29250) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29250,1; 
+									getitem 29588,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 3:
+									if ((countitem(29251) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29251,1; 
+									getitem 29589,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 4:
+									if ((countitem(29252) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29252,1; 
+									getitem 29590,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 5:
+									if ((countitem(29253) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29253,1; 
+									getitem 29591,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 6:
+									if ((countitem(29254) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29254,1; 
+									getitem 29592,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 7:
+									if ((countitem(29255) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29255,1; 
+									getitem 29593,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 8:
+									if ((countitem(29256) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29256,1; 
+									getitem 29594,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 9:
+									if ((countitem(29257) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29257,1; 
+									getitem 29595,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 10:
+									if ((countitem(29258) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29258,1; 
+									getitem 29596,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 11:
+									if ((countitem(29259) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29259,1; 
+									getitem 29597,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 12:
+									if ((countitem(29260) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29260,1; 
+									getitem 29598,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 13:
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Ok.";
+									close;
+							}					
+						case 5:
+							if ((countitem(5018) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5018,1; 
+							getitem 29599,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 6:
+							if ((countitem(5269) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5269,1; 
+							getitem 29600,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 7:
+							if ((countitem(5303) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5303,1; 
+							getitem 29601,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 8:
+							if ((countitem(5061) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5061,1; 
+							getitem 29602,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 9:
+							if ((countitem(29380) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29380,1; 
+							getitem 29603,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 10:
+							if ((countitem(29108) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29108,1; 
+							getitem 29604,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 11:
+							if ((countitem(5570) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5570,1; 
+							getitem 29736,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 12:
+							if ((countitem(5569) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5569,1; 
+							getitem 29735,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 13: // gemmed sallet
+							if ((countitem(2230) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2230,1; 
+							getitem 29781,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}						
+						case 14:
+							if ((countitem(5063) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5063,1; 
+							getitem 29606,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 15:
+							if ((countitem(29358) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29358,1; 
+							getitem 29607,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 16:
+							if ((countitem(5021) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5021,1; 
+							getitem 29608,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 17:
+							if ((countitem(5660) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5660,1; 
+							getitem 29609,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 18:
+							if ((countitem(5177) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5177,1; 
+							getitem 29610,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 19:
+							if ((countitem(5176) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5176,1; 
+							getitem 29611,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 20:
+							if ((countitem(29115) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29115,1; 
+							getitem 29612,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 21:
+							if ((countitem(5022) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5022,1; 
+							getitem 29613,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 22:
+							if ((countitem(5001) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5001,1; 
+							getitem 29614,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 23:
+							if ((countitem(5070) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5070,1; 
+							getitem 29615,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 24:
+							if ((countitem(5041) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5041,1; 
+							getitem 29616,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 25:
+							if ((countitem(5025) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5025,1; 
+							getitem 29617,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 26: // Helm of Darkness
+							switch(select("Helm of Darkness:Black Helm of Darkness:White Helm of Darkness:Gold Helm of Darkness:Purple Helm of Darkness:Red Helm of Darkness:Green Helm of Darkness:Cyan Helm of Darkness:Rien")) {
+								case 1:
+									if ((countitem(5181) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 5181,1; 
+									getitem 29618,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 2:
+									if ((countitem(29280) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29280,1; 
+									getitem 29619,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 3:
+									if ((countitem(29281) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29281,1; 
+									getitem 29620,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 4:
+									if ((countitem(29282) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29282,1; 
+									getitem 29621,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 5:
+									if ((countitem(29283) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29283,1; 
+									getitem 29622,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 6:
+									if ((countitem(29284) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29284,1; 
+									getitem 29623,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 7:
+									if ((countitem(29285) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29285,1; 
+									getitem 29624,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 8:
+									if ((countitem(29286) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29286,1; 
+									getitem 29625,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 9:
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Ok.";
+									close;
+							}
+						case 27:
+							if ((countitem(5094) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5094,1; 
+							getitem 29626,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 28:
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Ok.";
+							close;
+							}
+				case 4: // I-M
+					switch(select("Indian Headband:Jasper Crest:Jewel Crown:Judge Hat:Kafra Band:Kafra Bandana:Kitsune Mask:Koneko Hat:Large Baphomet Horns:Lazy Smokie:Leo Crown:Leo Diadem: Libra Crown:Libra Diadem: Light Golden Crown:Light of Darkness Crown:Lightness Crown: Little Angel Doll:Long Baphomet Horns:Lucky Hat:Lunatic Doll:Mage Hat:Magician Hat:Mine Hat:Moon Rabiit Hat:Mystic Rose:Rien")) {
+						case 1:
+							if ((countitem(5071) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5071,1; 
+							getitem 29628,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 2:
+							if ((countitem(5396) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5396,1; 
+							getitem 29629,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 3:
+							if ((countitem(5002) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5002,1; 
+							getitem 29724,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 4:
+							if ((countitem(5173) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5173,1; 
+							getitem 29630,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 5:
+							if ((countitem(5020) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5020,1; 
+							getitem 29631,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 6:
+							if ((countitem(29443) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29443,1; 
+							getitem 29632,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 7:
+							if ((countitem(5069) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5069,1; 
+							getitem 29633,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 8:
+							if ((countitem(5372) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5372,1; 
+							getitem 29634,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 9:
+							if ((countitem(5518) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5518,1; 
+							getitem 29635,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 10:
+							if ((countitem(5084) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5084,1; 
+							getitem 29636,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 11:
+							if ((countitem(5588) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5588,1; 
+							getitem 29737,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 12:
+							if ((countitem(5589) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5589,1; 
+							getitem 29738,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 13:
+							if ((countitem(5662) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5662,1; 
+							getitem 29739,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 14:
+							if ((countitem(5663) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5663,1; 
+							getitem 29740,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 15:
+							if ((countitem(29440) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29440,1; 
+							getitem 29723,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 16:
+							if ((countitem(29372) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29372,1; 
+							getitem 29638,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 17:
+							if ((countitem(29421) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29421,1; 
+							getitem 29639,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 18:
+							if ((countitem(5324) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5324,1; 
+							getitem 29637,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 19:
+							if ((countitem(5374) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5374,1; 
+							getitem 29641,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 20:
+							if ((countitem(29381) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29381,1; 
+							getitem 29642,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 21:
+							if ((countitem(5527) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5527,1; 
+							getitem 29643,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 22:
+							if ((countitem(5027) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5027,1; 
+							getitem 29644,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 23:
+							if ((countitem(5045) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5045,1; 
+							getitem 29645,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 24:
+							if ((countitem(5031) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5031,1; 
+							getitem 29646,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 25:
+							if ((countitem(5457) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5457,1; 
+							getitem 29647,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 26:
+							if ((countitem(5117) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5117,1; 
+							getitem 29655,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 27:
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Ok.";
+							close;
+							}
+				case 5: // N-R
+					switch(select("^0000FFNote Headphone^000000:Orc Hero Helmet:Parcel Hat:Party Hat:Ph D Hat:Pink Beanie:Pink Pajama Hat:Pisces Crown:Pisces Diadem:Popcorn Hat:Pretend Murderer:Rabbit Earplugs:Raccoon Hat:Rainbow Eggshell:Ramen Hat:Red Bonnet:Red Dress Hat:Red Flower Hairband:Red Tailed Ribbon:Rien")) {
+						case 1: // Note Headphone
+							switch(select("Note Headphone:White Note Headphone:Red Note Headphone:Purple Note Headphone:Green Note Headphone:Gold Note Headphone:Cyan Note Headphone:Black Note Headphone:Rien")) {
+								case 1:
+									if ((countitem(5151) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 5151,1; 
+									getitem 29656,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 2:
+									if ((countitem(29270) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29270,1; 
+									getitem 29657,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 3:
+									if ((countitem(29271) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29271,1; 
+									getitem 29658,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 4:
+									if ((countitem(29272) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29272,1; 
+									getitem 29659,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 5:
+									if ((countitem(29273) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29273,1; 
+									getitem 29660,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 6:
+									if ((countitem(29274) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29274,1; 
+									getitem 29661,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 7:
+									if ((countitem(29275) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29275,1; 
+									getitem 29662,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 8:
+									if ((countitem(29276) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29276,1; 
+									getitem 29663,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 9:
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Ok.";
+									close;
+							}
+						case 2:
+							if ((countitem(5375) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5375,1; 
+							getitem 29664,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 3:
+							if ((countitem(5023) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5023,1; 
+							getitem 29667,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 4:
+							if ((countitem(5060) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5060,1; 
+							getitem 29668,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 5:
+							if ((countitem(5012) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5012,1; 
+							getitem 29669,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 6:
+							if ((countitem(5237) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5237,1; 
+							getitem 29670,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 7:
+							if ((countitem(5507) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5507,1; 
+							getitem 29671,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 8:
+							if ((countitem(5515) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5515,1; 
+							getitem 29742,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 9:
+							if ((countitem(5514) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5514,1; 
+							getitem 29741,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 10:
+							if ((countitem(5413) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5413,1; 
+							getitem 29672,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 11:
+							if ((countitem(2293) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2293,1; 
+							getitem 29673,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 12:
+							if ((countitem(5520) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5520,1; 
+							getitem 29674,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 13:
+							if ((countitem(5033) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5033,1; 
+							getitem 29675,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 14:
+							if ((countitem(5039) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5039,1; 
+							getitem 29676,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 15:
+							if ((countitem(5293) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5293,1; 
+							getitem 29677,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 16:
+							if ((countitem(5109) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5109,1; 
+							getitem 29678,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 17:
+							if ((countitem(29112) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29112,1; 
+							getitem 29679,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 18:
+							if ((countitem(5547) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5547,1; 
+							getitem 29680,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 19:
+							if ((countitem(5801) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5801,1; 
+							getitem 29784,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 20:
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Ok.";
+							close;
+							}
+				case 6: // S-T
+					switch(select("Sagittarius Crown:Sagittarius Diadem:Sakkat:Santa Poring Hat:Scorpio Crown:Scorpio Diadem:Sea Otter Hat:Shafka Hat:Ship Captain Hat:Sigrun Wings:Sky Headgear:^0000FFSnow Cap^000000:Sombrero Hat:Soul Ring:Spore Hat:Straw Hat:Stripped Hairband:Sunday Hat:Stop Post:Taurus Crown:Taurus Diadem:Teddybear Hat:Tiara:Tulip Hairpin:Twin Red Ribbon:Rien")) {
+						case 1:
+							if ((countitem(5739) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5739,1; 
+							getitem 29743,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 2:
+							if ((countitem(5740) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5740,1; 
+							getitem 29744,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 3:
+							if ((countitem(2280) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2280,1; 
+							getitem 29682,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 4:
+							if ((countitem(5381) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5381,1; 
+							getitem 29683,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 5:
+							if ((countitem(5676) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5676,1; 
+							getitem 29745,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 6:
+							if ((countitem(5677) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5677,1; 
+							getitem 29746,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 7:
+							if ((countitem(5078) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5078,1; 
+							getitem 29684,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 8:
+							if ((countitem(5243) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5243,1; 
+							getitem 29685,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 9:
+							if ((countitem(5359) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5359,1; 
+							getitem 29686,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 10:
+							if ((countitem(5592) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5592,1; 
+							getitem 29687,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 11:
+							if ((countitem(29365) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29365,1; 
+							getitem 29688,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 12: // Snow Cap
+							switch(select("Snow Cap:Black Snow Cap:Blue Snow Cap:White Snow Cap:Rien")) {
+								case 1:
+									if ((countitem(29114) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29114,1; 
+									getitem 29689,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 2:
+									if ((countitem(29300) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29300,1; 
+									getitem 29690,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 3:
+									if ((countitem(29301) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29301,1; 
+									getitem 29691,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 4:
+									if ((countitem(29306) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29306,1; 
+									getitem 29692,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 5:
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Ok.";
+									close;
+							}
+						case 13:
+							if ((countitem(5067) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5067,1; 
+							getitem 29693,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 14:
+							if ((countitem(5297) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5297,1; 
+							getitem 29694,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 15:
+							if ((countitem(5029) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5029,1; 
+							getitem 29695,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 16:
+							if ((countitem(5062) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5062,1; 
+							getitem 29696,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 17:
+							if ((countitem(5049) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5049,1; 
+							getitem 29697,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 18:
+							if ((countitem(5032) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5032,1; 
+							getitem 29698,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 19:
+							if ((countitem(2272) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 2272,1; 
+							getitem 29699,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 20:
+							if ((countitem(5550) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5550,1; 
+							getitem 29748,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 21:
+							if ((countitem(5549) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5549,1; 
+							getitem 29747,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 22:
+							if ((countitem(5059) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5059,1; 
+							getitem 29700,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 23:
+							if ((countitem(5164) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5164,1; 
+							getitem 29701,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 24:
+							if ((countitem(5077) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5077,1; 
+							getitem 29702,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 25:
+							if ((countitem(5187) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5187,1; 
+							getitem 29703,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}	
+						case 26:
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Ok.";
+							close;
+							}
+				case 7: // U-Z
+					switch(select("Valkyrie Circlet:^0000FFValkyrie Crown^000000:Virgo Crown:Virgo Diadem:Valkyrie Helm:^0000FFWandering Minstrel^000000:White Cat Hood:Wind Milestone:Winged Black Top Hat:Winter Hat:Wonder Nutshell:X Hairpin:Yellow Bandana:Yellow Ribbon:Rien")) {
+						case 1:
+							if ((countitem(29110) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29110,1; 
+							getitem 29705,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 2: // Valkyrie Crown 
+							switch(select("Blue Valkyrie Crown:Black Valkyrie Crown:White Valkyrie Crown:Pink Valkyrie Crown:Gold Valkyrie Crown:Green Valkyrie Crown:Red Valkyrie Crown: Brown Valkyrie Crown:Cyan Valkyrie Crown:Orange Valkyrie Crown:Silver Valkyrie Crown:Purple Valkyrie Crown:Rien")) {
+								case 1:
+									if ((countitem(29200) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29200,1; 
+									getitem 29539,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 2:
+									if ((countitem(29201) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29201,1; 
+									getitem 29540,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 3:
+									if ((countitem(29202) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29202,1; 
+									getitem 29541,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 4:
+									if ((countitem(29203) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29203,1; 
+									getitem 29542,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 5:
+									if ((countitem(29204) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29204,1; 
+									getitem 29543,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 6:
+									if ((countitem(29205) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29205,1; 
+									getitem 29544,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 7:
+									if ((countitem(29206) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29206,1; 
+									getitem 29545,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 8:
+									if ((countitem(29207) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29207,1; 
+									getitem 29546,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 9:
+									if ((countitem(29208) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29208,1; 
+									getitem 29547,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 10:
+									if ((countitem(29209) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29209,1; 
+									getitem 29548,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 11:
+									if ((countitem(29210) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29210,1; 
+									getitem 29549,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 12:
+									if ((countitem(29211) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29211,1; 
+									getitem 29550,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 13:
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Ok.";
+									close;
+							}
+						case 3:
+							if ((countitem(5598) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5598,1; 
+							getitem 29749,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 4:
+							if ((countitem(5599) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29750,1; 
+							getitem 29750,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 5:
+							if ((countitem(5171) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5171,1; 
+							getitem 29704,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 6: // Wandering Minstrel
+							switch(select("Wandering Minstrel:Black Wandering Minstrel:Blue Wandering Minstrel:Cyan Wandering Minstrel:Gold Wandering Minstrel:Purple Wandering Minstrel:Red Wandering Minstrel: White Wandering Minstrel:Rien")) {
+								case 1:
+									if ((countitem(5188) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 5188,1; 
+									getitem 29706,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 2:
+									if ((countitem(29340) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29340,1; 
+									getitem 29707,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 3:
+									if ((countitem(29341) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29341,1; 
+									getitem 29708,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 4:
+									if ((countitem(29342) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29342,1; 
+									getitem 29709,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 5:
+									if ((countitem(29343) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29343,1; 
+									getitem 29710,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 6:
+									if ((countitem(29344) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29344,1; 
+									getitem 29711,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 7:
+									if ((countitem(29345) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29345,1; 
+									getitem 29712,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 8:
+									if ((countitem(29346) > 0)) {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "C'est parti !";
+									delitem 29346,1; 
+									getitem 29713,1; 
+									close;
+									}
+									else {
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Tu ne possèdes pas ce hat.";
+									close;
+									}
+								case 9:
+									mes "[^FF8000Costume Maker^000000]";
+									mes "Ok.";
+									close;
+							}
+						case 7:
+							if ((countitem(29384) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29384,1; 
+							getitem 29714,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 8:
+							if ((countitem(5466) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5466,1; 
+							getitem 29715,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 9:
+							if ((countitem(29450) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 29450,1; 
+							getitem 29716,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 10:
+							if ((countitem(5115) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5115,1; 
+							getitem 29717,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 11:
+							if ((countitem(5050) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5050,1; 
+							getitem 29718,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 12:
+							if ((countitem(5079) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5079,1; 
+							getitem 29719,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 13:
+							if ((countitem(5277) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5277,1; 
+							getitem 29720,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}
+						case 14:
+							if ((countitem(5278) > 0)) {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "C'est parti !";
+							delitem 5278,1; 
+							getitem 29721,1; 
+							close;
+							}
+							else {
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Tu ne possèdes pas ce hat.";
+							close;
+							}	
+						case 15:
+							mes "[^FF8000Costume Maker^000000]";
+							mes "Ok.";
+							close;
+							}
+				case 8:
+					mes "[^FF8000Costume Maker^000000]";
+					mes "ok.";
+					close;
+				}
+			case 2:
+			mes "[^FF8000Costume Maker^000000]";
+			mes "Dis-moi quel Hat tu souhaites transformer.";
+			next;				
+				switch(select("Alarm Mask:Angel Wing Ears:Annoyed Mask:Black Framed Glasses:Blush:Blinker:Binoculars:Censor Bar:Cyclop Eye:Dark Blinker:Elven Ears:Evil Wing Ears:Goblin Leader:Goblin Mask:Machomans Glasses:Masquerade:Mr Smile:Opera Mask:Opera Phantom Mask:Poker Face:Sunglasses:Surprised Mask:Robo Eye:Tongue Mask:Welding Mask:Zealotus Mask:Rien")) {
+					case 1:
+						if ((countitem(5086) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5086,1; 
+						getitem 29520,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 2:
+						if ((countitem(5074) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5074,1; 
+						getitem 29751,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 3:
+						if ((countitem(5089) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5089,1; 
+						getitem 29649,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 4:
+						if ((countitem(5401) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5401,1; 
+						getitem 29752,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 5:
+						if ((countitem(5040) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5040,1; 
+						getitem 29753,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 6:
+						if ((countitem(2295) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2295,1; 
+						getitem 29778,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 7:
+						if ((countitem(2296) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2296,1; 
+						getitem 29531,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 8:
+						if ((countitem(5175) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5175,1; 
+						getitem 29560,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 9:
+						if ((countitem(5135) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5135,1; 
+						getitem 29754,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 10:
+						if ((countitem(5104) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5104,1; 
+						getitem 29779,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 11:
+						if ((countitem(2286) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2286,1; 
+						getitem 29780,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 12:
+						if ((countitem(5068) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5068,1; 
+						getitem 29755,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 13:
+						if ((countitem(5090) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5090,1; 
+						getitem 29650,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 14:
+						if ((countitem(2297) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2297,1; 
+						getitem 29651,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 15:
+						if ((countitem(5006) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5006,1; 
+						getitem 29782,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 16:
+						if ((countitem(5326) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5326,1; 
+						getitem 29758,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 17:
+						if ((countitem(2278) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2278,1; 
+						getitem 29648,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 18:
+						if ((countitem(2281) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2281,1; 
+						getitem 29665,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 19:
+						if ((countitem(5043) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5043,1; 
+						getitem 29666,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 20:
+						if ((countitem(5087) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5087,1; 
+						getitem 29652,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 21:
+						if ((countitem(2201) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2201,1; 
+						getitem 29756,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 22:
+						if ((countitem(5088) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5088,1; 
+						getitem 29653,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 23:
+						if ((countitem(5325) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5325,1; 
+						getitem 29757,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 24:
+						if ((countitem(5272) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5272,1; 
+						getitem 29654,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 25:
+						if ((countitem(2292) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2292,1; 
+						getitem 29759,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 26:
+						if ((countitem(5121) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5121,1; 
+						getitem 29722,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 27:
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Ok.";
+						close;
+				}
+			case 3:
+			mes "[^FF8000Costume Maker^000000]";
+			mes "Dis-moi quel Hat tu souhaites transformer.";
+			next;				
+				switch(select("Baby Pacifer:Blue Rose:Crunch Toast:Gangster Scarf:Gentleman Pipe:Oxygen Mask:Pipe:Smokie Leaf:Romantic Flower:Romantic Leaf:Rose of Crimson:Well Chewed Pencil:Rien")) {
+					case 1:
+						if ((countitem(5110) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5110,1; 
+						getitem 29760,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 2:
+						if ((countitem(29362) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 29362,1; 
+						getitem 29538,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 3:
+						if ((countitem(5107) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5107,1; 
+						getitem 29761,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 4:
+						if ((countitem(5361) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5361,1; 
+						getitem 29762,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 5:
+						if ((countitem(5377) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5377,1; 
+						getitem 29605,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 6:
+						if ((countitem(5004) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5004,1; 
+						getitem 29763,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 7:
+						if ((countitem(2268) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2268,1; 
+						getitem 29768,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 8:
+						if ((countitem(5064) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5064,1; 
+						getitem 29764,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 9:
+						if ((countitem(2269) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2269,1; 
+						getitem 29766,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 10:
+						if ((countitem(2270) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 2270,1; 
+						getitem 29767,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 11:
+						if ((countitem(5548) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5548,1; 
+						getitem 29681,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 12:
+						if ((countitem(5574) > 0)) {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "C'est parti !";
+						delitem 5574,1; 
+						getitem 29765,1; 
+						close;
+						}
+						else {
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Tu ne possèdes pas ce hat.";
+						close;
+						}
+					case 13:
+						mes "[^FF8000Costume Maker^000000]";
+						mes "Ok.";
+						close;
+						}
+			case 4:
+			mes "[^FF8000Costume Maker^000000]";
+			mes "Tu ne possèdes pas ce hat.";
+			close;
+			}
+
+		case 2:	
+		mes "[^FF8000Costume Maker^000000]";
+		mes "C'est comme tu veux.";
+		close;
+		}
+	
+	case 2:
+		mes "[^FF8000Costume Maker^000000]";
+		mes "Tant pis !";
+		close;
+	}
+	end;
+}

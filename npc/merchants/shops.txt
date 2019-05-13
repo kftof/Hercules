@@ -49,6 +49,34 @@
 //= 3.9
 //=========================================================================
 
+gonryun,179,118,4	trader	Tool Dealer#gon	2_VENDING_MACHINE1,{
+OnInit:
+	sellitem Arrow;
+	sellitem Iron_Arrow;
+	sellitem Bullet;
+	sellitem Silver_Bullet;
+	sellitem Spectacles;
+	sellitem Green_Potion;
+	sellitem White_Potion;
+	sellitem Center_Potion;
+	sellitem Awakening_Potion;
+	sellitem Berserk_Potion;
+	sellitem Wing_Of_Fly;
+	sellitem Booby_Trap;
+	sellitem Grape_Juice;
+	sellitem Blue_Gemstone;
+	sellitem Red_Gemstone;
+	sellitem Yellow_Gemstone;
+	sellitem Flame_Stone;
+	sellitem Ice_Stone;
+	sellitem Wind_Stone;
+	sellitem Acid_Bottle;
+	sellitem Fire_Bottle;
+	sellitem Poison_Bottle;
+	sellitem Fruit_Of_Mastela;
+	sellitem Light_Blue_Pot;
+}
+
 //== Alberta ===============================================
 alberta_in,165,96,0	trader	Item Collector#alb	1_F_MERCHANT_02,{
 OnInit:
@@ -602,14 +630,14 @@ OnInit:
 	sellitem Town_Sword;
 	sellitem Cinquedea;
 }
-
+/*
 geffen_in,74,144,0	trader	Trader#gef	1_F_01,{
 OnInit:
 	sellitem Scell;
 	sellitem Garlet;
 	sellitem Zargon;
 }
-
+*/
 geffen_in,77,173,0	trader	Magical Item Seller#gef	1_M_WIZARD,{
 OnInit:
 	sellitem Blue_Gemstone;
@@ -623,6 +651,7 @@ OnInit:
 }
 
 //== Kunlun ================================================
+/*
 gonryun,147,84,5	trader	Tool Dealer#gon	4_M_TWOLDMAN,{
 OnInit:
 	sellitem Arrow;
@@ -639,7 +668,7 @@ OnInit:
 	sellitem Wing_Of_Butterfly;
 	sellitem Booby_Trap;
 }
-
+*/
 gonryun,174,101,3	trader	Weapon Dealer#gon	4_M_TWBOY,{
 OnInit:
 	sellitem Main_Gauche;
@@ -706,7 +735,7 @@ hu_in01,252,368,3	trader	Tool Dealer#hu2	4_F_01,{
 OnInit:
 	sellitem Blue_Gemstone;
 	sellitem Sunglasses;
-	sellitem Garlet;
+//	sellitem Garlet;
 	sellitem Monsters_Feed;
 }
 
@@ -808,14 +837,14 @@ OnInit:
 	sellitem Wing_Of_Fly;
 	sellitem Wing_Of_Butterfly;
 }
-
+/*
 yuno,226,107,5	trader	Tool Dealer#yuno1	4_M_01,{
 OnInit:
 	sellitem Scell;
 	sellitem Garlet;
 	sellitem Zargon;
 }
-
+*/
 yuno,197,114,4	trader	Pet Groomer#yuno	4_F_TELEPORTER,{
 OnInit:
 	sellitem Pet_Food;
@@ -846,7 +875,7 @@ OnInit:
 	sellitem Full_Plate_Armor;
 	sellitem Grave;
 	sellitem Turban;
-	sellitem Gemmed_Sallet;
+//	sellitem Gemmed_Sallet;
 	sellitem Repeting_CrossBow;
 }
 
@@ -921,14 +950,14 @@ OnInit:
 	sellitem Apple;
 	sellitem Banana;
 }
-
+/*
 lighthalzen,112,44,0	trader	Flower Girl#lhz	4_F_01,{
 OnInit:
 	sellitem Flower;
 	sellitem Bunch_Of_Flowers;
 	sellitem Witherless_Rose;
 }
-
+*/
 lighthalzen,124,129,0	trader	Vegetable Gardener#lhz	4_F_02,{
 OnInit:
 	sellitem Carrot;
@@ -952,7 +981,7 @@ OnInit:
 	sellitem Flame_Gemstone;
 	sellitem Bun_;
 }
-
+/*
 lhz_in02,286,95,4	trader	Beginner's Merchant#lhz	1_M_SIZ,{
 OnInit:
 	sellitem Super_Novice_Hat;
@@ -960,7 +989,7 @@ OnInit:
 	sellitem Novice_Shield;
 	sellitem Novice_Manteau;
 }
-
+*/
 lhz_in02,271,99,5	trader	Armor Dealer#lhz	4_M_REPAIR,{
 OnInit:
 	sellitem Guard;
@@ -1002,12 +1031,12 @@ OnInit:
 
 lhz_in02,105,21,3	trader	Jeweler#lhz	4_F_02,{
 OnInit:
-	sellitem Azure_Jewel;
-	sellitem Cardinal_Jewel;
-	sellitem Blue_Jewel;
-	sellitem Golden_Jewel;
-	sellitem Bluish_Green_Jewel;
-	sellitem Crystal_Jewel;
+//	sellitem Azure_Jewel;
+//	sellitem Cardinal_Jewel;
+//	sellitem Blue_Jewel;
+//	sellitem Golden_Jewel;
+//	sellitem Bluish_Green_Jewel;
+//	sellitem Crystal_Jewel;
 	sellitem Diamond_Ring;
 }
 
@@ -1028,7 +1057,7 @@ lhz_in02,32,219,5	trader	Butcher#lhz	1_M_JOBGUIDER,{
 OnInit:
 	sellitem Meat;
 }
-
+/*
 lhz_in02,38,145,5	trader	Gift Merchant#lhz	4_F_02,{
 OnInit:
 	sellitem Red_Frame;
@@ -1037,7 +1066,7 @@ OnInit:
 	sellitem Black_Ladle;
 	sellitem Glass_Bead;
 }
-
+*/
 lhz_in02,47,148,3	trader	Wedding Shop Dealer#lhz	1_F_LIBRARYGIRL,{
 OnInit:
 	sellitem Bunch_Of_Flowers;
@@ -1061,14 +1090,12 @@ OnInit:
 	sellitem Leaf_Of_Yggdrasil;
 	sellitem Iron_Arrow;
 }
-
 lhz_in02,85,216,5	trader	Doll Supplier#lhz	4_F_LGTGIRL,{
 OnInit:
 	sellitem Stuffed_Doll;
 	sellitem Poring_Doll;
 	sellitem Chonchon_Doll;
 }
-
 lhz_in02,87,208,3	trader	Toy Supplier#lhz	4_M_PIERROT,{
 OnInit:
 	sellitem Spinning_Eyes;
@@ -1097,7 +1124,7 @@ OnInit:
 	sellitem Fire_Arrow;
 	sellitem Silver_Arrow;
 }
-
+/*
 lhz_in03,249,24,4	trader	Merchant#lhz	4_M_EINMAN,{
 OnInit:
 	sellitem Scell;
@@ -1105,7 +1132,7 @@ OnInit:
 	sellitem Zargon;
 	sellitem Monsters_Feed;
 }
-
+*/
 //== Louyang ===============================================
 lou_in02,121,182,5	trader	Armor Dealer#lou	4_F_CHNWOMAN,{
 OnInit:
@@ -1188,10 +1215,10 @@ xmas_in,169,34,2	trader	Gift Seller#xmas	4_F_GON,{
 OnInit:
 	sellitem Flower_Ring;
 	sellitem Bunch_Of_Flowers;
-	sellitem Witherless_Rose;
-	sellitem White_Platter;
-	sellitem Glass_Bead;
-	sellitem Stuffed_Doll;
+//	sellitem Witherless_Rose;
+//	sellitem White_Platter;
+//	sellitem Glass_Bead;
+//	sellitem Stuffed_Doll;
 	sellitem Diamond_Ring;
 }
 
@@ -1212,7 +1239,7 @@ in_moc_16,22,20,7	trader	Sepulchral Merchant#moc	4_M_MASKMAN,{
 OnInit:
 	sellitem Venom_Knife;
 }
-
+/*
 moc_ruins,93,53,2	trader	Item Collector#moc1	4_M_03,{
 OnInit:
 	sellitem Scell;
@@ -1220,7 +1247,8 @@ OnInit:
 	sellitem Animals_Skin;
 	sellitem Bill_Of_Birds;
 }
-
+*/
+/*
 moc_ruins,81,113,0	trader	Item Collector#moc2	4_M_03,{
 OnInit:
 	sellitem Scell;
@@ -1228,7 +1256,8 @@ OnInit:
 	sellitem Animals_Skin;
 	sellitem Bill_Of_Birds;
 }
-
+*/
+/*
 moc_ruins,110,105,2	trader	Jeweler#moc1	8_F,{
 OnInit:
 	sellitem Azure_Jewel;
@@ -1237,23 +1266,24 @@ OnInit:
 	sellitem Golden_Jewel;
 	sellitem Bluish_Green_Jewel;
 }
-
+*/
 moc_ruins,52,85,6	trader	Jeweler#moc2	4W_M_03,{
 OnInit:
-	sellitem Crystal_Jewel;
+//	sellitem Crystal_Jewel;
 	sellitem Diamond_Ring;
 }
-
+/*
 moc_ruins,113,126,4	trader	Trader#moc1	4W_M_03,{
 OnInit:
 	sellitem Crystal_Mirror;
 }
-
+*/
+/*
 moc_ruins,131,138,0	trader	Trader#moc2	4_F_04,{
 OnInit:
 	sellitem Witherless_Rose;
 }
-
+*/
 moc_ruins,71,139,5	trader	Trader#moc3	4_F_04,{
 OnInit:
 	sellitem Flower_Ring;
@@ -1402,19 +1432,17 @@ OnInit:
 	sellitem Manteau;
 	sellitem Manteau;
 }
-
 nif_in,145,23,1	trader	Tool Dealer#nif	4_NFCOFFIN,{
 OnInit:
 	sellitem Pumpkin;
-	sellitem Pumpkin_Head;
-	sellitem Tree_Root;
-	sellitem Goats_Horn;
-	sellitem Pet_Food;
-	sellitem Poison_Powder;
-	sellitem Single_Cell;
-	sellitem Mementos;
+//	sellitem Pumpkin_Head;
+//	sellitem Tree_Root;
+//	sellitem Goats_Horn;
+//	sellitem Pet_Food;
+//	sellitem Poison_Powder;
+//	sellitem Single_Cell;
+//	sellitem Mementos;
 }
-
 //== Payon =================================================
 payon_in01,15,119,0	trader	Weapon Dealer#pay	1_F_ORIENT_03,{
 OnInit:
@@ -1494,7 +1522,7 @@ OnInit:
 	sellitem Flower;
 	sellitem Bunch_Of_Flowers;
 }
-
+/*
 prontera,105,87,0	trader	Gift Merchant#prt	4_F_02,{
 OnInit:
 	sellitem Red_Frame;
@@ -1503,14 +1531,13 @@ OnInit:
 	sellitem Black_Ladle;
 	sellitem Glass_Bead;
 }
-
+*/
 prontera,248,153,0	trader	Doll Supplier#prt	4_M_03,{
 OnInit:
 	sellitem Stuffed_Doll;
 	sellitem Poring_Doll;
 	sellitem Chonchon_Doll;
 }
-
 prontera,48,58,0	trader	Vegetable Gardener#prt	4_F_02,{
 OnInit:
 	sellitem Carrot;
@@ -1522,7 +1549,7 @@ prt_church,108,124,4	trader	Nun#prt	1_F_PRIEST,{
 OnInit:
 	sellitem Rosary;
 	sellitem Biretta;
-	sellitem Blue_Coif;
+	// sellitem Blue_Coif;
 	sellitem Scapulare;
 	sellitem Saint_Robe;
 	sellitem Club;

@@ -8,7 +8,6 @@
 //= Note: This script requires PCRE to run properly.
 //= 5.0 Last update by GmOcean.
 //= 5.1 Cleaned and standardized, mostly. [Euphy]
-//= 5.2 Fix a bug that causes this event run indefinitely [AnnieRuru]
 //============================================================
 
 prontera,160,155,4	script	Disguise Event	4_M_NFDEADMAN,{
@@ -179,20 +178,11 @@ OnTimer30000:
 	set .Change,0;
 	setnpcdisplay "Disguise Event", 4_M_NFDEADMAN;
 	npctalk "You took too long to guess what I was. Please wait 10 seconds while I disguise again.";
-	specialeffect EF_DETECT2;
+	specialeffect 725;
 	set $MonsterName$,"";
 	deletepset 1;
 	stopnpctimer;
 	setnpctimer 0;
-	++.RoundCount;
-	if (.RoundCount >= .Rounds) {
-		setnpcdisplay "Disguise Event", 4_M_NFDEADMAN;
-		.RoundCount = 0;
-		.Change = 0;
-		.EventON = 0;
-		npctalk "Thank you all for playing. That was the last round of the Disguise Event. Come play again later.";
-		end;
-	}
 	initnpctimer;
 	end;
 OnTimer60000:
@@ -243,7 +233,7 @@ iCorrect:
 	deletepset 1;
 	activatepset 1;
 	getitem .Prize,.PrizeAmt;
-	announce strcharinfo(PC_NAME)+" is correct! I was disguised as: "+$MonsterName$+"",bc_map | bc_blue;
+	announce strcharinfo(0)+" is correct! I was disguised as: "+$MonsterName$+"",bc_map | bc_blue;
 	if (.RoundCount>=.Rounds) {
 		setnpcdisplay "Disguise Event", 4_M_NFDEADMAN;
 		set .RoundCount,0; set .Change,0; set .EventON,0;

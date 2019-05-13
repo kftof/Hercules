@@ -18,14 +18,14 @@
 //= 2.8 Clustered conditionals replaced with switch to include all Upper types. [Euphy]
 //============================================================
 
-prontera,128,200,6	script	Platinum Skill NPC	4_F_MAID,{
+gonryun,177,142,4	script	Platinum Skill	4_M_JOB_KNIGHT1,{
 	mes "[Platinum Skill NPC]";
-	mes "I can give you the special skills available to your job.";
-	mes "Would you like these skills now?";
+	mes "Je peux vous donner les skills concernant votre classe.";
+	mes "Voudriez les vous ?";
 	next;
-	if (select("Yes Please", "No") == 2) {
+	if (select("Oui", "Non") == 2) {
 		mes "[Platinum Skill NPC]";
-		mes "Have a nice day... >.>";
+		mes "... >.>";
 		close;
 	}
 	skill 142,1,0;
@@ -56,6 +56,6 @@ prontera,128,200,6	script	Platinum Skill NPC	4_F_MAID,{
 		default: break;
 	}
 	mes "[Platinum Skill NPC]";
-	mes "There you go!";
+	mes "Et voila !";
 	close;
 }

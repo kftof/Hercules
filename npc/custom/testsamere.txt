@@ -1,0 +1,58 @@
+// GYM PASS
+//============================================================
+gonryun,159,117,3	script	Coach	4_F_JOB_BLACKSMITH,{
+	mes "[Coach]";
+	mes "Et bien, vous avez l'air tout ramollo. Un peu de sport ne vous ferait pas de mal, non ?";
+	next;
+	switch(select("C'est vrai que ...:Je me trouve bien comme je suis !")) {
+	case 1:
+		mes "[Coach]";
+		
+		mes "Il va falloir me prouver votre motivation !";
+		next;
+		switch(select("C'est à dire ?:Finalement ...")) {
+		case 1:
+			mes "[Coach]";
+			mes "50 Strong Branch.";
+			mes "50 Bomber Steak.";
+			mes "50 Great Nature.";
+			mes "5 Emperium.";
+			mes "Ramène-moi tous ces objets, et ta motivation ne fera plus aucun doute !";
+			next;
+			mes "[Coach]";
+			mes "Alors, tu les as ?";
+			next;
+			switch(select("Oui !:...")) {
+			input .@input$;
+			if (.@input$ == "nique ta mère") {
+					mes "[Coach]";
+					mes "Parfait ! Voici un ^0101DFGym Pass^000000, apporte le à ^0101DFRipped Cabus^000000, à ^0101DFPayon^000000, il t'aidera !";
+					delitem 7203,50; //Strong Branch
+					delitem 714,5; //Emperium
+					delitem 997,50; //Great Nature
+					delitem 12043,50; //Bomber Steak
+					getitem 7776,1; //Gym Pass
+					close;
+				}
+				else {
+					mes "[Coach]";
+					mes "Non, je ne vois pas la motivation !";
+					close;
+				}
+			case 2:
+				mes "[Coach]";
+				mes "Courage !";
+				close;	
+			}
+		case 2:
+			mes "[Coach]";
+			mes "...";
+			close;
+		}
+	case 2:
+		mes "[Coach]";
+		mes "Vraiment ? Haha !";
+		close;
+	}
+	end;
+}

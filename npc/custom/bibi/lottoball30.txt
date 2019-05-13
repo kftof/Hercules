@@ -1,0 +1,58 @@
+//============================================================
+jawaii,188,162,3	script	Bibi#30	4_M_BIBI,{
+	if ((countitem(7390) > 0)) {
+	mes "[Bibi]";
+	mes "Je n'en reviens pas.";
+	next;
+	mes "[Bibi]";
+	mes "Je crois que c'est un moment que tu attendais depuis longtemps.";
+	next;
+	specialeffect EF_EXIT;
+	next;
+	mes "[Bibi]";
+	mes "Laisse moi te montrer comment nous remercions ceux qui nous aident.";
+	next;
+	specialeffect EF_LORD;
+	next;
+	specialeffect EF_LIGHTSPHERE;
+	next;
+	delitem 7390,1;
+	getitem 29109,1;
+	mes "[Bibi]";
+	mes "Fais-en bon usage, mon ami.";
+	close;
+	}
+	else {
+	mes "[Bibi]";
+	mes "Un peu d'argent pour que je me paye une petite glace, l'ami ?";
+	next;	
+	if (Zeny > 9999) {
+			switch(select("Pas de problème !:Euh, non.")) {
+			case 1:
+				if (Zeny > 9999) {
+					mes "[Bibi]";
+					mes "C'est bien aimable !";
+					set Zeny,Zeny-10000;
+					close;
+				}
+				else {
+					mes "[Bibi]";
+					mes "Tu n'as meme pas de quoi t'en acheter ...";
+					close;
+				}
+			case 2:
+				mes "[Bibi]";
+				mes "On se reverra.";
+				close;	
+			}
+	
+		}
+	else {
+	next;
+	mes "[Bibi]";
+	mes "Tu n'as meme pas de quoi t'en acheter ...";
+	close;
+		}
+	}
+	end;
+}

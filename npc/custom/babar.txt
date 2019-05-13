@@ -1,0 +1,674 @@
+//============================================================
+
+// featheretvalkcrown
+//============================================================
+gonryun,199,120,4	script	Babar	4_ELEPHANT,{
+	mes "[Babar]";
+	mes "Je suis Babar, et j'ai le don de colorer les Hats.";
+	next;
+	switch(select("Vraiment ?:Peu importe.")) {
+	case 1:
+		mes "[Babar]";
+		mes "Comment, vraiment ? Je suis le meilleur de tout Rune-Midgard !";
+		next;
+		mes "[Babar]";
+		mes "^DF0101ATTENTION^000000";
+		mes "^DF0101Toutes les cards se trouvant dans le Hat lors de la coloration ou de la décoloration seront perdues !^000000";
+		next;
+		switch(select("Pourrais-tu colorer mon Feather Beret ?:Je souhaiterais décolorer mon Feather Beret.:Pourrais-tu colorer ma Valkyrie Crown ?:Je souhaiterais décolorer ma Valkyrie Crown.:En fait, rien.")) {
+		case 1:
+			mes "[Babar]";
+			mes "J'ai besoin de 50 dyestuffs pour colorer un Feather Beret.";
+			mes "Pour la couleur Rose, il me faudra 25 violets et 25 blancs.";
+			mes "Pour la couleur Silver, il me faudra 25 noirs et 25 blancs.";
+			mes "Pour la couleur Cyan, il me faudra 25 cobaltues et 25 blancs.";
+			mes "Pour la couleur Marron, il me faudra 25 cobaltues et 25 oranges.";
+			mes "Pour les autres, c'est 50 de la couleur que tu souhaites.";
+			next;
+			mes "Es-tu certain de vouloir encore colorer ton Feather Beret ?";
+			switch(select("Oui !:Non je ne veux pas.")) {
+			case 1:
+				if (countitem(5170) > 0) {
+					mes "[Babar]";
+					mes "De quelle couleur souhaites-tu que je le modifie ?";
+					next;
+					switch(select("Or:Silver:Rouge:Orange:Cyan:Vert:Rose:Violet:Marron:Noir:Blanc:En fait, non.")) {
+					case 1:
+						if (countitem(5170) > 0)  &&  (countitem(976) > 49) {
+							delitem 5170,1; //Feather_Beret
+							delitem 976,50; //Lemon_Dyestuffs
+							getitem 29252,1; //Gold_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 2:
+						if (countitem(5170) > 0)  &&  (countitem(982) > 24)  &&  (countitem(983) > 24) {
+							delitem 5170,1; //Feather_Beret
+							delitem 982,25; //White_Dyestuffs
+							delitem 983,25; //Black_Dyestuffs
+							getitem 29259,1; //Silver_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 3:
+						if (countitem(5170) > 0)  &&  (countitem(975) > 49) {
+							delitem 5170,1; //Feather_Beret
+							delitem 975,50; //Scarlet_Dyestuffs
+							getitem 29258,1; //Red_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 4:
+						if (countitem(5170) > 0)  &&  (countitem(980) > 49) {
+							delitem 5170,1; //Feather_Beret
+							delitem 980,50; //Orange_Dyestuffs
+							getitem 29255,1; //Orange_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 5:
+						if (countitem(5170) > 0)  &&  (countitem(978) > 24)  &&  (countitem(982) > 24) {
+							delitem 5170,1; //Feather_Beret
+							delitem 978,25; //Cobaltue_Dyestuffs
+							delitem 982,25; //White_Dyestuffs
+							getitem 29254,1; //Light_Blue_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 6:
+						if (countitem(5170) > 0)  &&  (countitem(979) > 49) {
+							delitem 5170,1; //Feather_Beret
+							delitem 979,50; //Darkgreen_Dyestuffs
+							getitem 29253,1; //Green_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 7:
+						if (countitem(5170) > 0)  &&  (countitem(981) > 24)  &&  (countitem(982) > 24) {
+							delitem 5170,1; //Feather_Beret
+							delitem 981,25; //Violet_Dyestuffs
+							delitem 982,25; //White_Dyestuffs
+							getitem 29256,1; //Pink_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 8:
+						if (countitem(5170) > 0)  &&  (countitem(981) > 49) {
+							delitem 5170,1; //Feather_Beret
+							delitem 981,50; //Violet_Dyestuffs
+							getitem 29257,1; //Purple_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 9:
+						if (countitem(5170) > 0)  &&  (countitem(980) > 24)  &&  (countitem(978) > 24) {
+							delitem 5170,1; //Feather_Beret
+							delitem 978,25; //Cobaltue_Dyestuffs
+							delitem 980,25; //Orange_Dyestuffs
+							getitem 29251,1; //Brown_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 10:
+						if (countitem(5170) > 0)  &&  (countitem(983) > 49) {
+							delitem 5170,1; //Feather_Beret
+							delitem 983,50; //Black_Dyestuffs
+							getitem 29250,1; //Black_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 11:
+						if (countitem(5170) > 0)  &&  (countitem(982) > 49) {
+							delitem 5170,1; //Feather_Beret
+							delitem 982,50; //White_Dyestuffs
+							getitem 29260,1; //White_Feather_Beret
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 12:
+						mes "[Babar]";
+						mes "Tant pis !";
+						close;
+					}
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				mes "[Babar]";
+				mes "Tant pis !";
+				close;	
+			}
+		case 2:
+			mes "[Babar]";
+			mes "Quel type de Feather Beret souhaites-tu décolorer ?";
+			next;
+			switch(select("Or:Silver:Rouge:Orange:Cyan:Vert:Rose:Violet:Marron:Noir:Blanc:En fait, non.")) {
+			case 1:
+				if (countitem(29252) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29252,1; //Gold_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Gold Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				if (countitem(29259) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29259,1; //Silver_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Silver Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 3:
+				if (countitem(29258) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29258,1; //Red_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Red Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 4:
+				if (countitem(29255) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29255,1; //Orange_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Orange Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 5:
+				if (countitem(29254) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29254,1; //Light_Blue_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Light Blue Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 6:
+				if (countitem(29253) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29253,1; //Green_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Green Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 7:
+				if (countitem(29256) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29256,1; //Pink_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Pink Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 8:
+				if (countitem(29257) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29257,1; //Purple_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Purple Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 9:
+				if (countitem(29251) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29251,1; //Brown_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Brown Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 10:
+				if (countitem(29250) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29250,1; //Black_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Black Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 11:
+				if (countitem(29260) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29260,1; //White_Feather_Beret
+					getitem 5170,1; //Feather_Beret
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de White Feather Beret. Reviens plus tard !";
+					close;
+				}
+			case 12:
+						mes "[Babar]";
+						mes "Tant pis !";
+						close;
+				}
+		case 3:
+			mes "[Babar]";
+			mes "J'ai besoin de 100 dyestuffs pour colorer une Valkyrie Crown.";
+			mes "Pour la couleur Rose, il me faudra 50 violets et 50 blancs.";
+			mes "Pour la couleur Silver, il me faudra 50 noirs et 50 blancs.";
+			mes "Pour la couleur Cyan, il me faudra 50 cobaltues et 50 blancs.";
+			mes "Pour la couleur Marron, il me faudra 50 cobaltues et 50 oranges.";
+			mes "Pour les autres, c'est 100 de la couleur que tu souhaites.";
+			next;
+			mes "Es-tu certain de vouloir encore colorer ta Valkyrie Crown ?";
+			switch(select("Oui !:Non je ne veux pas.")) {
+			case 1:
+				if (countitem(29200) > 0) {
+					mes "[Babar]";
+					mes "De quelle couleur souhaites-tu que je la modifie ?";
+					next;
+					switch(select("Or:Silver:Rouge:Orange:Cyan:Vert:Rose:Violet:Marron:Noir:Blanc:En fait, non.")) {
+					case 1:
+						if (countitem(29200) > 0)  &&  (countitem(976) > 99) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 976,100; //Lemon_Dyestuffs
+							getitem 29204,1; //Gold_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 2:
+						if (countitem(29200) > 0)  &&  (countitem(982) > 49)  &&  (countitem(983) > 49) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 982,50; //White_Dyestuffs
+							delitem 983,50; //Black_Dyestuffs
+							getitem 29210,1; //Silver_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 3:
+						if (countitem(29200) > 0)  &&  (countitem(975) > 99) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 975,100; //Scarlet_Dyestuffs
+							getitem 29206,1; //Red_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 4:
+						if (countitem(29200) > 0)  &&  (countitem(980) > 99) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 980,100; //Orange_Dyestuffs
+							getitem 29209,1; //Orange_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 5:
+						if (countitem(29200) > 0)  &&  (countitem(978) > 49)  &&  (countitem(982) > 49) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 978,50; //Cobaltue_Dyestuffs
+							delitem 982,50; //White_Dyestuffs
+							getitem 29208,1; //Cyan_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 6:
+						if (countitem(29200) > 0)  &&  (countitem(979) > 99) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 979,100; //Darkgreen_Dyestuffs
+							getitem 29205,1; //Green_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 7:
+						if (countitem(29200) > 0)  &&  (countitem(981) > 49)  &&  (countitem(982) > 49) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 981,50; //Violet_Dyestuffs
+							delitem 982,50; //White_Dyestuffs
+							getitem 29203,1; //Pink_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 8:
+						if (countitem(29200) > 0)  &&  (countitem(981) > 99) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 981,100; //Violet_Dyestuffs
+							getitem 29211,1; //Purple_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 9:
+						if (countitem(29200) > 0)  &&  (countitem(980) > 49)  &&  (countitem(978) > 49) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 978,50; //Cobaltue_Dyestuffs
+							delitem 980,50; //Orange_Dyestuffs
+							getitem 29207,1; //Brown_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 10:
+						if (countitem(29200) > 0)  &&  (countitem(983) > 99) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 983,100; //Black_Dyestuffs
+							getitem 29201,1; //Black_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 11:
+						if (countitem(29200) > 0)  &&  (countitem(982) > 99) {
+							delitem 29200,1; //Blue_Valkyrie_Crown
+							delitem 982,100; //White_Dyestuffs
+							getitem 29202,1; //White_Valkyrie_Crown
+							close;
+						}
+						else {
+							mes "[Babar]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 12:
+						mes "[Babar]";
+						mes "Tant pis !";
+						close;
+					}
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				mes "[Babar]";
+				mes "Tant pis !";
+				close;	
+			}
+		case 4:
+			mes "[Babar]";
+			mes "Quel type de Valkyrie Crown souhaites-tu décolorer ?";
+			next;
+			switch(select("Or:Silver:Rouge:Orange:Cyan:Vert:Rose:Violet:Marron:Noir:Blanc:En fait, non.")) {
+			case 1:
+				if (countitem(29204) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29204,1; //Gold_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Gold Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				if (countitem(29210) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29210,1; //Silver_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Silver Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 3:
+				if (countitem(29206) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29206,1; //Red_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Red Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 4:
+				if (countitem(29209) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29209,1; //Orange_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Orange Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 5:
+				if (countitem(29208) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29208,1; //Cyan_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Light Blue Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 6:
+				if (countitem(29205) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29205,1; //Green_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Green Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 7:
+				if (countitem(29203) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29203,1; //Pink_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Pink Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 8:
+				if (countitem(29211) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29211,1; //Purple_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Purple Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 9:
+				if (countitem(29207) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29207,1; //Brown_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Brown Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 10:
+				if (countitem(29201) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29201,1; //Black_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de Black Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 11:
+				if (countitem(29202) > 0) {
+					mes "[Babar]";
+					mes "Je m'en occupe !";
+					delitem 29202,1; //White_Valkyrie_Crown
+					getitem 29200,1; //Blue_Valkyrie_Crown
+					close;
+				}
+				else {
+					mes "[Babar]";
+					mes "Tu n'as pas de White Valkyrie Crown. Reviens plus tard !";
+					close;
+				}
+			case 12:
+					mes "[Babar]";
+					mes "Tant pis !";
+					close;
+				}
+		case 5:
+			mes "[Babar]";
+			mes "Humpff.";
+			close;
+		}
+	case 2:
+		mes "[Babar]";
+		mes "Humpff.";
+		close;
+	}
+	end;
+}

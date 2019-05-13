@@ -1,0 +1,180 @@
+//============================================================
+// ^29AFD6Dorie^000000
+//============================================================
+gon_in,42,17,2	script	Dorie	4_F_06,{
+	mes "[^29AFD6Dorie^000000]";
+	mes "J'ai l'impression d'avoir entendu un bruit en haut... Mais je n'ose pas aller voir...";
+	next;
+	mes "[^29AFD6Dorie^000000]";
+	mes "Oublions !";
+	mes "Tu veux jouer avec moi ?";
+	mes "D'habitude, je joue avec ^CC3333Groumie^000000, ma soeur, mais elle est partie à ^F70000Lutie^000000, pour un mariage, je crois.";
+	next;
+	switch(select("Oui ?:Je n'ai pas le temps.")) {
+	case 1:
+		mes "[^29AFD6Dorie^000000]";
+		mes "On fait la course ! Le gagnant aura un super ^0033FFNote Headphone^000000, tu veux ?";
+		mes "Et puis, j'ai plein de couleur, alors on pourra même faire un échange !";
+		next;
+		switch(select("Allons-y !:Je voudrais faire un échange !")) {
+		case 1:
+			mes "[^29AFD6Dorie^000000]";
+			mes "Alors, le premier qui rapporte :";
+			next;
+			mes "[^29AFD6Dorie^000000]";
+			mes "1 Goddess Tear";
+			mes "15 Stiff Horn";
+			mes "30 Muscovite";
+			mes "30 Turquoise";
+			mes "75 Aquamarine";
+			mes "500 Frozen Rose";
+			mes "500 Blue Feather";
+			mes "3000 Cloud Crumb";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(7830) > 0) && (countitem(7008) > 14) && (countitem(7292) > 29) && (countitem(7294) > 29) && (countitem(720) > 74) && (countitem(749) > 499) && (countitem(7441) > 499) && (countitem(7162) > 2999)) {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Waouh ! Tu gagnes !";
+					mes "On fait la revanche quand tu veux !";
+					delitem 7830,1; //Goddess Tear
+					delitem 7008,15; //Stiff Horn
+					delitem 7292,30; //Muscovite
+					delitem 7294,30; //Turquoise
+					delitem 720,75; //Aquamarine
+					delitem 749,500; //Frozen Rose
+					delitem 7441,500; //Blue Feather
+					delitem 7162,3000; //Cloud Crumb
+					getitem 5151,1; //Note_Headphone
+					close;
+				}
+				else {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Il t'en manque encore !";
+					close;
+				}
+			case 2:
+				mes "[^29AFD6Dorie^000000]";
+				mes "Pas drôle !";
+				close;	
+			}
+		case 2:
+		mes "[^29AFD6Dorie^000000]";
+		mes "^DF0101ATTENTION^000000";
+		mes "^DF0101Toutes les cards se trouvant dans le Hat seront perdues !^000000";
+		next;
+		mes "[^29AFD6Dorie^000000]";
+		mes "J'ai besoin de 200 dyestuffs de la couleur que tu souhaites !";
+		next;
+			switch(select("Noir:Blanc:Gold:Purple:Red:Green:Cyan:En fait non")) {
+			case 1:
+				if ((countitem(5151) > 0) && (countitem(983) > 199)) {
+					mes "[^29AFD6Dorie^000000]";
+					mes "C'est parti !";
+					delitem 5151,1; //Note
+					delitem 983,200; //Black_Dyestuffs
+					getitem 29276,1; //Black note
+					close;
+				}
+				else {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+			case 2:
+				if ((countitem(5151) > 0) && (countitem(982) > 199)) {
+					mes "[^29AFD6Dorie^000000]";
+					mes "C'est parti !";
+					delitem 5151,1; //Note_Headphone
+					delitem 982,200; //White_Dyestuffs
+					getitem 29270,1; //White Note
+					close;
+				}
+				else {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+			case 3:
+				if ((countitem(5151) > 0) && (countitem(976) > 199)) {
+					mes "[^29AFD6Dorie^000000]";
+					mes "C'est parti !";
+					delitem 5151,1; //Note_Headphone
+					delitem 976,200; //Lemon_Dyestuffs
+					getitem 29274,1; //Gold
+					close;
+				}
+				else {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+			case 4:
+				if ((countitem(5151) > 0) && (countitem(981) > 199)) {
+					mes "[^29AFD6Dorie^000000]";
+					mes "C'est parti !";
+					delitem 5151,1; //Note_Headphone
+					delitem 981,200; //Violet_Dyestuffs
+					getitem 29272,1; //Purple
+					close;
+				}
+				else {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+			case 5:
+				if ((countitem(5151) > 0) && (countitem(975) > 199)) {
+					mes "[^29AFD6Dorie^000000]";
+					mes "C'est parti !";
+					delitem 5151,1; //Note_Headphone
+					delitem 975,200; //Scarlet_Dyestuffs
+					getitem 29271,1; //Red
+					close;
+				}
+				else {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+			case 6:
+				if ((countitem(5151) > 0) && (countitem(979) > 199)) {
+					mes "[^29AFD6Dorie^000000]";
+					mes "C'est parti !";
+					delitem 5151,1; //Note_Headphone
+					delitem 979,200; //Darkgreen_Dyestuffs
+					getitem 29273,1; //Green
+					close;
+				}
+				else {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+			case 7:
+				if ((countitem(5151) > 0) && (countitem(978) > 199)) {
+					mes "[^29AFD6Dorie^000000]";
+					mes "C'est parti !";
+					delitem 5151,1; //Note_Headphone
+					delitem 978,200; //Cobaltue_Dyestuffs
+					getitem 29275,1; //Cyan 
+					close;
+				}
+				else {
+					mes "[^29AFD6Dorie^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+			case 8:
+				mes "[^29AFD6Dorie^000000]";
+				mes "Tant pis !";
+				close;
+			}
+		}
+	case 2:
+		mes "[^29AFD6Dorie^000000]";
+		mes "Pas drôle !";
+		close;
+	}
+	end;
+}

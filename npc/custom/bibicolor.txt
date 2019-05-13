@@ -1,0 +1,449 @@
+//============================================================
+// Bibi Color
+//============================================================
+gonryun,197,138,4	script	Bibi Color	4_F_JP_CHROME,{
+	mes "[^D73E68Bibi Color^000000]";
+	mes "Bonjour, j'ai le talent de colorer les Bibi hats.";
+	next;
+	switch(select("J'aurais besoin de vos services.:Rien.")) {
+	case 1:
+		mes "[^D73E68Bibi Color^000000]";
+		mes "Bien sur, colorer les Bibi Hat est ma passion, mais j'ai besoin de matériaux particuliers.";
+		next;
+		mes "[^D73E68Bibi Color^000000]";
+		mes "^DF0101ATTENTION^000000";
+		mes "^DF0101Toutes les cards se trouvant dans ton Bibi lors de sa coloration ou de sa décoloration seront perdues !^000000";
+		next;
+		mes "[^D73E68Bibi Color^000000]";
+		mes "^DF0101ATTENTION^000000";
+		mes "^DF0101De plus, j'absorberai l'orbe pour colorer le Bibi et je ne pourrai pas la rendre lors de la décoloration.^000000";
+		next;
+		switch(select("Je veux colorer mon Bibi.:Je veux décolorer mon Bibi.:En fait, rien.")) {
+		case 1:
+			mes "[^D73E68Bibi Color^000000]";
+			mes "Es-tu certain de vouloir le colorer ?";
+			switch(select("Oui !:Non je ne veux pas.")) {
+			case 1:
+				if (countitem(29109) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "De quelle couleur souhaites-tu que je le modifie ?";
+					mes "Je vais avoir besoin de l'orbe de la couleur que tu veux en plus du Bibi.";
+					next;
+					switch(select("^FF4848Red^000000:Black:^FFBBBBWhite^000000:^01FCEFCyan^000000:^01F33EGreen^000000:^DFDF00Gold^000000:^9B4EE9Purple^000000:^0000CCBlue^000000:^FF800DOrange^000000:^FF68DDPink^000000:^8A2908Dark Brown^000000:^B43104Light Brown^000000:^FFFF00Yellow^000000:^8A0808Crimson^000000:En fait, non.")) {
+					case 1:
+						if (countitem(29410) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29410,1; //Red Orbe
+							getitem 29100,1; //Red_Traveler_Hat
+							close;
+						}
+						else {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 2:
+						if (countitem(29278) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29278,1; //Black_orbe
+							getitem 29101,1; //Black_Traveler_Hat
+							close;
+						}
+						else {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 3:
+						if (countitem(29411) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29411,1; //White Orbe
+							getitem 29102,1; //White_Traveler_Hat
+							close;
+						}
+						else {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 4:
+						if (countitem(29412) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29412,1; //Cyan Orbe
+							getitem 29103,1; //Cyan_Traveler_Hat
+							close;
+						}
+						else {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 5:
+						if (countitem(29413) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29413,1; //Green Orbe
+							getitem 29104,1; //Green_Traveler_Hat
+							close;
+						}
+						else {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 6:
+						if (countitem(29414) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29414,1; //Gold Orbe
+							getitem 29105,1; //Gold_Traveler_Hat
+							close;
+						}
+						else {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 7:
+						if (countitem(29415) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29415,1; //Purple Orbe
+							getitem 29106,1; //Purple_Traveler_Hat
+							close;
+						}
+						else {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 8:
+						if (countitem(29416) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29416,1; //Blue Orbe
+							getitem 29107,1; //Blue_Traveler_Hat
+							close;
+						}
+						else {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 9:
+						if (countitem(29417) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29417,1; //Orange Orbe
+							getitem 29116,1; //Orange Traveler Hat
+							close;
+						}
+						else {
+							mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 10:
+						if (countitem(29350) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29350,1; //Pink Orb
+							getitem 29117,1; //Pink bibi
+							close;
+						}
+						else {
+							mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 11:
+						if (countitem(29418) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29418,1; //Dark Brown
+							getitem 29120,1; //Dark Brown Bibi Hat
+							close;
+						}
+						else {
+							mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 12:
+						if (countitem(29419) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29419,1; //Light Brown
+							getitem 29119,1; //Light Brown Bibi Hat
+							close;
+						}
+						else {
+							mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 13:
+						if (countitem(29420) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29420,1; //Yellow 
+							getitem 29118,1; //Yellow Bibi
+							close;
+						}
+						else {
+							mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 14:
+						if (countitem(29409) > 0) {
+							mes "[^D73E68Bibi Color^000000]";
+							mes "C'est tout bon !";
+							delitem 29109,1; //Traveler_Hat
+							delitem 29409,1; //Sang 
+							getitem 29121,1; //Crimson Bibi
+							close;
+						}
+						else {
+							mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 15:
+						mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+						mes "Tant pis !";
+						close;
+					}
+				}
+				else {
+					mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+					mes "Tu n'as pas de Bibi. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+				mes "Tant pis !";
+				close;	
+			}
+		case 2:
+			mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+			mes "Quel type de Bibi souhaites-tu décolorer ?";
+			mes "Le service est gratuit, cependant je ne rends pas l'orbe lors de la décoloration.";
+			next;
+			switch(select("^FF4848Red^000000:Black:^FFBBBBWhite^000000:^01FCEFCyan^000000:^01F33EGreen^000000:^DFDF00Gold^000000:^9B4EE9Purple^000000:^0000CCBlue^000000:^FF800DOrange^000000:^FF68DDPink^000000:^8A2908Dark Brown^000000:^B43104Light Brown^000000:^FFFF00Yellow^000000:^8A0808Crimson^000000:En fait, non.")) {
+			case 1:
+				if (countitem(29100) > 0) {
+					mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+					mes "Je m'en occupe !";
+					delitem 29100,1; //Red_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 2:
+				if (countitem(29101) > 0) {
+					mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+					mes "Je m'en occupe !";
+					delitem 29101,1; //Black_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68^D73E68Bibi Color^000000^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 3:
+				if (countitem(29102) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29102,1; //White_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 4:
+				if (countitem(29103) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29103,1; //Cyan_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 5:
+				if (countitem(29104) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29104,1; //Green_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 6:
+				if (countitem(29105) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29105,1; //Gold_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 7:
+				if (countitem(29106) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29106,1; //Purple_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 8:
+				if (countitem(29107) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29107,1; //Blue_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 9:
+				if (countitem(29116) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29116,1; //Bibi Orange
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 10:
+				if (countitem(29117) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29117,1; //Pink_Traveler_Hat
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 11:
+				if (countitem(29120) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29120,1; //Dark Brown Bibi
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 12:
+				if (countitem(29119) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29119,1; //Light Brown Bibi
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}
+			case 13:
+				if (countitem(29118) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29118,1; //YELLOW BIBI
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}	
+			case 14:
+				if (countitem(29121) > 0) {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Je m'en occupe !";
+					delitem 29121,1; //crimson BIBI
+					getitem 29109,1; //Traveler_Hat
+					close;
+				}
+				else {
+					mes "[^D73E68Bibi Color^000000]";
+					mes "Il manque quelque chose, tu ne crois pas ? ;)";
+					close;
+				}				
+			case 15:
+				mes "[^D73E68Bibi Color^000000]";
+				mes "Tant pis !";
+				close;	
+			}
+		case 3:
+			mes "[^D73E68Bibi Color^000000]";
+			mes "D'accord, tant pis !";
+			close;
+		}
+	case 2:
+		mes "[^D73E68Bibi Color^000000]";
+		mes "A une prochaine fois !";
+		close;
+	}
+	end;
+}

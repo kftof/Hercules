@@ -1,0 +1,130 @@
+//============================================================
+// Garrison[4] Quest
+//============================================================
+gonryun,131,140,6	script	Alex Garrison#	4_M_GUNSLINGER,{
+	if (countitem(29777) > 0 || countitem(29477) > 0) {
+			mes "[Alex]";
+			mes "Et bien, je vois que tu possèdes une bien belle arme.";
+			mes "Si tu veux, je peux opérer des changements pour que son type change.";
+			next;
+			mes "[Alex]";
+			mes "Cela signifie que je peux passer ton Ultimate Garrison en Ultimate ShotGun, et inversement.";
+			next;			
+			switch(select("Passer mon Gun en ShotGun:Passer mon ShotGun en Gun.:Ne rien faire.")) {
+				case 1:
+					if (countitem(29477) > 0) {
+					mes "[Alex]";
+					mes "Je vais procéder aux changements, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vraiment vouloir faire ça maintenant ?";
+					next;
+						switch(select("Oui, je veux changer mon Gun en ShotGun.:Non.")) {
+						case 1:
+						if (countitem(29477) > 0) {
+						mes "[Alex]";
+						mes "Voilà pour toi !";	
+						delitem 29477,1;
+						getitem 29777,1;
+						close;
+						}
+						else {
+						mes "[Alex]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[Alex]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[Alex]";
+					mes "Désolé, mais tu n'as pas d'Ultimate Garrison.";
+					close;					
+					}
+				case 2:
+					if (countitem(29777) > 0) {
+					mes "[Alex]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vouloir faire ça ?";
+					next;
+						switch(select("Oui, je veux passer mon ShotGun en Gun.:Non.")) {
+						case 1:
+						if (countitem(29777) > 0) {
+						mes "[Alex]";
+						mes "Voilà pour toi !";	
+						delitem 29777,1;
+						getitem 29477,1;
+						close;
+						}
+						else {
+						mes "[Alex]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[Alex]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[Alex]";
+					mes "Désolé, mais tu n'as pas d'Ultimate Shotgun.";
+					close;					
+					}		
+				case 3:
+					mes "[Alex]";
+					mes "Fais ce que tu veux...";
+					close;	
+				}
+	}
+	else {
+	mes "[Alex]";
+	mes "Je suis Alex Garrison, le fils du célèbre Mr.Garrison.";
+	mes "M'aiderais-tu a confectionner un prototype encore jamais vu du Garrison ?";
+	next;
+	switch(select("Ok !:Non.")) {
+	case 1:
+		mes "[Alex]";
+		mes "Je vais avoir besoin des objets suivants :";
+		mes "100 Rusty Screw";
+		mes "100 Used Iron Plate";
+		mes "100 Steel.";
+		next;
+		mes "[Alex]";
+		mes "As-tu rassembler les items ?";
+		next;
+		switch(select("Lui donner les items.:Ne pas lui donner.")) {
+		case 1:
+			if ((countitem(999) > 99) &&(countitem(7317) > 99) && (countitem(7319) > 99) ) {
+				mes "[Alex]";
+				mes "Parfait, voici ton Garrison. Prends en soin.";
+				delitem 999,100; //Steel
+				delitem 7317,100; //Screw
+				delitem 7319,100; //Old_Steel_Plate
+				getitem 29279,1; //The_Garrison_
+				close;
+			}
+			else {
+				mes "[Alex]";
+				mes "Il manque des objets.";
+				close;
+			}
+		case 2:
+			mes "[Alex]";
+			mes "Fais ce que tu veux...";
+			close;	
+		}
+	case 2:
+		mes "[Alex]";
+		mes "Tant pis.";
+		close;
+	}
+	}
+	end;
+}

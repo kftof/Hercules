@@ -1,0 +1,53 @@
+//============================================================
+kh_school,50,66,4	script	Bibi#11	4_M_BIBI,{
+	mes "[Bibi]";
+	mes "Je suis un des frêres de Bibi.";
+	next;
+	switch(select("Besoin d'aide ?:Rien.")) {
+		case 1:
+			mes "[Bibi]";
+			mes "J'aurais bien besoin de quelque chose ...";
+			mes "Oui, peux-tu me rapporter ces objets ?";
+			next;
+			mes "[Bibi]";
+			mes "20 Fang of Garm";
+			mes "50 Talon of Griffon";
+			mes "1 Evil Snake Lord Card";
+			mes "20 000 000 Zeny";
+			mes "C'est tout ce dont j'ai besoin.";
+			next;
+			mes "[Bibi]";
+			mes "Alors ?";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(7036) > 19)	&&	(countitem(7048) > 49)	&&	(countitem(4330) > 0)	&&	(Zeny > 19999999)) {
+					mes "[Bibi]";
+					mes "C'est parfait ! Tiens, voilà pour te remercier.";
+					delitem 7036,20;
+					delitem 7048,50;
+					delitem 4330,1;
+					set Zeny,Zeny-20000000;
+					getitem 7371,1; //ball1
+	specialeffect(EF_FLOWERLEAF, AREA, playerattached());
+	specialeffect(EF_ELECTRIC, AREA, playerattached());
+	specialeffect(EF_MVP, AREA, playerattached());
+					close2;
+				}
+				else {
+					mes "[Bibi]";
+					mes "Il manque quelque chose.";
+					close;
+				}
+			case 2:
+				mes "[Bibi]";
+				mes "Comme tu veux.";
+				close;	
+			}
+		case 2:
+			mes "[Bibi]";
+			mes "...";
+			close;
+		}
+	end;
+}

@@ -10389,7 +10389,7 @@ OnMyMobDead:
 		getitem Some_Of_Report,1;
 	end;
 }
-
+/*
 man_fild03,1,1,0	script	ep13_man_fild03_mon_edq	FAKE_NPC,{
 OnInit:
 	enablenpc "ep13_man_fild03_mon_edq";
@@ -10419,6 +10419,7 @@ OnMyMobDead:
 		getitem Some_Of_Report,1;
 	end;
 }
+*/
 
 //== Persuing Rayan Moore :: ep13_moc2 =====================
 mid_campin,68,185,3	script	Pursuit Party Leader#1	1_F_SIGNZISK,{

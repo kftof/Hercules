@@ -1,0 +1,65 @@
+// SkyHeadear
+//============================================================
+ra_temple,73,63,4	script	Eitri#	2_M_OLDBLSMITH,{
+	mes "[Eitri]";
+	mes "Je suis Eitri, frêre de Brokk.";
+	mes "Que veux-tu ?";
+	next;
+	switch(select("J'ai entendu parler de vos talents.:Rien.")) {
+	case 1:
+		mes "[Eitri]";
+		mes "Je suis effectivement capable de forger une Couronne incroyable, mais il faudra me prouver ta valeur.";
+		next;
+		switch(select("De quoi as-tu besoin ?:Non.")) {
+		case 1:
+			mes "[Eitri]";
+			mes "20 Turquoise";
+			mes "30 Matchstick";
+			mes "300 Aquamarine";
+			mes "500 Mystic Frozen";
+			mes "1000 Powder of Butterfly";
+			mes "1000 Talon";
+			mes "1000 Star Dust";
+			mes "1000 Cyfar";
+			mes "1000 Cloud Crumb";
+			mes "T'en sens-tu capable ?";
+			next;
+			switch(select("Lui donner les items.:Je n'en suis pas capable.")) {
+			case 1:
+				if ((countitem(720) > 299) && (countitem(995) > 499) && (countitem(7035) > 29) && (countitem(7294) > 19) && (countitem(924) > 999) && (countitem(917) > 999) && (countitem(1001) > 999) && (countitem(7053) > 999) && (countitem(7162) > 999)) {
+					mes "[Eitri]";
+					mes "Parfait, tiens.";
+					delitem 720,300; //Aquamarine
+					delitem 995,500; //Mystic frozen
+					delitem 7035,30; //matchstick
+					delitem 7294,20; //turquoise
+					delitem 924,1000; //powder of butterfly
+					delitem 917,1000; //talon
+					delitem 1001,1000; //star dust
+					delitem 7053,1000; //cyfar
+					delitem 7162,1000; //cloud crumb
+					getitem 29365,1; //Sky Headgear
+					close;
+				}
+				else {
+					mes "[Eitri]";
+					mes "Il manque des items.";
+					close;
+				}
+			case 2:
+				mes "[Eitri]";
+				mes "Je comprends.";
+				close;	
+			}
+		case 2:
+			mes "[Eitri]";
+			mes "Tant pis.";
+			close;
+		}
+	case 2:
+		mes "[Eitri]";
+		mes "Tant pis.";
+		close;
+	}
+	end;
+}

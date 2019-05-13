@@ -32,4 +32,4 @@
 //= 1.0
 //=========================================================================
 
-alde_gld,181,199,5	duplicate(MountManager_turbo)	Peco Peco Manager	4_F_RACING
+//alde_gld,181,199,5	duplicate(MountManager_turbo)	Peco Peco Manager	4_F_RACING

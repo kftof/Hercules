@@ -1,0 +1,81 @@
+//
+// WOE FLAG DANS GONRYUN
+//
+// 99 Bamboo Grove Hill :
+//
+
+
+gonryun,145,129,4	script	Bamboo Grove (lvl 99)	GUILD_FLAG,{
+
+	.@GID = getcastledata("payg_cas05",1);
+			mes "[Drapeau]";
+			mes " ";
+			mes "La Guilde ^FF0000" + getguildname(.@GID) + "^000000 possède actuellement le Château.";
+			mes " ";
+		    mes "^FF0000" + getguildmaster(.@GID) + "^000000 est le Guild Master.";
+			next;
+			switch(select("Aller au Château:Annuler")) {
+			case 1:
+					warp "pay_gld",204,266;
+					end;
+			case 2:
+				close;
+			}
+			
+OnInit:
+OnAgitInit:
+OnRecvCastlePy05:
+flagemblem getcastledata("payg_cas05",1);
+end;
+}
+
+// 200 Bright Arbor :
+/*
+gonryun,146,131,4	script	Bright Arbor (lvl 200)	GUILD_FLAG,{
+
+	.@GID = getcastledata("payg_cas01",1);
+			mes "[Drapeau]";
+			mes " ";
+			mes "La Guilde ^FF0000" + getguildname(.@GID) + "^000000 possède actuellement le Château.";
+			mes " ";
+		    mes "^FF0000" + getguildmaster(.@GID) + "^000000 est le Guild Master.";
+			next;
+			switch(select("Aller au Château:Annuler")) {
+			case 1:
+					warp "pay_gld",121,233;
+					end;
+			case 2:
+				close;
+			}
+			
+OnInit:
+OnAgitInit:
+OnRecvCastlePy01:
+flagemblem getcastledata("payg_cas01",1);
+end;
+}
+*/
+// 999 Banadis :
+
+gonryun,149,134,4	script	Bandis (lvl 999)	GUILD_FLAG,{
+
+	.@GID = getcastledata("arug_cas05",1);
+			mes "[Drapeau]";
+			mes " ";
+			mes "La Guilde ^FF0000" + getguildname(.@GID) + "^000000 possède actuellement le Château.";
+			mes " ";
+		    mes "^FF0000" + getguildmaster(.@GID) + "^000000 est le Guild Master.";
+			next;
+			switch(select("Aller au Château:Annuler")) {
+			case 1:
+					warp "aru_gld",292,107;
+					end;
+			case 2:
+				close;
+			}
+OnInit:			
+OnAgitInit2:
+OnRecvCastleAr05:
+	flagemblem getcastledata("arug_cas05",1);
+	end;
+}

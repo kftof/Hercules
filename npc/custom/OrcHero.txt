@@ -1,0 +1,60 @@
+//===== rAthena Script ======================================= 
+//= Quest Orc Hero hat
+//===== By: ================================================== 
+//= kobra_k88
+//============================================================
+// Orc Hero Quest
+//============================================================
+gonryun,152,189,5	script	Daisho	ORK_HERO,{
+	mes "[^FF9331Daisho^000000]";
+	mes "Lok'Narosh ! Que veux-tu, humain ?";
+	next;
+	switch(select("Je veux faire partie de votre clan.:...")) {
+	case 1:
+		mes "[^FF9331Daisho^000000]";
+		mes "Tu vas devoir nous prouver ta valeur pour que le clan te Mok'kra.";
+		mes "Tu auras le Mogrin quand tu auras prouvé ta valeur.";
+		next;
+		switch(select("Que dois-je faire ?.:Finalement ... non.")) {
+		case 1:
+			mes "[^FF9331Daisho^000000]";
+			mes "Tu vas devoir massacrer nos ennemis, Aiyish !";
+			next;
+			mes "[^FF9331Daisho^000000]";
+			mes "3000 Orcish Voucher";
+			mes "500 Heroic Emblem";
+			mes "Chasses nos ennemis, et tu seras des notres.";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(931) > 2999) && (countitem(968) > 499)) {
+					mes "[^FF9331Daisho^000000]";
+					mes "Aka'Magosh ! Tu n'es pas comme tous les autres humains.";
+					mes "Tu es maintenant des notres, porte ce casque avec triomphe !";
+					delitem 931,3000; //Orcish_Voucher
+					delitem 968,500; //Voucher_Of_Orcish_Hero
+					getitem 5375,1; //L_Orc_Hero_Helm
+					close;
+				}
+				else {
+					mes "[^FF9331Daisho^000000]";
+					mes "Massacrer, tu dois en tuer plus ! Aiyish !";
+					close;
+				}
+			case 2:
+				mes "[^FF9331Daisho^000000]";
+				mes "Tu vas tâter, de mes lames !";
+				close;	
+			}
+		case 2:
+			mes "[^FF9331Daisho^000000]";
+			mes "Gol'Kosh, lâche !";
+			close;
+		}
+	case 2:
+		mes "[^FF9331Daisho^000000]";
+		mes "Gol'Kosh, humain !";
+		close;
+	}
+	end;
+}

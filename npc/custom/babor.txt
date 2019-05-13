@@ -1,0 +1,1045 @@
+//============================================================
+// babor
+//============================================================
+gonryun,197,118,7	script	Babor	4_ELEPHANT,{
+	mes "[Babor]";
+	mes "Je suis Babor, et je peux colorer les Wings.";
+	next;
+	switch(select("Continue ?:Peu importe.")) {
+	case 1:
+		mes "[Babor]";
+		mes "Et je peux aussi les décolorer ! N'est-ce pas formidable ?";
+		next;
+		mes "[Babor]";
+		mes "^DF0101ATTENTION^000000";
+		mes "^DF0101Toutes les cards se trouvant dans le Hat lors de la coloration ou de la décoloration seront perdues !^000000";
+		next;
+		switch(select("Pourrais-tu colorer mes Valkyrie Wings ?:Je souhaiterais décolorer mes Valkyrie Wings.:Pourrais-tu colorer mes Butterfly Wings ?:Je souhaiterais décolorer mes Butterfly Wings.:Pourrais-tu colorer mes Animated Wings ?:Je souhaiterais décolorer mes Animated Wings.:En fait, rien.")) {
+		case 1:
+			mes "[Babor]";
+			mes "J'ai besoin de 200 dyestuffs pour colorer des Valkyrie Wings.";
+			mes "Pour la couleur Rose, il me faudra 100 violets et 100 blancs.";
+			mes "Pour la couleur Silver, il me faudra 100 noirs et 100 blancs.";
+			mes "Pour la couleur Cyan, il me faudra 100 cobaltues et 100 blancs.";
+			mes "Pour la couleur Marron, il me faudra 100 cobaltues et 100 oranges.";
+			mes "Pour les autres, c'est 200 de la couleur que tu souhaites.";
+			next;
+			mes "Es-tu certain de vouloir encore colorer tes Valkyrie Wings ?";
+			switch(select("Oui !:Non je ne veux pas.")) {
+			case 1:
+				if (countitem(29169) > 0) {
+					mes "[Babor]";
+					mes "Quelle couleur veux-tu que j'utilise pour tes Wings ?";
+					next;
+					switch(select("Or:Silver:Rouge:Orange:Cyan:Vert:Rose:Violet:Marron:Blue:Blanc:Jaune:En fait, non.")) {
+					case 1:
+						if (countitem(29169) > 0)  &&  (countitem(976) > 199) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 976,200; //Lemon_Dyestuffs
+							getitem 29173,1; //Gold_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 2:
+						if (countitem(29169) > 0)  &&  (countitem(982) > 99)  &&  (countitem(983) > 99) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 982,100; //White_Dyestuffs
+							delitem 983,100; //Black_Dyestuffs
+							getitem 29167,1; //Silver_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 3:
+						if (countitem(29169) > 0)  &&  (countitem(975) > 199) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 975,200; //Scarlet_Dyestuffs
+							getitem 29166,1; //Red_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 4:
+						if (countitem(29169) > 0)  &&  (countitem(980) > 199) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 980,200; //Orange_Dyestuffs
+							getitem 29163,1; //Orange_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 5:
+						if (countitem(29169) > 0)  &&  (countitem(978) > 99)  &&  (countitem(982) > 99) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 978,100; //Cobaltue_Dyestuffs
+							delitem 982,100; //White_Dyestuffs
+							getitem 29172,1; //Cyan_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 6:
+						if (countitem(29169) > 0)  &&  (countitem(979) > 199) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 979,200; //Darkgreen_Dyestuffs
+							getitem 29162,1; //Green_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 7:
+						if (countitem(29169) > 0)  &&  (countitem(981) > 99)  &&  (countitem(982) > 99) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 981,100; //Violet_Dyestuffs
+							delitem 982,100; //White_Dyestuffs
+							getitem 29164,1; //Pink_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 8:
+						if (countitem(29169) > 0)  &&  (countitem(981) > 199) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 981,200; //Violet_Dyestuffs
+							getitem 29165,1; //Purple_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 9:
+						if (countitem(29169) > 0)  &&  (countitem(980) > 99)  &&  (countitem(978) > 99) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 978,100; //Cobaltue_Dyestuffs
+							delitem 980,100; //Orange_Dyestuffs
+							getitem 29171,1; //Brown_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 10:
+						if (countitem(29169) > 0)  &&  (countitem(978) > 199) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 978,200; //Blue_Dyestuffs
+							getitem 29170,1; //Blue_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 11:
+						if (countitem(29169) > 0)  &&  (countitem(982) > 199) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 982,200; //White_Dyestuffs
+							getitem 29168,1; //White_Fairy_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 12:
+						if (countitem(29169) > 0)  &&  (countitem(976) > 199) {
+							delitem 29169,1; //Black_Fairy_Wings
+							delitem 976,200; //Lemon_Dyestuffs
+							getitem 29186,1; //Yellow_Fair_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 13:
+						mes "[Babor]";
+						mes "Tant pis !";
+						close;
+					}
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				mes "[Babor]";
+				mes "Tant pis !";
+				close;	
+			}
+		case 2:
+			mes "[Babor]";
+			mes "Quel type de Valkyrie Wings souhaites-tu décolorer ?";
+			next;
+			switch(select("Or:Silver:Rouge:Orange:Cyan:Vert:Rose:Violet:Marron:Blue:Blanc:Jaune:En fait, non.")) {
+			case 1:
+				if (countitem(29173) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29173,1; //Gold_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Gold Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				if (countitem(29167) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29167,1; //Silver_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Silver Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 3:
+				if (countitem(29166) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29166,1; //Red_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Red Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 4:
+				if (countitem(29163) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29163,1; //Orange_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Orange Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 5:
+				if (countitem(29172) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29172,1; //Cyan_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Cyan Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 6:
+				if (countitem(29162) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29162,1; //Green_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Green Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 7:
+				if (countitem(29164) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29164,1; //Pink_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Pink Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 8:
+				if (countitem(29165) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29165,1; //Purple_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Purple Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 9:
+				if (countitem(29171) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29171,1; //Brown_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Brown Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 10:
+				if (countitem(29170) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29170,1; //Blue_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Blue Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 11:
+				if (countitem(29168) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29168,1; //White_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de White Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 12:
+				if (countitem(29186) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29186,1; //Yellow_Fairy_Wings
+					getitem 29169,1; //Black_Fairy_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Yellow Valkyrie Wings. Reviens plus tard !";
+					close;
+				}
+			case 13:
+						mes "[Babor]";
+						mes "Tant pis !";
+						close;
+				}
+		case 3:
+			mes "[Babor]";
+			mes "J'ai besoin de 200 dyestuffs pour colorer des Butterfly Wings.";
+			mes "Pour la couleur Rose, il me faudra 100 violets et 100 blancs.";
+			mes "Pour la couleur Silver, il me faudra 100 noirs et 100 blancs.";
+			mes "Pour la couleur Cyan, il me faudra 100 cobaltues et 100 blancs.";
+			mes "Pour la couleur Marron, il me faudra 100 cobaltues et 100 oranges.";
+			mes "Pour les autres, c'est 200 de la couleur que tu souhaites.";
+			next;
+			mes "Es-tu certain de vouloir encore colorer tes Butterfly Wings ?";
+			switch(select("Oui !:Non je ne veux pas.")) {
+			case 1:
+				if (countitem(29159) > 0) {
+					mes "[Babor]";
+					mes "Quelle couleur souhaites-tu que j'utilise pour tes Wings ?";
+					next;
+					switch(select("Or:Silver:Rouge:Orange:Cyan:Vert:Rose:Violet:Marron:Noir:Blanc:Jaune:En fait, non.")) {
+					case 1:
+						if (countitem(29159) > 0)  &&  (countitem(976) > 199) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 976,200; //Lemon_Dyestuffs
+							getitem 29150,1; //Gold_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 2:
+						if (countitem(29159) > 0)  &&  (countitem(982) > 99)  &&  (countitem(983) > 99) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 982,100; //White_Dyestuffs
+							delitem 983,100; //Black_Dyestuffs
+							getitem 29156,1; //Silver_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 3:
+						if (countitem(29159) > 0)  &&  (countitem(975) > 199) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 975,200; //Scarlet_Dyestuffs
+							getitem 29155,1; //Red_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 4:
+						if (countitem(29159) > 0)  &&  (countitem(980) > 199) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 980,200; //Orange_Dyestuffs
+							getitem 29152,1; //Orange_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 5:
+						if (countitem(29159) > 0)  &&  (countitem(978) > 99)  &&  (countitem(982) > 99) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 978,100; //Cobaltue_Dyestuffs
+							delitem 982,100; //White_Dyestuffs
+							getitem 29161,1; //Cyan_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 6:
+						if (countitem(29159) > 0)  &&  (countitem(979) > 199) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 979,200; //Darkgreen_Dyestuffs
+							getitem 29151,1; //Green_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 7:
+						if (countitem(29159) > 0)  &&  (countitem(981) > 99)  &&  (countitem(982) > 99) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 981,100; //Violet_Dyestuffs
+							delitem 982,100; //White_Dyestuffs
+							getitem 29153,1; //Pink_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 8:
+						if (countitem(29159) > 0)  &&  (countitem(981) > 199) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 981,200; //Violet_Dyestuffs
+							getitem 29154,1; //Purple_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 9:
+						if (countitem(29159) > 0)  &&  (countitem(980) > 99)  &&  (countitem(978) > 99) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 978,100; //Cobaltue_Dyestuffs
+							delitem 980,100; //Orange_Dyestuffs
+							getitem 29160,1; //Brown_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 10:
+						if (countitem(29159) > 0)  &&  (countitem(983) > 199) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 983,200; //Black_Dyestuffs
+							getitem 29158,1; //Black_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 11:
+						if (countitem(29159) > 0)  &&  (countitem(982) > 199) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 982,200; //White_Dyestuffs
+							getitem 29157,1; //White_Butterfly_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 12:
+						if (countitem(29159) > 0)  &&  (countitem(976) > 199) {
+							delitem 29159,1; //Blue_Butterfly_Wings
+							delitem 976,200; //Lemon_Dyestuffs
+							getitem 29187,1; //Yellow Butterfly Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 13:
+						mes "[Babor]";
+						mes "Tant pis !";
+						close;
+					}
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				mes "[Babor]";
+				mes "Tant pis !";
+				close;	
+			}
+		case 4:
+			mes "[Babor]";
+			mes "Quel type de Butterfly Wings souhaites-tu décolorer ?";
+			next;
+			switch(select("Or:Silver:Rouge:Orange:Cyan:Vert:Rose:Violet:Marron:Noir:Blanc:Jaune:En fait, non.")) {
+			case 1:
+				if (countitem(29150) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29150,1; //Gold_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Gold Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				if (countitem(29156) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29156,1; //Silver_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Silver Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 3:
+				if (countitem(29155) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29155,1; //Red_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Red Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 4:
+				if (countitem(29152) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29152,1; //Orange_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Orange Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 5:
+				if (countitem(29161) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29161,1; //Cyan_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Cyan Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 6:
+				if (countitem(29151) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29151,1; //Green_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Green Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 7:
+				if (countitem(29153) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29153,1; //Pink_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Pink Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 8:
+				if (countitem(29154) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29154,1; //Purple_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Purple Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 9:
+				if (countitem(29160) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29160,1; //Brown_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Brown Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 10:
+				if (countitem(29158) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29158,1; //Black_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Black Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 11:
+				if (countitem(29157) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29157,1; //White_Butterfly_Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de White Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 12:
+				if (countitem(29187) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29187,1; //Yellow Butterfly Wings
+					getitem 29159,1; //Blue_Butterfly_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Yellow Butterfly Wings. Reviens plus tard !";
+					close;
+				}
+			case 13:
+						mes "[Babor]";
+						mes "Tant pis !";
+						close;
+				}
+		case 5:
+			mes "[Babor]";
+			mes "J'ai besoin de 150 dyestuffs pour colorer des Animated Wings.";
+			mes "Pour la couleur Rose, il me faudra 75 violets et 75 blancs.";
+			mes "Pour la couleur Silver, il me faudra 75 noirs et 75 blancs.";
+			mes "Pour la couleur Cyan, il me faudra 75 cobaltues et 75 blancs.";
+			mes "Pour la couleur Marron, il me faudra 75 cobaltues et 75 oranges.";
+			mes "Pour les autres, c'est 150 de la couleur que tu souhaites.";
+			next;
+			mes "Es-tu certain de vouloir encore colorer tes Animated Wings ?";
+			switch(select("Oui !:Non je ne veux pas.")) {
+			case 1:
+				if (countitem(29174) > 0) {
+					mes "[Babor]";
+					mes "Quelle couleur souhaitesè-tu que j'utilise pour tes Wings ?";
+					next;
+					switch(select("Blue:Cyan:Gold:Green:Purple:Red:Black:Brown:Orange:Pink:Silver:En fait, non.")) {
+					case 1:
+						if (countitem(29174) > 0)  &&  (countitem(978) > 149) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 978,150; //Blue_Dyestuffs
+							getitem 29175,1; //Blue_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 2:
+						if (countitem(29174) > 0)  &&  (countitem(982) > 74)  &&  (countitem(978) > 74) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 982,75; //White_Dyestuffs
+							delitem 978,75; //Cobaltue_Dyestuffs
+							getitem 29176,1; //Cyan_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 3:
+						if (countitem(29174) > 0)  &&  (countitem(976) > 149) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 976,150; //Lemon_Dyestuffs
+							getitem 29177,1; //Gold_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 4:
+						if (countitem(29174) > 0)  &&  (countitem(979) > 149) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 979,150; //Darkgreen_Dyestuffs
+							getitem 29178,1; //Green_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 5:
+						if (countitem(29174) > 0)  &&  (countitem(981) > 149) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 981,150; //Violet_Dyestuffs
+							getitem 29179,1; //Purple_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 6:
+						if (countitem(29174) > 0)  &&  (countitem(975) > 149) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 975,150; //Scarlet_Dyestuffs
+							getitem 29180,1; //Red_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 7:
+						if (countitem(29174) > 0)  &&  (countitem(983) > 149) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 983,150; //Black_Dyestuffs
+							getitem 29181,1; //Black_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 8:
+						if (countitem(29174) > 0)  &&  (countitem(978) > 74)  &&  (countitem(980) > 74) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 980,75; //orange_Dyestuffs
+							delitem 978,75; //cobltue_Dyestuffs
+							getitem 29182,1; //Brown_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 9:
+						if (countitem(29174) > 0)  &&  (countitem(980) > 149) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 980,150; //Orange_Dyestuffs
+							getitem 29183,1; //Orange_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 10:
+						if (countitem(29174) > 0)  &&  (countitem(981) > 74)  &&  (countitem(982) > 74) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 981,75; //Pink_Dyestuffs
+							delitem 982,75; //White_Dyestuffs
+							getitem 29184,1; //Pink_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 11:
+						if (countitem(29174) > 0)  &&  (countitem(982) > 74)  &&  (countitem(983) > 74) {
+							delitem 29174,1; //Animated_Angel_Wings
+							delitem 982,75; //white_Dyestuffs
+							delitem 983,75; //black
+							getitem 29185,1; //Silver_Animated_Angel_Wings
+							close;
+						}
+						else {
+							mes "[Babor]";
+							mes "Tu n'as pas les bons matériaux. Reviens plus tard !";
+							close;
+						}
+					case 12:
+						mes "[Babor]";
+						mes "Tant pis !";
+						close;
+					}
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas d'Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				mes "[Babor]";
+				mes "Tant pis !";
+				close;	
+			}
+		case 6:
+			mes "[Babor]";
+			mes "Quel type d'Animated Wings souhaites-tu décolorer ?";
+			next;
+			switch(select("Blue:Cyan:Gold:Green:Purple:Red:Black:Brown:Orange:Pink:Silver:En fait, non.")) {
+			case 1:
+				if (countitem(29175) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29175,1; //Blue_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Blue Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 2:
+				if (countitem(29176) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29176,1; //Cyan_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Cyan Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 3:
+				if (countitem(29177) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29177,1; //Gold_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Gold Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 4:
+				if (countitem(29178) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29178,1; //Green_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Green Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 5:
+				if (countitem(29179) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29179,1; //Purple_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Purple Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 6:
+				if (countitem(29180) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29180,1; //Red_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Red Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 7:
+				if (countitem(29181) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29181,1; //Black_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Black Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 8:
+				if (countitem(29182) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29182,1; //Brown_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Brown Animated Wings. Reviens plus tard !";
+					close;
+				}	
+			case 9:
+				if (countitem(29183) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29183,1; //Orange_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Orange Animated Wings. Reviens plus tard !";
+					close;
+				}
+			case 10:
+				if (countitem(29184) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29184,1; //Pink_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Pink Animated Wings. Reviens plus tard !";
+					close;
+				}		
+			case 11:
+				if (countitem(29185) > 0) {
+					mes "[Babor]";
+					mes "Je m'en occupe !";
+					delitem 29185,1; //Silver_Animated_Angel_Wings
+					getitem 29174,1; //Animated_Angel_Wings
+					close;
+				}
+				else {
+					mes "[Babor]";
+					mes "Tu n'as pas de Silver Animated Wings. Reviens plus tard !";
+					close;
+				}				
+			case 12:
+						mes "[Babor]";
+						mes "Tant pis !";
+						close;
+				}
+		case 7:
+			mes "[Babor]";
+			mes "Humpff.";
+			close;
+		}
+	case 2:
+		mes "[Babor]";
+		mes "Humpff.";
+		close;
+	}
+	end;
+}

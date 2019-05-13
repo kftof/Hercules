@@ -1,0 +1,429 @@
+// Switch God item
+//============================================================
+gonryun,146,105,4	script	Scientifique Déchu	4_LGTSCIENCE,{
+	mes "[^B40431Scientifique^000000]";
+	mes "Je me présente, je suis un ancien scientifique du Roi.";
+	mes "Autrefois, je faisais partie des plus brillants chercheurs.";	
+	next;
+	mes "[^B40431Scientifique^000000]";
+	mes "Cela fait des années que j'étudiais et que j'aidais à la forge des";
+	mes "God Items. Cette expérience unique m'a permis d'éloborer des prototypes inédits, du jamais vu auparavant.";
+	next;
+	mes "[^B40431Scientifique^000000]";
+	mes "Cependant, le Roi a jugé mes recherches illégales. Mes prototypes expérimentaux sont donc totalement";
+	mes "interdits dans les zones de combat officielles, car jugés trop puissants pour l'équilibre du Royaume.";
+	next;
+	mes "[^B40431Scientifique^000000]";
+	mes "Le seul changement officiel que je peux faire est celui de la Balmung, pour la passer en mode Dague.";
+	mes "Tous les autres sont jugés comme des prototypes illégaux.";
+	next;
+	mes "[^B40431Scientifique^000000]";
+	mes "Je veux bien te prêter mes prototypes en échange des originaux gratuitement,";
+	mes "car je cherche des volontaires pour tester mes prototypes.";
+	next;
+	mes "[^B40431Scientifique^000000]";
+	mes "Bien entendu, je te rendrais les originaux si tu veux les récupérer, tant que tu me rends le prototype.";
+	next;
+		switch(select("Switch Excalibur:Switch Balmung:Switch Mjollnir:Switch Heaven's Bow:Switch Staff of Light:Rien")) {
+		case 1:
+			if (countitem(1137) > 0 || countitem(29490) > 0) {
+			mes "[^B40431Scientifique^000000]";
+			mes "Quel type de switch souhaites-tu faire ?";	
+			next;			
+				switch(select("Switch Prototype => Originale:Switch Originale => Prototype")) {
+				case 1:
+					if (countitem(29490) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vraiment vouloir switcher maintenant ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(29490) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 29490,1;
+						getitem 1137,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas de Proto: Excalibur.";
+					close;					
+					}
+				case 2:
+					if (countitem(1137) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vouloir switcher ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(1137) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 1137,1;
+						getitem 29490,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas d'Excalibur Originale.";
+					close;					
+					}		
+				}
+			}
+			else {
+			mes "[^B40431Scientifique^000000]";
+			mes "Désolé, mais tu n'as pas d'Excalibur.";
+			close;	
+			}
+		case 2:
+			if (countitem(1161) > 0 || countitem(29493) > 0) {
+			mes "[^B40431Scientifique^000000]";
+			mes "Quel type de switch souhaites-tu faire ?";	
+			next;			
+				switch(select("Switch Originale => Prototype:Switch Prototype => Originale")) {
+				case 1: // Originale 1161 => Dague 29493
+					if (countitem(1161) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vraiment vouloir switcher maintenant ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(1161) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 1161,1;
+						getitem 29493,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas de Balmung Originale.";
+					close;					
+					}
+				case 2: // Dague 29493 => Originale 1161
+					if (countitem(29493) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vouloir switcher ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(29493) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 29493,1;
+						getitem 1161,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas de Prototype: Balmung.";
+					close;					
+					}			
+				}
+			}
+			else {
+			mes "[^B40431Scientifique^000000]";
+			mes "Désolé, mais tu n'as pas de Balmung.";
+			close;	
+			}
+		case 3:
+			if (countitem(1530) > 0 || countitem(29494) > 0) {
+			mes "[^B40431Scientifique^000000]";
+			mes "Quel type de switch souhaites-tu faire ?";	
+			next;			
+				switch(select("Original => Prototype:Prototype => Original")) {
+				case 1: // Originale 1530 => Prototype 29494
+					if (countitem(1530) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vraiment vouloir switcher maintenant ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(1530) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 1530,1;
+						getitem 29494,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas de Mjollnir Original.";
+					close;					
+					}
+				case 2: // Prototype 29494 => Originale 1530
+					if (countitem(29494) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vraiment vouloir switcher maintenant ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(29494) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 29494,1;
+						getitem 1530,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas de Prototype de Mjollnir.";
+					close;					
+					}
+				}
+			}
+			else {
+			mes "[^B40431Scientifique^000000]";
+			mes "Désolé, mais tu n'as pas de Mjollnir.";
+			close;	
+			}
+		case 4:
+			if (countitem(29352) > 0 || countitem(29495) > 0) {
+			mes "[^B40431Scientifique^000000]";
+			mes "Quel type de switch souhaites-tu faire ?";	
+			next;			
+				switch(select("Original => Prototype:Prototype => Original")) {
+				case 1: // Original 29352 => Prototype 29495
+					if (countitem(29352) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vraiment vouloir switcher maintenant ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(29352) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 29352,1;
+						getitem 29495,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas d'Heaven's Bow Original.";
+					close;					
+					}
+				case 2: // 29495 Proto => Original 29352
+					if (countitem(29495) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vraiment vouloir switcher maintenant ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(29495) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 29495,1;
+						getitem 29352,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas de Prototype d'Heaven's Bow.";
+					close;					
+					}
+				}
+			}
+			else {
+			mes "[^B40431Scientifique^000000]";
+			mes "Désolé, mais tu n'as pas d'Heaven's Bow.";
+			close;	
+			}
+		case 5:
+			if (countitem(29491) > 0 || countitem(29492) > 0) {
+			mes "[^B40431Scientifique^000000]";
+			mes "Quel type de switch souhaites-tu faire ?";	
+			next;			
+				switch(select("Switch Prototype => Originale:Switch Originale => Prototype")) {
+				case 1:
+					if (countitem(29492) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vraiment vouloir switcher maintenant ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(29492) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 29492,1;
+						getitem 29491,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas de Prototype: Staff of Light.";
+					close;					
+					}
+				case 2:
+					if (countitem(29491) > 0) {
+					mes "[^B40431Scientifique^000000]";
+					mes "Je vais procéder aux switch, cependant, toutes";
+					mes "les cards et upgrades de ton équipement seront perdus dans le processus.";
+					mes "Es-tu sûr de vouloir switcher ?";
+					next;
+						switch(select("Oui, je veux switcher.:Non.")) {
+						case 1:
+						if (countitem(29491) > 0) {
+						mes "[^B40431Scientifique^000000]";
+						mes "Voilà pour toi !";	
+						delitem 29491,1;
+						getitem 29492,1;
+						close;
+						}
+						else {
+						mes "[^B40431Scientifique^000000]";
+						mes "Tu tentes de m'escroquer ?";
+						mes "^FF0000Un message a été envoyé aux Admins.^000000";
+						close;
+						}
+						case 2:
+						mes "[^B40431Scientifique^000000]";
+						mes "C'est toi qui vois.";
+						close;
+						}
+					}
+					else {
+					mes "[^B40431Scientifique^000000]";
+					mes "Désolé, mais tu n'as pas de Staff of Light.";
+					close;					
+					}		
+				}
+			}
+			else {
+			mes "[^B40431Scientifique^000000]";
+			mes "Désolé, mais tu n'as pas de Staff of Light.";
+			close;	
+			}
+		case 6:
+			mes "[^B40431Scientifique^000000]";
+			mes "A une prochaine fois.";
+			close;
+		}
+end;
+}

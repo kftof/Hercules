@@ -1,0 +1,11 @@
+-    script    Costume Remover    FAKE_NPC,{   
+OnPCLoadMapEvent:
+if ((agitcheck() && agitcheck2()) && ( strcharinfo(3) == .@nocostume)) { // Check if woe is on and if you entered a castle
+if (getequipisequiped(EQI_COSTUME_HEAD_LOW)) unequip EQI_COSTUME_HEAD_LOW;
+if (getequipisequiped(EQI_COSTUME_HEAD_MID)) unequip EQI_COSTUME_HEAD_MID;
+if (getequipisequiped(EQI_COSTUME_HEAD_TOP)) unequip EQI_COSTUME_HEAD_TOP;
+if (getequipisequiped(EQI_COSTUME_GARMENT)) unequip EQI_COSTUME_GARMENT;
+}
+ 
+OnInit:
+set .@nocostume,"prtg_cas01";

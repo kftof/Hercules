@@ -1,0 +1,104 @@
+-	script	killmvp	FAKE_NPC,{
+end;
+	
+OnInit:
+    startnpctimer;
+	announce "Scripts KillMvp Activé...", bc_all;
+    end; 
+	
+OnTimer6000:
+	atcommand "@killmonster2 abbey02";       // Fallen Bishop Hibram
+	atcommand "@killmonster2 abbey03";       // Beelzebub
+	atcommand "@killmonster2 abyss_03";      // Detale
+	atcommand "@killmonster2 ama_dun03";     // Samurai Specter
+	atcommand "@killmonster2 anthell02";     // Maya
+	atcommand "@killmonster2 anthell01";     // Maya purple
+	atcommand "@killmonster2 ayo_dun02";     // Lady Tanee
+	atcommand "@killmonster2 beach_dun";     // Tao Gunka
+	atcommand "@killmonster2 ein_dun02";     // RSX-0806
+	atcommand "@killmonster2 gef_dun01";     // Dracula
+	atcommand "@killmonster2 gef_dun02";     // Doppelganger
+	atcommand "@killmonster2 gef_fild02";    // Orc Hero
+	atcommand "@killmonster2 gef_fild10";    // Orc Lord
+	atcommand "@killmonster2 gef_fild14";    // Orc Hero
+	atcommand "@killmonster2 gl_chyard";     // Dark Lord
+	atcommand "@killmonster2 gld_dun01";     // Eddga
+	atcommand "@killmonster2 gld_dun02";     // Doppelganger
+	atcommand "@killmonster2 gld_dun03";     // Maya
+	atcommand "@killmonster2 gld_dun04";     // Dark Lord
+	atcommand "@killmonster2 gon_dun03";     // Evil Snake Lord
+	atcommand "@killmonster2 ice_dun03";     // Ktullanux
+	atcommand "@killmonster2 in_sphinx5";    // Pharaoh
+	atcommand "@killmonster2 jupe_core";     // Vesper
+	atcommand "@killmonster2 kh_dun02";      // Kiel D-01
+	atcommand "@killmonster2 lhz_dun02";     // Egnigem Cenia
+	atcommand "@killmonster2 lhz_dun03";     // Assassin Cross Eremes, High Priest Margaretha, High Wizard Kathryne, Lord Knight Seyren, Sniper Cecil, Whitesmith Howard
+	atcommand "@killmonster2 lhz_dun04";     // Bio 4
+	atcommand "@killmonster2 lou_dun03";     // White Lady
+	atcommand "@killmonster2 mjolnir_04";    // Mistress
+	atcommand "@killmonster2 moc_fild17";    // Phreeoni
+	atcommand "@killmonster2 moc_pryd04";    // Osiris
+	atcommand "@killmonster2 moc_pryd06";    // Amon Ra
+	atcommand "@killmonster2 mosk_dun03";    // Zmey Gorynych
+	atcommand "@killmonster2 niflheim";      // Lord of Death
+	atcommand "@killmonster2 odin_tem03";    // Valkyrie Randgris
+	atcommand "@killmonster2 pay_dun04";     // Moonlight Flower
+	atcommand "@killmonster2 pay_fild11";    // Eddga
+	atcommand "@killmonster2 prt_maze03";    // Baphomet
+	atcommand "@killmonster2 prt_sewb4";     // Golden Thief Bug
+	atcommand "@killmonster2 ra_fild02";     // Atroce
+	atcommand "@killmonster2 ra_fild03";     // Atroce
+	atcommand "@killmonster2 ra_fild04";     // Atroce
+	atcommand "@killmonster2 ra_san05";      // Gloom Under Night
+	atcommand "@killmonster2 thor_v03";      // Ifrit
+	atcommand "@killmonster2 treasure02";    // Drake
+	atcommand "@killmonster2 tur_dun04";     // Turtle General
+	atcommand "@killmonster2 ve_fild01";     // Atroce
+	atcommand "@killmonster2 ve_fild02";     // Atroce
+	atcommand "@killmonster2 xmas_dun01";    // Angeling // Chepet
+	atcommand "@killmonster2 xmas_dun02";    // Stormy Knight
+	atcommand "@killmonster2 xmas_fild01";   // Garm
+	atcommand "@killmonster2 moc_fild22";    // Wounded Morroc
+	atcommand "@killmonster2 pay_fild04";    // Angeling/Deviling etc
+	atcommand "@killmonster2 yuno_fild03";	// angeling Deviling
+	atcommand "@killmonster2 yuno_fild05";   // arc angeling
+	atcommand "@killmonster2 man_fild03";    // hardrock mamoth
+	atcommand "@killmonster2 alde_dun04"; // sword
+	atcommand "@killmonster2 gefenia01";
+	atcommand "@killmonster2 gefenia02";
+	atcommand "@killmonster2 gefenia03";
+	atcommand "@killmonster2 gefenia04";
+	atcommand "@killmonster2 gef_dun01";
+	atcommand "@killmonster2 gl_cas01";
+	atcommand "@killmonster2 gl_cas02";
+	atcommand "@killmonster2 gl_knt01";
+	atcommand "@killmonster2 gl_knt02";
+	atcommand "@killmonster2 ein_dun01";
+	atcommand "@killmonster2 ein_fild02";
+	atcommand "@killmonster2 ein_fild07";
+	atcommand "@killmonster2 c_tower1";
+	atcommand "@killmonster2 c_tower2";
+	atcommand "@killmonster2 c_tower3";
+	atcommand "@killmonster2 c_tower4";
+	atcommand "@killmonster2 odin_tem02";
+	atcommand "@killmonster2 cmd_fild03";
+	atcommand "@killmonster2 hu_fild05";
+	atcommand "@killmonster2 tha_t04";
+	atcommand "@killmonster2 tha_t05";
+	atcommand "@killmonster2 tha_t06";
+	atcommand "@killmonster2 tha_t07";
+	atcommand "@killmonster2 tha_t08";
+	atcommand "@killmonster2 tha_t09";
+	atcommand "@killmonster2 tha_t10";
+	atcommand "@killmonster2 tha_t11";
+	atcommand "@killmonster2 ra_fild01";
+	atcommand "@killmonster2 cmd_fild08";
+	atcommand "@killmonster2 um_fild03";
+	
+	announce "Les MVP ont été éradiqués.", bc_all;
+	end;
+
+OnTimer8000:
+    stopnpctimer;
+    end;
+}

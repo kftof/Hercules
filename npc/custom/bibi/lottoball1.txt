@@ -1,0 +1,80 @@
+//============================================================
+gonryun,139,118,4	script	Bibi#01	4_M_BIBI,{
+	if ((countitem(7361) > 0)	&&	(countitem(7362) > 0)	&&	(countitem(7363) > 0)	&&	(countitem(7364) > 0)	&&	(countitem(7365) > 0)	&&	(countitem(7366) > 0)	&&	(countitem(7367) > 0)	&&	(countitem(7368) > 0)	&&	(countitem(7369) > 0)	&&	(countitem(7370) > 0)	&&	(countitem(7371) > 0)	&&	(countitem(7372) > 0)	&&	(countitem(7373) > 0)	&&	(countitem(7374) > 0)	&&	(countitem(7375) > 0)	&&	(countitem(7376) > 0)	&&	(countitem(7377) > 0)	&&	(countitem(7378) > 0)	&&	(countitem(7379) > 0)	&&	(countitem(7380) > 0)	&&	(countitem(7381) > 0)	&&	(countitem(7382) > 0)	&&	(countitem(7383) > 0)	&&	(countitem(7384) > 0)	&&	(countitem(7385) > 0)	&&	(countitem(7386) > 0)	&&	(countitem(7387) > 0)	&&	(countitem(7388) > 0)	&&	(countitem(7389) > 0)) {
+	mes "[Bibi]";
+	mes "Oh !";
+	mes "Je n'y crois pas. Tu as réussi !";
+	next;
+	mes "[Bibi]";
+	mes "Tu devrais aller voir mon grand frère, il est sûrement sur un Banc, à Jawaii, prêt d'un bar.";
+	delitem 7361,1;
+	delitem 7362,1;
+	delitem 7363,1;
+	delitem 7364,1;
+	delitem 7365,1;
+	delitem 7366,1;
+	delitem 7367,1;
+	delitem 7368,1;
+	delitem 7369,1;
+	delitem 7370,1;
+	delitem 7371,1;
+	delitem 7372,1;
+	delitem 7373,1;
+	delitem 7374,1;
+	delitem 7375,1;
+	delitem 7376,1;
+	delitem 7377,1;
+	delitem 7378,1;
+	delitem 7379,1;
+	delitem 7380,1;
+	delitem 7381,1;
+	delitem 7382,1;
+	delitem 7383,1;
+	delitem 7384,1;
+	delitem 7385,1;
+	delitem 7386,1;
+	delitem 7387,1;
+	delitem 7388,1;
+	delitem 7389,1;
+	getitem 7390,1;
+	specialeffect(EF_FLOWERLEAF, AREA, playerattached());
+	specialeffect(EF_ELECTRIC, AREA, playerattached());
+	specialeffect(EF_MVP, AREA, playerattached());
+	close2;
+	// specialeffect2 EF_FLOWERLEAF;
+	// specialeffect2 EF_ELECTRIC;
+	// specialeffect2 EF_MVP;
+
+	close;
+	}
+	else {
+	mes "[Bibi]";
+	mes "Salut !";
+	mes "Mon nom est Bibi. Je fais partie d'une grande famille qui s'étend dans tout Rune-Migard.";
+	next;
+	mes "[Bibi]";
+	mes "Si je suis venu ici, à Gonryun, c'est avant tout pour trouver quelqu'un qui pourra m'aider.";
+	next;
+	switch(select("Continue ?:Je n'ai pas le temps.")) {
+		case 1:
+			mes "[Bibi]";
+			mes "J'ai besoin de quelqu'un pour aider mes frêres.";
+			mes "Beaucoup ont des dettes, d'autres ont simplement besoin d'objets divers.";
+			mes "Pourrais-tu t'en occuper ?";
+			mes "Crois-moi, si tu parviens à tous les aider, mon grand frêre te récompensera comme il se doit !";
+			next;
+			mes "[Bibi]";
+			mes "Tiens, voici ce que mes frêres te donneront :";
+			next;
+			getitem 7361,1;
+			mes "[Bibi]";
+			mes "Reviens me voir quand tu auras fini !";
+			close;
+		case 2:
+			mes "[Bibi]";
+			mes "...";
+			close;
+		}
+	}
+	end;
+}

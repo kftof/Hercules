@@ -1,0 +1,109 @@
+gonryun,147,114,5	script	Gold Room	1_F_SIGNZISK,{
+
+	mes "[ ^0065DFGold Room^000000 ]";
+	mes "La Gold Room est ouverte entre 20h30 et 20h35 tous les jours.";
+	mes "^FF0000Seuls les novices 1/1 peuvent entrer.^000000";
+	next;
+	if (.Opengr == 1) {
+		mes "[ ^0065DFGold Room^000000 ]";
+		mes "Voulez-vous entrer ?";
+		menu "Oui",Q_1, "Non",Q_0;	
+		}
+		
+	else {
+	mes "[ ^0065DFGold Room^000000 ]";
+	mes "La Gold Room n'est pas ouverte.";
+
+	close;
+	}
+	
+Q_1:
+	if (.Opengr == 0) {
+		mes " ";
+		mes "Non non ;)";
+		announce "["+strcharinfo(0)+"] a voulu rentrer dans la Gold Room après sa fermeture ! Bouh !",0;
+		close;
+	}
+	
+	if ( BaseLevel < 2 ) && (.Opengr == 1) {
+		announce "["+strcharinfo(0)+"] vient d'entrer dans la Gold Room.",0;
+		warp .Map$,0,0;
+		end;
+
+		close;
+	}
+	
+	else {
+		mes "Vous devez être niveau 1 !";
+		close;
+	}
+	
+Q_0:
+
+close;
+
+
+OnInit:
+set .Map$,"guild_vs3";
+set .Opengr, "0";
+end;
+
+
+OnMobKill:
+if (.Opengr == 1)
+	{
+	getitem 969,1;
+	monster .Map$,0,0,"Gold",3300,1,strnpcinfo(0)+"::OnMobKill";
+	}
+end;
+
+OnClock2025:
+announce "La Gold Room ouvre dans 5mn !",0;
+end;
+
+//OnClock0006:
+OnClock2030:
+
+announce "La Gold Room est ouverte !",0;
+monster .Map$,0,0,"Gold",3300,60,strnpcinfo(0)+"::OnMobKill";
+set .Opengr, "1";
+end;
+
+//OnClock0020:
+OnClock2035:
+atcommand "@killmonster2 guild_vs3";
+set .Opengr, "0";
+mapannounce .Map$,"C'est fini, il est 20h35 !",0;
+mapwarp .Map$,"gonryun",159,124;
+end;
+
+
+
+//AntiFuck Jailing System :)
+OnClock2036:
+OnClock2037:
+OnClock2038:
+OnClock2039:
+OnClock2040:
+OnClock2041:
+OnClock2100:
+OnClock2200:
+OnClock2300:
+OnClock0000:
+OnClock0100:
+OnClock0200:
+OnClock0300:
+OnClock0400:
+mapannounce .Map$,"HEYY !!!!",0;
+mapwarp .Map$,"sec_pri",24,75;
+end;
+}
+   
+guild_vs3	mapflag	nosave
+guild_vs3	mapflag	noskill
+guild_vs3	mapflag	nowarp
+guild_vs3	mapflag	nowarpto
+guild_vs3	mapflag	noteleport
+guild_vs3	mapflag	novending
+guild_vs3	mapflag	noreturn
+guild_vs3	mapflag	noexp

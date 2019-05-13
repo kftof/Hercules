@@ -1,0 +1,143 @@
+// MDRRR
+quiz_02,36,69,2	script	Apprentice Craftsman	1_F_MERCHANT_01,{
+	disable_items;
+	mes "[Apprentice Craftsman]";
+	if (Zeny >= 400000) {
+		mes "ok";
+		next;
+		switch(select("Non Slotted Armor.", "Slotted Armor.", "High Grade Armor.", "Maybe next time.")) {
+		case 1:
+			setarray .@items[0],14996;
+			.@j = 50;
+			break;
+		case 2:
+			setarray .@items[0],14999;
+			.@j = 55;
+			.@k = 1;
+			break;
+		case 3:
+			setarray .@items[0],2364,2365,2391,2374,2375,2376,2377,2378,2379,2380,2381,2382,2387,2388,2389,2390;
+			.@j = 60;
+			break;
+		case 4:
+			mes "[Apprentice Craftsman]";
+			mes "Please come back when you have any interest in enchanting your armor.";
+			close;
+		}
+		.@menu$ = "";
+		for(.@i = 0; .@i<getarraysize(.@items); ++.@i)
+			.@menu$ += getitemname(.@items[.@i])+((.@k)?" [1]":"")+":";
+		callsub S_EnchantArmor, .@items[select(.@menu$)-1], .@j;
+		end;
+	}
+	mes "I am in charge of Enchanting Armors. Simply put, I've been studying ways to power-up armor.";
+	next;
+	mes "[Apprentice Craftsman]";
+	mes "If by any chance, you would want to enchant your armor, bring me 400,000 zeny and the armor you want to enchant and you are all set to go.";
+	close;
+
+S_EnchantArmor:
+	.@itemid = getarg(0);
+	.@failrate = getarg(1);
+	mes "[Apprentice Craftsman]";
+	if (countitem(.@itemid) == 1) {
+		mes "Socket enchant will cost you 400,000 zeny. And there will be a random option enchanted. Of course, there is a chance of breaking your armor.";
+		next;
+		if(select("Hmm... Let me think it over.", "Go ahead.") == 1) {
+			mes "[Apprentice Craftsman]";
+			mes "Well, I can't blame you. Safety first, eh?";
+			mes "Now you have a nice day.";
+			close;
+		}
+		mes "[Apprentice Craftsman]";
+		mes "Quite of an adventurer huh? Well, shall we?";
+		close2;
+		// specialeffect2 EF_MAPPILLAR;
+		if (Zeny < 400000) {
+			mes "[Apprentice Craftsman]";
+			mes "Sorry, but you don't have enough zeny.";
+			close;
+		}
+		progressbar "ffff00",1;
+		Zeny -= 400000;
+		delitem .@itemid,1;
+		switch (rand(1,.@failrate)) {
+			/*case 1: .@addpart = 4702;break; = STR +3
+			case 2: .@addpart = 4712;break; = INT +3 + il manque le sprite
+			case 3: .@addpart = 4722;break; = DEX +3
+			case 4: .@addpart = 4732;break; = AGI +3
+			case 5: .@addpart = 4742;break; = VIT +3
+			case 6: .@addpart = 4752;break; = LUK +3*/
+			case 1: .@addpart = 4722;break;
+			case 2: .@addpart = 4722;break;
+			case 3: .@addpart = 4722;break;
+			case 4: .@addpart = 4722;break;
+			case 5: .@addpart = 4722;break;
+			case 6: .@addpart = 4722;break;
+			case 7: .@addpart = 4722;break;
+			case 8: .@addpart = 4722;break;
+			case 9: .@addpart = 4722;break;
+			case 10: .@addpart = 4722;break;
+			case 11: .@addpart = 4722;break;
+			case 12: .@addpart = 4722;break;
+			case 13: .@addpart = 4722;break;
+			case 14: .@addpart = 4722;break;
+			case 15: .@addpart = 4722;break;
+			case 16: .@addpart = 4722;break;
+			case 17: .@addpart = 4722;break;
+			case 18: .@addpart = 4722;break;
+			case 19: .@addpart = 4722;break;
+			case 20: .@addpart = 4722;break;
+			case 21: .@addpart = 4722;break;
+			case 22: .@addpart = 4722;break;
+			case 23: .@addpart = 4722;break;
+			case 24: .@addpart = 4722;break;
+			case 25: .@addpart = 4722;break;
+			case 26: .@addpart = 4722;break;
+			case 27: .@addpart = 4722;break;
+			case 28: .@addpart = 4722;break;
+			case 29: .@addpart = 4722;break;
+			case 30: .@addpart = 4722;break;
+			case 31: .@addpart = 4722;break;
+			case 32: .@addpart = 4722;break;
+			case 33: .@addpart = 4722;break;
+			case 34: .@addpart = 4722;break;
+			case 35: .@addpart = 4722;break;
+			case 36: .@addpart = 4722;break;
+			default:
+				// specialeffect2 EF_PHARMACY_FAIL;
+				mes "[Apprentice Craftsman]";
+				mes "Well that's too bad.";
+				mes "The requested equipment has failed to enchant.";
+				close;
+		}
+		getitem2 .@itemid, 1, 1, 0, 0, 0, 0, 0, .@addpart;
+	}
+	else {
+		mes "Hmm? There's nothing to be enchanted!";
+		mes "Please come back with just ONE equipment to be enchanted.";
+		close;
+	}
+}
+quiz_02,38,71,2	trader	EventMdr	4_M_ALCHE_B,{
+OnInit:
+	sellitem Box_Of_Grudge;
+	sellitem Aloebera;
+	sellitem Poison_Bottle;
+	sellitem Acid_Bottle;
+	sellitem Fire_Bottle;
+	sellitem Int_Dish10;
+	sellitem Str_Dish10;
+	sellitem Dex_Dish10;
+	sellitem Agi_Dish10;
+	sellitem Vit_Dish10;
+	sellitem Water_Of_Darkness;
+	sellitem Elemental_Fire;
+	sellitem Elemental_Earth;
+	sellitem Elemental_Wind;
+	sellitem Elemental_Water;
+	sellitem Speed_Up_Potion;
+	sellitem Spiderweb;
+	sellitem Gloomy_Box;
+	sellitem Sleepy_Box;
+	}

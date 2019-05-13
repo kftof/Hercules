@@ -1,0 +1,72 @@
+// Bapho Horns quest
+//============================================================
+gonryun,120,141,4	script	Disciple de Baphomet	4_M_DEATH,{
+	if ((countitem(6004) > 0)) {
+	mes "[Disciple de Baphomet]";
+	mes "Je sens votre grand pouvoir, que voulez-vous ?";
+	next;
+		switch(select("Je veux faire des Baphomet Horns:Rien.")) {
+			case 1:
+				mes "[Disciple de Baphomet]";
+				mes "J'ai besoin de :";
+				mes "50 Fragment of Darkess.";
+				mes "50 Crystal of Darkness.";
+				mes "1 Magestic Goat";
+				mes "1 Cursed Baphomet Doll";
+				next;
+				mes "[Disciple de Baphomet]";
+				mes "Lesquelles veux-tu ?";
+				next;
+				switch(select("Baphomet Horns ATK:Baphomet Horns DEF:Finalement, aucune.")) {
+					case 1:
+						if ((countitem(7799) > 49) && (countitem(7798) > 49) && (countitem(2256) > 0) && (countitem(6004) > 0)) {
+							mes "[Disciple de Baphomet]";
+							mes "Voici tes Baphomets Horns.";
+							delitem 7799,50; //
+							delitem 7798,50; //
+							delitem 2256,1; //Magestic Goat
+							delitem 6004,1; //Cursed
+							getitem 5374,1; //Bapho Hornss atk
+							close;
+						}
+						else {
+							mes "[Disciple de Baphomet]";
+							mes "Il manque des objets.";
+							close;
+							}
+					case 2:
+						if ((countitem(7799) > 49) && (countitem(7798) > 49) && (countitem(2256) > 0) && (countitem(6004) > 0)) {
+							mes "[Disciple de Baphomet]";
+							mes "Voici tes Baphomets Horns.";
+							delitem 7799,50; //
+							delitem 7798,50; //
+							delitem 2256,1; //Magestic Goat
+							delitem 6004,1; //Cursed
+							getitem 5518,1; //Bapho Hornss def
+							close;
+						}
+						else {
+							mes "[Disciple de Baphomet]";
+							mes "Il manque des objets.";
+							close;
+							}
+					case 3:
+						mes "[Disciple de Baphomet]";
+						mes "...";
+						close;	
+				}
+			case 2:
+				mes "[Disciple de Baphomet]";
+				mes "Cesse de me faire perdre mon temps.";
+				close;
+		}
+	}
+	
+	else {
+	mes "[Disciple de Baphomet]";
+	mes "Vous osez me déranger ?";
+	close;
+	}
+	
+	end;
+}

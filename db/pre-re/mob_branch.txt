@@ -85,7 +85,6 @@
 1093,Eclipse,71428
 1094,Ambernite,357142
 1095,Andre,357142
-1096,Angeling,71428
 1097,Ant Egg,71428
 1098,Anubis,71428
 1099,Argiope,71428
@@ -107,7 +106,6 @@
 1117,Evil Druid,71428
 1118,Flora,214285
 1119,Frilldora,214285
-1120,Ghostring,71428
 1121,Giearth,214285
 1122,Goblin,214285
 1123,Goblin,214285
@@ -170,12 +168,8 @@
 1196,Skeleton Prisoner,71428
 1197,Zombie Prisoner,71428
 1199,Punk,71428
-1200,Zealotus,71428
 1201,Rybio,71428
 1202,Phendark,71428
-1203,Mysteltainn,71428
-1204,Ogretooth,71428
-1205,Executioner,71428
 1206,Anolian,71428
 1207,Sting,71428
 1208,Wanderer,71428
@@ -193,14 +187,12 @@
 1246,Christmas Cookie,214285
 1248,Cruiser,214285
 1249,Myst Case,214285
-1250,Chepet,71428
 1253,Gargoyle,71428
 1254,Raggler,214285
 1255,Nereid,214285
 1256,Pest,214285
 1257,Injustice,71428
 1258,Goblin Archer,214285
-1259,Gryphon,71428
 1260,Dark Frame,71428
 1261,Wild Rose,214285
 1262,Mutant Dragonoid,71428
@@ -223,8 +215,6 @@
 1280,Goblin Steamrider,214285
 1281,Sage Worm,71428
 1282,Kobold Archer,214285
-1283,Chimera,71428
-1289,Maya Purple,71428
 1290,Skeleton General,71428
 1291,Wraith Dead,71428
 1292,Mini Demon,71428
@@ -242,7 +232,6 @@
 1304,Giant Spider,71428
 1305,Ancient Worm,71428
 1306,Leib Olmai,71428
-1307,Cat o' Nine Tails,71428
 1308,Panzer Goblin,71428
 1309,Gajomart,71428
 1310,Majoruros,71428
@@ -321,7 +310,6 @@
 1517,Jing Guai,71428
 1519,Green Maiden,71428
 1520,Boiled Rice,71428
-1582,Deviling,71428
 1584,Tamruan,71428
 1586,Leaf Cat,71428
 1587,Kraben,71428
@@ -353,10 +341,6 @@
 1655,Errende Ebecee,71428
 1656,Kavach Icarus,71428
 1657,Laurell Weinder,71428
-1664,Photon Cannon,71428
-1665,Photon Cannon,71428
-1666,Photon Cannon,71428
-1667,Photon Cannon,71428
 1668,Archdam,71428
 1669,Dimik,71428
 1670,Dimik,71428
@@ -380,16 +364,11 @@
 1696,Plasma,71428
 1699,Ancient Mimic,71428
 1703,Lady Solace,71428
-1704,Odium of Thanatos,71428
-1705,Despero of Thanatos,71428
-1706,Maero of Thanatos,71428
-1707,Dolor of Thanatos,71428
 1713,Acidus,71428
 1714,Ferus,71428
 1715,Novus,71428
 1717,Ferus,71428
 1718,Novus,71428
-1720,Hydrolancer,71428
 1721,Dragon Egg,71428
 1736,Aliot,71428
 1737,Aliza,71428
@@ -449,9 +428,6 @@
 1986,Tatacho,71428
 1987,Centipede,71428
 1988,Nepenthes,71428
-1989,Hillthrion,71428
-1990,Hardrock Mammoth,71428
-1991,Tendrillion,71428
 1992,Cornus,71428
 1993,Naga,71428
 1994,Luciola Vespa,71428

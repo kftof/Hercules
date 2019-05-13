@@ -1,0 +1,42 @@
+-	script	WoE_Kick	FAKE_NPC,{
+end;
+
+OnKick:
+warp "gonryun",159,124;
+end;
+
+OnPCLoadMapEvent:
+
+//LVL MAX LIMITATION
+if( strcharinfo(3) == "prtg_cas01" && BaseLevel > 99 ){
+    announce "Dsl, Chateau pour LVL 99 MAX ^_^ !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+
+else if( strcharinfo(3) == "payg_cas01" && BaseLevel > 200 ){
+    announce "Dsl, Chateau pour LVL 200 MAX ^_^ !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+
+//GUILD LIMITATION
+else if( strcharinfo(3) == "prtg_cas01" && !getcharid(2) ){
+    announce "Dsl, Tu n'as pas de Guild X_x !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+
+else if( strcharinfo(3) == "payg_cas01" && !getcharid(2) ){
+    announce "Dsl, Tu n'as pas de Guild X_x !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+
+else if( strcharinfo(3) == "arug_cas05" && !getcharid(2) ){
+    announce "Dsl, Tu n'as pas de Guild X_x !", bc_self;
+	addtimer 1000, "WoE_Kick::OnKick";
+}
+	
+end;
+}
+
+payg_cas01	mapflag	loadevent
+prtg_cas01	mapflag	loadevent
+arug_cas05	mapflag	loadevent

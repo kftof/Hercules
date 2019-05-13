@@ -1,0 +1,130 @@
+//============================================================
+// Wind Milestone
+//============================================================
+rachel,94,134,4	script	Magny	4_F_BRZ_WOMAN,{
+		mes "[^DF01D7Magny^000000]";
+		mes "Bonjour ! Je suis ^DF01D7Magny^000000, je suis spécialisée dans la confection de Hat.";
+		next;
+		switch(select("Wind Milestone:Moon Rabbit Hat:Rabbit Earplugs:Non, c'est bon.")) {
+		case 1:
+			mes "[^DF01D7Magny^000000]";
+			mes "2 Fire Dragon Scale";
+			mes "7 Fordidden Red Candle";
+			mes "100 Garnet";
+			mes "2 Red Beret";
+			mes "100 Red Feather";
+			mes "10 Angel Wing";
+			mes "500 Red Muffler";
+			mes "1000 Soft Feather";
+			mes "1 Poison Knife [0]";
+			mes "1 Book of Gust of Wind [3]";
+			mes "100 White Dyestuffs";
+			mes "100 Scarlet Dyestuffs";
+			mes "Ce sont tous les items dont j'ai besoin !";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(7451) > 1) && (countitem(660) > 6) 
+					&& (countitem(718) > 99)
+					&& (countitem(5580) > 1) && (countitem(7440) > 99)
+					&& (countitem(2254) > 9) && (countitem(982) > 99)
+					&& (countitem(975) > 99) && (countitem(7216) > 499)
+					&& (countitem(7063) > 999) && (countitem(1239) > 0)
+					&& (countitem(1571) > 0)) {	
+					mes "[^DF01D7Magny^000000]";
+					mes "Parfait, voilà pour toi !";
+					delitem 7451,2; //Fire Dragon Scale
+					delitem 660,7; //Fordidden Red Candle
+					delitem 718,100; //Garnet
+					delitem 5580,2; //Red Beret
+					delitem 7440,100; //Red Feather
+					delitem 2254,10; //Angel Wing
+					delitem 982,100; //White Dyestuffs
+					delitem 975,100; //Scarlet Dyestuffs
+					delitem 7216,500; //Red Muffler
+					delitem 7063,1000; //Soft Feather
+					delitem 1239,1; //Poison Knife [0]
+					delitem 1571,1; //Book of Gust of Wind [3]
+					getitem 5466,1; //Wind Milestone hat
+					close;
+					}
+				else {
+					mes "[^DF01D7Magny^000000]";
+					mes "Je crois qu'il manque des items !.";
+					close;
+				}
+			case 2:
+				mes "[^DF01D7Magny^000000]";
+				mes "...";
+				close;
+			}
+//////////////////////////////////////////////////////////////// 
+		case 2:
+			mes "[^DF01D7Magny^000000]";
+			mes "1 Spring Rabbit Card";
+			mes "300 Soft Feather";
+			mes "5 Opal";
+			mes "10 White Dyestuffs";
+			mes "Ce sont tous les items dont j'ai besoin !";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(4227) > 0) && (countitem(7063) > 299) 
+					&& (countitem(727) > 4) && (countitem(982) > 9)) {
+					mes "[^DF01D7Magny^000000]";
+					mes "Parfait, voilà pour toi !";
+					delitem 4227,1; //spring rabbit card
+					delitem 7063,300; //soft feather
+					delitem 727,5; //Opal
+					delitem 982,10;//white
+					getitem 5457,1; //Moon Rabbit Hat
+					close;
+					}
+				else {
+					mes "[^DF01D7Magny^000000]";
+					mes "Je crois qu'il manque des items !.";
+					close;
+				}
+			case 2:
+				mes "[^DF01D7Magny^000000]";
+				mes "...";
+				close;
+			}
+//////////////////////////////////////////////////////////////////
+		case 3:
+			mes "[^DF01D7Magny^000000]";
+			mes "2 Moon Rabbit Hat";
+			mes "10 Headset";
+			mes "1000 Feather";
+			mes "Ce sont tous les items dont j'ai besoin !";
+			mes "Au passage, je précise que mes Rabbit Earplugs ne prendront que ton slot UpperHead.";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(5457) > 1) && (countitem(5001) > 9) 
+					&& (countitem(949) > 999)) {
+					mes "[^DF01D7Magny^000000]";
+					mes "Parfait, voilà pour toi !";
+					delitem 5457,2; //Moon Rabbit Hat
+					delitem 5001,10; //Headset
+					delitem 949,1000; //feather
+					getitem 5520,1; //Rabbit Earplugs
+					close;
+				}
+				else {
+					mes "[^DF01D7Magny^000000]";
+					mes "Je crois qu'il manque des items !.";
+					close;
+				}
+			case 2:
+				mes "[^DF01D7Magny^000000]";
+				mes "...";
+				close;	
+			}
+		case 4:
+			mes "[^DF01D7Magny^000000]";
+			mes "...";
+			close;	
+		}
+	end;
+}

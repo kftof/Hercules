@@ -1,0 +1,72 @@
+//CRM PVP
+gonryun,151,124,5	script	PVP Warper	4_M_KNIGHT_BLACK,{
+
+	mes "[ ^FF0000PVP Warper^000000 ]";
+	mes " ";
+	mes "Merci de choisir une salle :";
+	menu "PvP lvl 99        [" + getmapusers("guild_vs2") + "] Joueurs",Q_1,"PvP Carnage    [" + getmapusers("pvp_fri") + "] Joueurs",Q_2, "Aucune",QQ; 
+//"PvP lvl 200      [" + getmapusers("pvp_n_1-5") + "] Joueurs",Q_2,
+
+
+
+Q_1:
+if( BaseLevel > 99 ) {
+		mes " ";
+        mes "Seulement les joueurs de niveau 99 ou inferieur peuvent entrer dans cette salle.";
+        close;
+                }
+else { 
+	announce ""+ strcharinfo(0) +" vient d'entrer dans la salle PvP lvl 99",bc_all;
+	warp "guild_vs2"	,0,0; 
+	sc_end	SC_ALL;
+	close;
+}
+/*
+Q_2:
+if( BaseLevel > 200 ) {
+		mes " ";
+        mes "Seulement les joueurs de niveau 200 ou inferieur peuvent entrer dans cette salle.";
+        close;
+                }
+else { 
+	announce ""+ strcharinfo(0) +" vient d'entrer dans la salle PvP lvl 200",bc_all;
+	warp "pvp_n_1-5"	,0,0; 
+	sc_end	SC_ALL;
+	close;
+	}
+*/
+Q_2:	
+	announce ""+ strcharinfo(0) +" vient d'entrer dans la salle PvP Carnage ",bc_all;
+	warp "pvp_fri"	,0,0;
+	sc_end	SC_ALL;
+	close;
+	
+
+QQ:
+	mes "...";
+	close;
+	
+
+//OnInit:
+	//waitingroom "Pvp Room",0,0;
+	//end;
+
+}
+
+guild_vs2	mapflag	nosave
+guild_vs2	mapflag	nowarp
+guild_vs2	mapflag	nowarpto
+guild_vs2	mapflag	noteleport
+guild_vs2	mapflag	noreturn
+
+pvp_n_1-5	mapflag	nosave
+pvp_n_1-5	mapflag	nowarp
+pvp_n_1-5	mapflag	nowarpto
+pvp_n_1-5	mapflag	noteleport
+pvp_n_1-5	mapflag	noreturn
+
+pvp_fri	mapflag	nosave
+pvp_fri	mapflag	nowarp
+pvp_fri	mapflag	nowarpto
+pvp_fri	mapflag	noteleport
+pvp_fri	mapflag	noreturn

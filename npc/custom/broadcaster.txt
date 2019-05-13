@@ -1,0 +1,50 @@
+//
+// HR Broadcast NPC
+//
+
+gonryun,180,138,4	script	Annonceur	1_M_BARD,{
+
+if (.delay > gettimetick(2)) {
+    mes "=============================";
+	mes "Attendez 1 minute avant de refaire une annonce.";
+	mes "=============================";
+    close;
+}
+
+mes "=============================";
+mes "Frais d'annonce:";
+mes "100,000z";
+mes "";
+mes "=============================";
+mes "Cooldown: 60 secondes";
+mes "=============================";
+menu "Annonce",normal,"Annuler",no;
+
+		normal:
+		if(Zeny < 100000) goto nozeny;
+		next;
+		mes "=============================";
+		mes "Écrivez votre message:";
+		mes "=============================";
+		input @message$;
+		set Zeny,Zeny-100000;
+		announce "[Annonce] "+strcharinfo(0)+": "+@message$+" ",bc_all,0xFFFFFF;
+		set .delay, gettimetick(2) + 60;
+		close;
+
+	no:
+	next;
+	mes "=============================";
+	mes "Annulation.";
+	mes "=============================";
+	close;
+
+	nozeny:
+	next;
+	mes "=============================";
+	mes "Pas assez de zeny.";
+	mes "=============================";
+	close;
+
+	end;
+}

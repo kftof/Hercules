@@ -1,0 +1,119 @@
+// Emblem of the sun God / Moon Goddess
+//============================================================
+einbroch,28,82,1	script	Rodyle	4_M_MUT1,{
+	mes "Vous voyez un homme difforme qui semble terriblement souffrir.";
+	next;		
+	mes "[^FF0000Rodyle^000000]";
+	mes "Uhg.";
+	next;
+	mes "[^FF0000Rodyle^000000]";
+	mes "Je n'y crois pas, ce n'est pas possible...";
+	switch(select("Que vous arrive t'il ?")) {
+	case 1:
+	mes "[^FF0000Rodyle^000000]";
+	mes "J...Je faisais partie d'un groupe de chercheurs qui travaillait sur un projet top secret...";
+	mes "Nous étions sur le point de le finir, nous étions à deux doigts de terminer ce chef d'oeuvre.";
+	next;
+	mes "[^FF0000Rodyle^000000]";
+	mes "Ils étaient tellement beaux, si parfaits. Je n'ai pas pu m'empêcher de les voler.";
+	mes "Mais il ne m'a pas fallu longtemps pour comprendre que le dispositif qui protégeait ces prototypes était en fait un poison rare et puissant.";
+	next;
+	mes "[^FF0000Rodyle^000000]";
+	mes "Me voila ici a gémir de douleur, à me tordre pendant que mon corps se transforme lentement en cette chose atroce...";
+	mes "Aidez-moi, je vous en supplie.";
+	next;
+	switch(select("Comment ?:Non.")) {
+	case 1:
+		mes "[^FF0000Rodyle^000000]";
+		mes "Je connais quelqu'un, mais cet homme est cupide et avare.";
+		mes "Il sait comment faire l'antidote, mais le prix qu'il me demande est inhumain.";
+		next;
+		switch(select("C'est à dire ?")) {
+		case 1:
+			mes "[^FF0000Rodyle^000000]";
+			mes "J'ai besoin de 5 Lingôt d'Or.";
+			mes "Je vous en prie, apportez-les moi, et je vous donnerai l'un des deux prototypes en échange.";
+			next;
+			switch(select("5 Lingôt d'Or ?!! C'est n'importe quoi !:Je peux peut être vous aider.")) {
+			case 1:
+				mes "[^FF0000Rodyle^000000]";
+				mes "Allez au diable et laissez-moi mourir !";
+				close;
+			case 2:
+				if ((countitem(7228) > 4)) {
+				mes "[^FF0000Rodyle^000000]";
+				mes "Je ne peux pas y croire, vous les avez !";
+				next;
+				mes "[^FF0000Rodyle^000000]";
+				mes "Donnez-les moi, je vous en supplie. Lequel des deux voulez-vous ?";
+				next;
+				mes "[^FF0000Rodyle^000000]";
+				mes "[^CBBF0EPrototype en or = Emblem of the sun god^000000]";
+				mes "[^B0B0B0Prototype en argent = Emblem of the moon goddess^000000]";
+				next;
+					switch(select("Prendre le prototype en or.:Prendre le prototype en argent.")) {
+					case 1:
+						mes "[^FF0000Rodyle^000000]";
+						mes "Vous êtes certain de vouloir celui en or ? Je garderai l'autre !";
+						next;
+						switch(select("Oui, je veux celui en or.:Finalement, non.")) {
+						case 1:
+							if ((countitem(7228) > 4)) {
+							mes "[^FF0000Rodyle^000000]";
+							mes "Parfait, tenez, prenez cette maudite chose et partez !";
+							delitem 7228,5; //Lingot
+							getitem 7086,1; //Emblem of the Sun God
+							close;							
+							}
+							else {
+							mes "[^FF0000Rodyle^000000]";
+							mes "Mais, où sont les Lingôts ?!";
+							close;
+							} 
+						case 2:
+							mes "[^FF0000Rodyle^000000]";
+							mes "Partez ! Je vous maudit !";
+							close;
+						}
+					case 2:
+						mes "[^FF0000Rodyle^000000]";
+						mes "Vous êtes certain de vouloir celui en argent ? Je garderai l'autre !";
+						next;
+						switch(select("Oui, je veux celui en argent.:Finalement, non.")) {
+						case 1:
+							if ((countitem(7228) > 4)) {
+							mes "[^FF0000Rodyle^000000]";
+							mes "Parfait, tenez, prenez cette maudite chose et partez !";
+							delitem 7228,5; //Lingot
+							getitem 29373,1; //Emblem of the Moon Goddess
+							close;
+							}
+							else {
+							mes "[^FF0000Rodyle^000000]";
+							mes "Mais, où sont les Lingôts ?!";
+							close;
+							}
+						case 2:
+							mes "[^FF0000Rodyle^000000]";
+							mes "Partez ! Je vous maudit !";
+							close;
+						}
+					}
+					}
+					else {
+						mes "[^FF0000Rodyle^000000]";
+						mes "Vous n'avez pas les Lingôts... Partez ! Laissez-moi mourir !";
+						close;
+						}
+	
+			}
+
+		}
+		case 2:
+		mes "[^FF0000Rodyle^000000]";
+		mes "Partez... Partez !";
+		close;
+		}
+	}
+	end;
+	}

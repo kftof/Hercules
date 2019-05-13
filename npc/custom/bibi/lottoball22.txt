@@ -1,0 +1,55 @@
+//============================================================
+aldebaran,168,98,4	script	Bibi#22	4_M_BIBI,{
+	mes "[Bibi]";
+	mes "Je suis un des frêres de Bibi.";
+	next;
+	switch(select("Besoin d'aide ?:Rien.")) {
+		case 1:
+			mes "[Bibi]";
+			mes "J'aurais bien besoin de quelque chose ...";
+			mes "Oui, peux-tu me rapporter ces objets ?";
+			next;
+			mes "[Bibi]";
+			mes "20 Beret ";
+			mes "500 Soft feather ";
+			mes "300 White dyestuff ";
+			mes "10 Fang of garm";
+			mes "1 Sea-Otter Hat";
+			mes "C'est tout ce dont j'ai besoin.";
+			next;
+			mes "[Bibi]";
+			mes "Alors ?";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(5172) > 19)	&&	(countitem(7063) > 499)	&&	(countitem(982) > 299)	&&	(countitem(7036) > 9)	&&	(countitem(5078) > 0)) {
+					mes "[Bibi]";
+					mes "C'est parfait ! Tiens, voilà pour te remercier.";
+					delitem 5172,20;
+					delitem 7063,500;
+					delitem 982,300;
+					delitem 7036,10;
+					delitem 5078,1;
+					getitem 7382,1; //ball1
+	specialeffect(EF_FLOWERLEAF, AREA, playerattached());
+	specialeffect(EF_ELECTRIC, AREA, playerattached());
+	specialeffect(EF_MVP, AREA, playerattached());
+					close2;
+				}
+				else {
+					mes "[Bibi]";
+					mes "Il manque quelque chose.";
+					close;
+				}
+			case 2:
+				mes "[Bibi]";
+				mes "Comme tu veux.";
+				close;	
+			}
+		case 2:
+			mes "[Bibi]";
+			mes "...";
+			close;
+		}
+	end;
+}

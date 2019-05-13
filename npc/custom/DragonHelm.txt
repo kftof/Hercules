@@ -1,0 +1,408 @@
+// DRAGON HELM
+// gonryun
+gonryun,40,189,4	script	Alduin#01	4_M_CHNGENERL,{
+	if ((countitem(29389) > 0)) {
+	mes "[^DF0101Alduin^000000]";
+	mes "Maintenant que tu as reussi a demontrer ta valeur.";
+	mes "Laisse moi te féliciter en colorant ton Dragon Helm.";
+	next;
+		switch(select("Le colorer:Le decolorer.")) {
+			case 1:
+			mes "[^DF0101Alduin^000000]";
+			mes "De quelle couleur souhaites-tu le colorer ?";
+			mes "Je vais avoir besoin de 300 dyestuffs de la couleur que tu souhaites.";
+			next;
+			switch(select("Noir:Blue:Cyan:Gold:Green:Purple:Red:White:Non merci.")) {
+				case 1:
+				if ((countitem(29389) > 0) && (countitem(983) > 299)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29389,1; //Dragon Helm
+					delitem 983,300; //Black_Dyestuffs
+					getitem 29386,1; //Black Dragon
+					close;
+				}
+						else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+						case 2:
+				if ((countitem(29389) > 0) && (countitem(978) > 299)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29389,1; //Dragon Helm
+					delitem 978,300; //Cobaltue
+					getitem 29387,1; //Blue Dragon
+					close;
+				}
+						else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+						case 3:
+				if ((countitem(29389) > 0) && (countitem(978) > 149) && (countitem(982) > 149)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29389,1; //Dragon Helm
+					delitem 978,150; //Cyan_Dyestuffs
+					delitem 982,150; //White_Dyestuffs
+					getitem 29388,1; //Cyan Dragon
+					close;
+				}
+						else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+						case 4:
+				if ((countitem(29389) > 0) && (countitem(976) > 299)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29389,1; //Dragon Helm
+					delitem 976,300; //Lemon_Dyestuffs
+					getitem 29390,1; //Gold Dragon
+					close;
+				}
+						else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+						case 5:
+				if ((countitem(29389) > 0) && (countitem(979) > 299)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29389,1; //Dragon Helm
+					delitem 979,300; //Darkgreen_Dyestuffs
+					getitem 29391,1; //Green Dragon
+					close;
+				}
+						else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+						case 6:
+				if ((countitem(29389) > 0) && (countitem(981) > 299)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29389,1; //Dragon Helm
+					delitem 981,300; //Violet_Dyestuffs
+					getitem 29392,1; //Purple Dragon
+					close;
+				}
+						else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+					case 7:
+				if ((countitem(29389) > 0) && (countitem(975) > 299)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29389,1; //Dragon Helm
+					delitem 975,300; //Red_Dyestuffs
+					getitem 29393,1; //Red Dragon
+					close;
+				}
+						else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+					case 8:
+				if ((countitem(29389) > 0) && (countitem(982) > 199)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29389,1; //Dragon Helm
+					delitem 982,300; //White_Dyestuffs
+					getitem 29394,1; //White Dragon 
+					close;
+				}
+					else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas les ingrédients requis !";
+					close;
+				}
+					case 9:
+				mes "[^DF0101Alduin^000000]";
+				mes "D'accord.";
+				close;
+			}
+			case 2:
+				mes "[^DF0101Alduin^000000]";
+				mes "Quel type de couleur souhaites-tu décolorer ?";
+				next;
+				switch(select("Noir:Blue:Cyan:Gold:Green:Purple:Red:White:Non merci.")) {
+					case 1:
+				if ((countitem(29386) > 0)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29386,1; //Black Dragon
+					getitem 29389,1; //Dragon Helm
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas cette couleur de Dragon Helm.";
+					close;
+				}
+					case 2:
+				if ((countitem(29387) > 0)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29387,1; //Blue Dragon
+					getitem 29389,1; //Dragon Helm
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas cette couleur de Dragon Helm.";
+					close;
+				}
+			case 3:
+				if ((countitem(29388) > 0)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29388,1; //Cyan Dragon				
+					getitem 29389,1; //Dragon Helm
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas cette couleur de Dragon Helm.";
+					close;
+				}
+			case 4:
+				if ((countitem(29390) > 0)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29390,1; //Gold Dragon
+					getitem 29389,1; //Dragon Helm
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas cette couleur de Dragon Helm.";
+					close;
+				}
+			case 5:
+				if ((countitem(29391) > 0)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29391,1; //Green Dragon
+					getitem 29389,1; //Dragon Helm
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas cette couleur de Dragon Helm.";
+					close;
+				}
+			case 6:
+				if ((countitem(29392) > 0)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29392,1; //Purple Dragon				
+					getitem 29389,1; //Dragon Helm
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas cette couleur de Dragon Helm.";
+					close;
+				}
+			case 7:
+				if ((countitem(29393) > 0)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29393,1; //Red Dragon				
+					getitem 29389,1; //Dragon Helm
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas cette couleur de Dragon Helm.";
+					close;
+				}
+			case 8:
+				if ((countitem(29394) > 0)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "C'est parti !";
+					delitem 29394,1; //White Dragon 					
+					getitem 29389,1; //Dragon Helm
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Tu n'as pas cette couleur de Dragon Helm.";
+					close;
+				}
+			case 9:
+				mes "[^DF0101Alduin^000000]";
+				mes "D'accord.";
+				close;
+			}
+		}
+	}
+	else {
+		mes "[^DF0101Alduin^000000]";
+		mes "Salutation.";
+		next;
+		mes "[^DF0101Alduin^000000]";
+		mes "Je suis un chasseur de Dragon.";
+		mes "Si tu souhaites faire partie de mon clan, retrouve-moi à l'endroit le plus à l'Ouest de Rune-Midgard, prêt de l'antre des Enfers.";
+		close;
+		}
+end;
+}
+// Veins field 03 108,222
+ve_fild03,109,224,4	script	Alduin#02	4_M_CHNGENERL,{
+	if ((countitem(7858) > 0)) {
+	mes "[^DF0101Alduin^000000]";
+	mes "Bien, retrouve-moi dans la ville la plus au Nord de Rune-Midgard, je t'attendrai en admirant les neiges éternelles de la montagne.";
+	close;
+	}
+	else {
+		mes "[^DF0101Alduin^000000]";
+		mes "Et bien, je vois que tu souhaites toujours intégrer mon Clan.";
+		next;
+		mes "[^DF0101Alduin^000000]";
+		mes "Prouve-moi ta valeur en m'apportant les items suivants :";
+		next;
+		mes "[^DF0101Alduin^000000]";
+		mes "10 Three-Headed Dragon's Head";
+		mes "3000 Fang";
+		mes "Alors, toujours partant ?";
+			switch(select("Biensûr !:Non.")) {
+			case 1:
+				if ((countitem(7443) > 9) && (countitem(1063) > 2999)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "Parfait, voici une preuve de ta bravoure.";
+					delitem 7443,10;
+					delitem 1063,3000;
+					getitem 7858,1; //Dragonball Yellow
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Je crains qu'il ne manque des objets.";
+					close;
+				}
+			case 2:
+				mes "[^DF0101Alduin^000000]";
+				mes "Je savais que tu étais trop faible.";
+				close;	
+			}
+		}
+	end;
+	}
+// Hugel 154,230
+hugel,154,230,4	script	Alduin#03	4_M_CHNGENERL,{
+	if ((countitem(7921) > 0)) {
+	mes "[^DF0101Alduin^000000]";
+	mes "Bien, retrouve-moi à l'endroit le plus au Sud Est de Rune-Midgard, dans l'ombre d'une statue faisant face à la mer.";
+	close;
+	}
+	else {
+		mes "[^DF0101Alduin^000000]";
+		mes "Et bien, je vois que tu souhaites encore intégrer mon Clan.";
+		next;
+		mes "[^DF0101Alduin^000000]";
+		mes "Prouve-moi ta valeur en m'apportant les items suivants :";
+		next;
+		mes "[^DF0101Alduin^000000]";
+		mes "10 Three-Headed Dragon's Head";
+		mes "3000 Dragon Canine";
+		mes "Alors, toujours partant ?";
+			switch(select("Biensûr !:Non.")) {
+			case 1:
+				if ((countitem(7443) > 9) && (countitem(1035) > 2999)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "Parfait, voici une preuve de ta bravoure.";
+					delitem 7443,10;
+					delitem 1035,3000;
+					getitem 7921,1; //Essence of Dragon
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Je crains qu'il ne manque des objets.";
+					close;
+				}
+			case 2:
+				mes "[^DF0101Alduin^000000]";
+				mes "Je savais que tu étais trop faible.";
+				close;	
+			}
+		}
+	end;
+	}
+// Turtle 01
+tur_dun01,76,199,4	script	Alduin#04	4_M_CHNGENERL,{
+	if ((countitem(7701) > 0)) {
+	mes "[^DF0101Alduin^000000]";
+	mes "Retrouve-moi sur l'île la plus proche d'Izlude, je t'y attendrai en contemplant le crâne du monde.";
+	close;
+	}
+	else {
+		mes "[^DF0101Alduin^000000]";
+		mes "Encore toi.";
+		next;
+		mes "[^DF0101Alduin^000000]";
+		mes "Tu as besoin de me prouver encore une fois ta valeur en m'apportant les items suivants :";
+		next;
+		mes "[^DF0101Alduin^000000]";
+		mes "10 Three-Headed Dragon's Head";
+		mes "3000 Turtle Shell";
+		mes "Alors, toujours partant ?";
+			switch(select("Biensur !:Non.")) {
+			case 1:
+				if ((countitem(7443) > 9) && (countitem(967) > 2999)) {
+					mes "[^DF0101Alduin^000000]";
+					mes "Parfait, voici une preuve de ta bravoure.";
+					delitem 7443,10;
+					delitem 967,3000;
+					getitem 7701,1; //Dragon Soul
+					close;
+				}
+				else {
+					mes "[^DF0101Alduin^000000]";
+					mes "Je crains qu'il ne manque des objets.";
+					close;
+				}
+			case 2:
+				mes "[^DF0101Alduin^000000]";
+				mes "Je savais que tu étais trop faible.";
+				close;	
+			}
+		}
+	end;
+	}
+// Byalan island
+izlu2dun,106,187,4	script	Alduin#05	4_M_CHNGENERL,{
+	if ((countitem(7858) > 0)	&&	(countitem(7921) > 0)	&&	(countitem(7701) > 0)) {
+	mes "[^DF0101Alduin^000000]";
+	mes "Tu as fait un long chemin.";
+	mes "Tiens, prends ta récompense.";
+			delitem 7858,1; //
+			delitem 7921,1; //
+			delitem 7701,1; //
+			getitem 29389,1; //Dragon Helm
+			close;
+		}
+	else {
+	mes "[^DF0101Alduin^000000]";
+	mes "Hmm ?";
+	close;
+		}
+end;
+}
+
+
+
+
+
+

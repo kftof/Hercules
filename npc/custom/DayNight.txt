@@ -1,0 +1,24 @@
+-	script	DAYNNIGHT	FAKE_NPC,{
+
+OnInit:
+  
+  if ((gettime(3) < 8) || (gettime(3) >= 20)) night;
+  
+  end;
+  
+OnClock0800:
+
+announce "Il est 8H ! Bonne journée sur Heaven's Radiance ! ;)",bc_blue|bc_all;;
+day;
+
+end;
+
+OnClock2100:
+
+announce "Il est 21H ! Bonne soirée sur Heaven's Radiance ! ;)",bc_blue|bc_all;;
+night;
+
+end;
+
+
+}

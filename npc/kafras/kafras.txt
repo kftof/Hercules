@@ -504,14 +504,10 @@ einbroch,59,203,6	script	Kafra Employee#ein1::kaf_einbroch2	4_F_KAFRA9,{
 }
 
 //== Kunlun ================================================
-gonryun,159,122,4	script	Kafra Employee::kaf_gonryun	4_F_KAFRA2,{
+gonryun,166,125,4	script	Kafra Employee::kaf_gonryun	4_F_KAFRA2,{
 	cutin "kafra_02",2;
 	mes "[Kafra Employee]";
-	mes "Welcome to the";
-	mes "Kafra Corporation.";
-	mes "Kafra's Employees are";
-	mes "always ready to serve you.";
-	mes "How can I help you today?";
+	mes "Bonjour, que puis-je faire pour vous ?";
 	callfunc "F_Kafra",5,3,1,50,700;
 	savepoint "gonryun",160,62;
 	callfunc "F_KafEnd",0,1,"in the city of Kunlun";

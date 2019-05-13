@@ -1,0 +1,37 @@
+gonryun,143,143,5	script	SG Reset	4_M_SURA,{
+    cutin "arang01",2;
+    mes "[SG Resetter]";
+    mes "Que voulez-vous reset ?";
+    menu "Reset Feeling",feeling,"Reset Hatred",hatred;
+
+feeling:
+    atcommand "@feelreset";
+    mes "Voilà !";
+    close2;
+    cutin "",255;
+    end;
+
+hatred:
+    set PC_HATE_MOB_MOON, 0;
+    set PC_HATE_MOB_STAR, 0;
+    set PC_HATE_MOB_SUN, 0;
+    mes "Voilà !";
+    next;
+    mes "[SG Resetter]";
+    mes "Hatred sera reset à la prochaine connexion.";
+    mes "Voulez-vous vous reconnecter maintenant ?";
+    menu "Relog maintenant",relog,"Attendre",later;
+
+relog:
+    atcommand "@kick "+strcharinfo(0);
+    end;
+
+later:
+    next;
+    mes "[SG Resetter]";
+    mes "Ok, mais n'oubliez pas que l'effet ne sera pris en compte qu'à la prochaine connexion !";
+    close2;
+    cutin "",255;
+    end;
+
+}
