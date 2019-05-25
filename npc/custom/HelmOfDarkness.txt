@@ -240,42 +240,41 @@ gon_in,34,81,2	script	Shadow#12	8_DOPPEL,{
 			mes "1 Nightmare";
 			mes "10 Skeletal Armor Piece";
 			mes "10 Gemstone";
-			mes "100 Animal Gore";
-			mes "100 Blade Lost in Darkness";
+			mes "75 Animal Gore";
+			mes "75 Blade Lost in Darkness";
 			mes "500 Burning Horseshoe";
-			mes "2000 Rune of Darkness";
-			mes "3000 Bloody Rune";
+			mes "1000 Rune of Darkness";
+			mes "1000 Bloody Rune";
 			next;
 				switch(select("Lui donner les items.:Ne pas lui donner.")) {
 				case 1:
-					if ((countitem(7102) > 0)	&&	(countitem(7450) > 9)	&&	(countitem(7300) > 9)	&&	(countitem(702) > 99)	&&	(countitem(7023) > 88)	&&	(countitem(7120) > 499)	&&	(countitem(7511) > 1999)	&&	(countitem(7563) > 2999)) {
+					if ((countitem(7102) > 0)	&&	(countitem(7450) > 9)
+						&&	(countitem(7300) > 9)	&&	(countitem(702) > 74)
+					&&	(countitem(7023) > 74)	&&	(countitem(7120) > 499)
+					&&	(countitem(7511) > 999)	&&	(countitem(7563) > 999)) {
 						mes "[^892EE4Shadow^000000]";
-						mes "Tu ... es ... fort ...";
+						mes "Tu... es... fort...";
 						delitem 7102,1; //Nightmare
 						delitem 7450,10; //Skeletal Armor piece
 						delitem 7300,10; //Gemstone
-						delitem 702,100; //Animal Gore
-						delitem 7023,100; //Blade Lost in Darkness
+						delitem 702,75; //Animal Gore
+						delitem 7023,75; //Blade Lost in Darkness
 						delitem 7120,500; //Burning HorseShoe
-						delitem 7511,2000; //darkness Rune
-						delitem 7563,3000; //Bloody Rune
+						delitem 7511,1000; //darkness Rune
+						delitem 7563,1000; //Bloody Rune
 						getitem 5181,1; //Helm_Of_Darkness
 						close;
 					}
 					else {
 						mes "[^892EE4Shadow^000000]";
-						mes "Tuer ... encore ...";
+						mes "...";
 						close;
 					}
 				case 2:
-					mes "[^892EE4Shadow^000000]";
-					mes "...";
 					close;	
 				}
 			}
 		case 2:
-		mes "[^892EE4Shadow^000000]";
-		mes "...";
 		close;
 		}
 	}

@@ -5,7 +5,7 @@ rachel,94,134,4	script	Magny	4_F_BRZ_WOMAN,{
 		mes "[^DF01D7Magny^000000]";
 		mes "Bonjour ! Je suis ^DF01D7Magny^000000, je suis spécialisée dans la confection de Hat.";
 		next;
-		switch(select("Wind Milestone:Moon Rabbit Hat:Rabbit Earplugs:Non, c'est bon.")) {
+		switch(select("Wind Milestone:Moon Rabbit Hat:Rabbit Earplugs:Mystia Beret:Non, c'est bon.")) {
 		case 1:
 			mes "[^DF01D7Magny^000000]";
 			mes "2 Fire Dragon Scale";
@@ -62,20 +62,20 @@ rachel,94,134,4	script	Magny	4_F_BRZ_WOMAN,{
 		case 2:
 			mes "[^DF01D7Magny^000000]";
 			mes "1 Spring Rabbit Card";
-			mes "300 Soft Feather";
-			mes "5 Opal";
+			mes "200 Soft Feather";
+			mes "4 Opal";
 			mes "10 White Dyestuffs";
 			mes "Ce sont tous les items dont j'ai besoin !";
 			next;
 			switch(select("Lui donner les items.:Ne pas lui donner.")) {
 			case 1:
-				if ((countitem(4227) > 0) && (countitem(7063) > 299) 
-					&& (countitem(727) > 4) && (countitem(982) > 9)) {
+				if ((countitem(4227) > 0) && (countitem(7063) > 199) 
+					&& (countitem(727) > 3) && (countitem(982) > 9)) {
 					mes "[^DF01D7Magny^000000]";
 					mes "Parfait, voilà pour toi !";
 					delitem 4227,1; //spring rabbit card
-					delitem 7063,300; //soft feather
-					delitem 727,5; //Opal
+					delitem 7063,200; //soft feather
+					delitem 727,4; //Opal
 					delitem 982,10;//white
 					getitem 5457,1; //Moon Rabbit Hat
 					close;
@@ -122,6 +122,39 @@ rachel,94,134,4	script	Magny	4_F_BRZ_WOMAN,{
 				close;	
 			}
 		case 4:
+			mes "[^DF01D7Magny^000000]";
+			mes "5 Feather Beret";
+			mes "20 Black Dyestuffs";
+			mes "100 Rough Wind";
+			mes "600 Suspicious Hat";
+			mes "1 Cat Ears Beret";
+			mes "Ce sont tous les items dont j'ai besoin !";
+			next;
+			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(5170) > 4) && (countitem(983) > 19) 
+					&& (countitem(996) > 99) && (countitem(7567) > 599) && (countitem(18600) > 0)) {
+					mes "[^DF01D7Magny^000000]";
+					mes "Parfait, voilà pour toi !";
+					delitem 5170,5;
+					delitem 983,20;
+					delitem 996,100;
+					delitem 7567,600;
+					delitem 18600,1;
+					getitem 29435,1; //mystia beret
+					close;
+				}
+				else {
+					mes "[^DF01D7Magny^000000]";
+					mes "Je crois qu'il manque des items !.";
+					close;
+				}
+			case 2:
+				mes "[^DF01D7Magny^000000]";
+				mes "...";
+				close;	
+			}
+		case 5:
 			mes "[^DF01D7Magny^000000]";
 			mes "...";
 			close;	

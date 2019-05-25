@@ -51,10 +51,10 @@ einbroch,28,82,1	script	Rodyle	4_M_MUT1,{
 				mes "[^CBBF0EPrototype en or = Emblem of the sun god^000000]";
 				mes "[^B0B0B0Prototype en argent = Emblem of the moon goddess^000000]";
 				next;
-					switch(select("Prendre le prototype en or.:Prendre le prototype en argent.")) {
+					switch(select("Prendre le prototype en or.:Prendre le prototype en argent.:Prendre le prototype de sang.")) {
 					case 1:
 						mes "[^FF0000Rodyle^000000]";
-						mes "Vous êtes certain de vouloir celui en or ? Je garderai l'autre !";
+						mes "Vous êtes certain de vouloir celui en or ?";
 						next;
 						switch(select("Oui, je veux celui en or.:Finalement, non.")) {
 						case 1:
@@ -77,7 +77,7 @@ einbroch,28,82,1	script	Rodyle	4_M_MUT1,{
 						}
 					case 2:
 						mes "[^FF0000Rodyle^000000]";
-						mes "Vous êtes certain de vouloir celui en argent ? Je garderai l'autre !";
+						mes "Vous êtes certain de vouloir celui en argent ?";
 						next;
 						switch(select("Oui, je veux celui en argent.:Finalement, non.")) {
 						case 1:
@@ -93,6 +93,29 @@ einbroch,28,82,1	script	Rodyle	4_M_MUT1,{
 							mes "Mais, où sont les Lingôts ?!";
 							close;
 							}
+						case 2:
+							mes "[^FF0000Rodyle^000000]";
+							mes "Partez ! Je vous maudit !";
+							close;
+						}
+					case 3:
+						mes "[^FF0000Rodyle^000000]";
+						mes "Vous êtes certain de vouloir celui de sang ?";
+						next;
+						switch(select("Oui, je veux celui de sang.:Finalement, non.")) {
+						case 1:
+							if ((countitem(7228) > 4)) {
+							mes "[^FF0000Rodyle^000000]";
+							mes "Parfait, tenez, prenez cette maudite chose et partez !";
+							delitem 7228,5; //Lingot
+							getitem 29401,1; //Emblem of the Sun God
+							close;							
+							}
+							else {
+							mes "[^FF0000Rodyle^000000]";
+							mes "Mais, où sont les Lingôts ?!";
+							close;
+							} 
 						case 2:
 							mes "[^FF0000Rodyle^000000]";
 							mes "Partez ! Je vous maudit !";

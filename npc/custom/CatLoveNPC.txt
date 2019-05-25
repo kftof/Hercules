@@ -1,0 +1,86 @@
+// Cat FootHairpin
+//============================================================
+ayothaya,113,185,4	script	Chat endormi	4_CAT_REST,{
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "zzzZZzz";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "zzZZZzzz";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "Sieste... encore...";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "*baille*";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "Et bien, j'espère que vous avez une bonne raison d'interrompre ma sieste!";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "*baille*";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "Je sais, c'est sûrement ma grâce naturelle qui vous a attiré.";
+	mes "J'admets avoir beaucoup de miaoufan dans tout Rune-Midgard.";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "A ce sujet, il m'est arrivé à l'occasion d'une sieste sur les marches des pyramides de Morroc de rencontrer des miaouchêur de poisson...";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "Hmmm, je me rappelle de leur petit fumet délicat...";
+	next;
+	mes "[^DB16D4Chat endormi^000000]";
+	mes "Mais je m'égards. Je suppose que vous êtes comme tous les autres, un de mes fans inconditionnels.";
+	next;
+	switch(select("Exactement!:Passer votre chemin.")) {
+	case 1:
+		mes "[^DB16D4Chat endormi^000000]";
+		mes "Serais-tu prêt à prouver ton amour pour nous autres, les plus mignons, les plus petits, les plus aimés : les chats ?";
+		next;
+		switch(select("Bien sûr !:Non.")) {
+		case 1:
+			mes "[^DB16D4Chat endormi^000000]";
+			mes "Héhéhé... alors prouve le moi, miaou !";
+			next;
+			mes "[^DB16D4Chat endormi^000000]";
+			mes "Il me faut :";
+			mes "1 Neko Mimi Hat";
+			mes "1 Koneko Hat";
+			mes "800 Hard Feeler (ID : 7163)";
+			mes "1000 Miaoubric (ID : 1059)";
+			mes "1000 Cat's Eye (ID : 7263)";
+			mes "Je pense que ça devrait être assez...";
+			next;
+			switch(select("Lui donner les items:Je m'en occupe !")) {
+			case 1:
+				if ((countitem(5099) > 0) && (countitem(5372) > 0)
+				 && (countitem(7163) > 799) && (countitem(1059) > 999)
+				  && (countitem(7263) > 999)) {
+					mes "[^DB16D4Chat endormi^000000]";
+					mes "Oui...C'est parfait !";
+					delitem 7263,1000; //Cat's Eye
+					delitem 1059,1000; //
+					delitem 7163,800; //
+					delitem 5372,1; //
+					delitem 5099,1; //
+					getitem 29430,1; //Catlove
+					close;
+				}
+				else {
+					mes "[^DB16D4Chat endormi^000000]";
+					mes "...Miaounon... Ce n'est pas ce que je veux !";
+					close;
+				}
+			case 2:
+				mes "[^DB16D4Chat endormi^000000]";
+				mes "Héhéhé, reviens miaouvite !";
+				close;	
+			}
+		case 2:
+			close;
+		}
+	case 2:
+		close;
+	}
+	end;
+}

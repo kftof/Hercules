@@ -2211,7 +2211,7 @@ static int status_calc_mob_(struct mob_data *md, enum e_status_calc_opt opt)
 		if (!gc)
 			ShowError("status_calc_mob: No castle set at map %s\n", map->list[md->bl.m].name);
 		else
-			if (gc->castle_id < 24 || md->class_ == MOBID_EMPELIUM) {
+			if (gc->castle_id < 24 || md->class_ == MOBID_EMPELIUM || md->class_ == MOBID_EMPELIUM99) {
 #ifdef RENEWAL
 				mstatus->max_hp += 50 * gc->defense;
 				mstatus->max_sp += 70 * gc->defense;
@@ -2224,7 +2224,7 @@ static int status_calc_mob_(struct mob_data *md, enum e_status_calc_opt opt)
 				mstatus->def += (gc->defense+2)/3;
 				mstatus->mdef += (gc->defense+2)/3;
 			}
-			if (md->class_ != MOBID_EMPELIUM) {
+			if (md->class_ != MOBID_EMPELIUM || md->class_ != MOBID_EMPELIUM99) {
 				mstatus->batk += mstatus->batk * 10*guardup_lv/100;
 				mstatus->rhw.atk += mstatus->rhw.atk * 10*guardup_lv/100;
 				mstatus->rhw.atk2 += mstatus->rhw.atk2 * 10*guardup_lv/100;
@@ -7548,7 +7548,7 @@ static int status_change_start(struct block_list *src, struct block_list *bl, en
 
 	if (bl->type == BL_MOB) {
 		struct mob_data *md = BL_CAST(BL_MOB, bl);
-		if (md && (md->class_ == MOBID_EMPELIUM || mob_is_battleground(md)) && type != SC_SAFETYWALL && type != SC_PNEUMA)
+		if (md && (md->class_ == MOBID_EMPELIUM || md->class_ == MOBID_EMPELIUM99 || mob_is_battleground(md)) && type != SC_SAFETYWALL && type != SC_PNEUMA)
 			return 0; //Emperium/BG Monsters can't be afflicted by status changes
 #if 0
 		if (md && mob_is_gvg(md) && status->sc2scb_flag(type)&SCB_MAXHP)

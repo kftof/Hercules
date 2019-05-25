@@ -3,22 +3,106 @@
 OnInit:
   
   if ((gettime(3) < 8) || (gettime(3) >= 20)) night;
-  
   end;
   
+OnClock0100:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock0200:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock0300:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock0400:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock0500:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock0600:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock0700:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
 OnClock0800:
-
-announce "Il est 8H ! Bonne journée sur Heaven's Radiance ! ;)",bc_blue|bc_all;;
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 day;
+end;
 
+OnClock0900:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1000:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1100:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1200:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1300:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1400:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1500:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1600:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1700:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1800:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock1900:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock2000:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
 OnClock2100:
-
-announce "Il est 21H ! Bonne soirée sur Heaven's Radiance ! ;)",bc_blue|bc_all;;
-night;
-
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
+OnClock2200:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+night;
+end;
+
+OnClock2300:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+OnClock0000:
+announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
+end;
+
+end;
 
 }

@@ -67,7 +67,7 @@ OnInit:
 	// Rewards per castle.
 	// -- when given directly: <itemID>,<amount>{,<itemID>,<amount>,...}
 	// -- via mail (option 2): <itemID>,<amount>,<Zeny>
-	setarray .Reward[0],14001,1;
+	setarray .reward[0],14001,1;
 
 // -----------------------------------------------------------
 //  Constants (leave this section alone).
@@ -173,14 +173,14 @@ OnReward:
 					query_sql("INSERT INTO `mail` (send_name,dest_id,title,message,nameid,amount,identify,zeny,time) VALUES ("+
 					          "'no-reply',"+.@cid[.@j]+",'** Siege Reward: "+getcastlename(.Castles$[.@i])+" **',"+
 					          "'Brave one,% % Congratulations!% Your guild has successfully occupied% territory in the War of Emperium on% "+.@str$+".% % % % % [ Your reward is attached. ]',"+
-					          .Reward[0]+","+.Reward[1]+",0,"+.Reward[2]+",UNIX_TIMESTAMP(NOW()))");
+					          .reward[0]+","+.reward[1]+",0,"+.reward[2]+",UNIX_TIMESTAMP(NOW()))");
 					if (!getd(".@str_"+.@cid[.@j]) && isloggedin(.@aid[.@j],.@cid[.@j])) {
 						setd ".@str_"+.@cid[.@j],1;
 						message rid2name(.@aid[.@j]),"You've got mail! Please re-login to update your mailing list.";
 					}
 				} else if (isloggedin(.@aid[.@j])) {
-					for(set .@k,0; .@k<getarraysize(.Reward); set .@k,.@k+2)
-						getitem .Reward[.@k], .Reward[.@k+1], .@aid[.@j];
+					for(set .@k,0; .@k<getarraysize(.reward); set .@k,.@k+2)
+						getitem .reward[.@k], .reward[.@k+1], .@aid[.@j];
 					message rid2name(.@aid[.@j]),"You have been rewarded for conquering "+getcastlename(.Castles$[.@i])+".";
 				}
 			}

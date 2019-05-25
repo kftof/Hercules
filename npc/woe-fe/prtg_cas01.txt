@@ -52,14 +52,14 @@
 		mes "ownership of this castle.";
 		close;
 	}
-	if (getcharid(CHAR_ID_GUILD) == .@GID) {
+	if (getcharid(2) == .@GID) {
 		mes "[ Echoing Voice ]";
 		mes "Brave ones...";
 		mes "Do you wish to return to your honorable place?";
 		next;
 		if(select("Return to the guild castle.", "Quit.") == 1) {
 			close2;
-			if (getcharid(CHAR_ID_GUILD) == getcastledata("prtg_cas01",1)) {
+			if (getcharid(2) == getcastledata("prtg_cas01",1)) {
 				warp "prtg_cas01",96,173;
 				end;
 			}
@@ -84,11 +84,6 @@ OnRecvCastlePt01:
 	end;
 }
 
-prt_gld,131,60,6	duplicate(OutsideFlagsPR1)	Kriemhild#1-2	GUILD_FLAG
-prt_gld,138,68,6	duplicate(OutsideFlagsPR1)	Kriemhild#2	GUILD_FLAG
-prt_gld,138,60,6	duplicate(OutsideFlagsPR1)	Kriemhild#3	GUILD_FLAG
-prt_gld,135,60,6	duplicate(OutsideFlagsPR1)	Kriemhild#4	GUILD_FLAG
-
 //== Guild Flags (Inside Castle) ===========================
 -	script	Kriemhild#5::InsideFlagsPR1	GUILD_FLAG,{
 	end;
@@ -97,6 +92,13 @@ OnRecvCastlePt01:
 	flagemblem getcastledata("prtg_cas01",1);
 	end;
 }
+
+prt_gld,131,60,6	duplicate(InsideFlagsPR1)	Kriemhild#1-2	GUILD_FLAG
+prt_gld,138,68,6	duplicate(InsideFlagsPR1)	Kriemhild#2	GUILD_FLAG
+prt_gld,138,60,6	duplicate(InsideFlagsPR1)	Kriemhild#3	GUILD_FLAG
+prt_gld,135,60,6	duplicate(InsideFlagsPR1)	Kriemhild#4	GUILD_FLAG
+
+
 
 prtg_cas01,58,56,4	duplicate(InsideFlagsPR1)	Kriemhild#5-2	GUILD_FLAG
 prtg_cas01,64,56,4	duplicate(InsideFlagsPR1)	Kriemhild#6	GUILD_FLAG

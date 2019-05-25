@@ -10,7 +10,7 @@
 //= 5.1 Cleaned and standardized, mostly. [Euphy]
 //============================================================
 
-prontera,160,155,4	script	Disguise Event	4_M_NFDEADMAN,{
+gonryun,165,84,4	script	Disguise Event	4_M_BOSSCAT,{
 
 	// Currently set to run every two hours.
 	// To change times, edit the OnClock labels below.
@@ -43,8 +43,8 @@ prontera,160,155,4	script	Disguise Event	4_M_NFDEADMAN,{
 			}
 			set .EventON,1; set .Timer,1; setnpctimer 0; initnpctimer;
 			set .ResetCounter,.ResetCounter+1;
-			announce "The Disguise Event will begin in 3 minutes.",bc_all | bc_blue;
-			announce "The Event is being held in Prontera.",bc_all | bc_blue;
+			announce "L'event disguinse va commencer dans 3 minutes.",bc_all | bc_blue;
+			announce "L'event va avoir lieu au sud du centre de Gonryun.",bc_all | bc_blue;
 			close;
 		case 2:
 			mes .@n$;
@@ -102,20 +102,16 @@ prontera,160,155,4	script	Disguise Event	4_M_NFDEADMAN,{
 	}
 	if (.EventON) end;
 	mes .@n$;
-	mes "Welcome.";
-	mes "How may I be of assistance?";
-	if(select("Information", "Nothing, just passing through.")==2) close;
+	mes "Bonjour.";
+	mes "Puis-je vous aider?";
+	if(select("Information", "Quitter.")==2) close;
 	next;
 	mes .@n$;
-	mes "This event is quite simple.";
-	mes "At the start of the event, I will";
-	mes "disguise myself as a random";
-	mes "monster. You have to shout";
-	mes "that monter's name out loud.";
+	mes "Cet event est très simple. Au début de l'event, je me déguiserai en un monstre au hasard.";
+	mes "Vous devrez juste écrire son nom, peu importe les majuscules.";
 	next;
-	mes "If you are correct, you will receive";
-	mes "a prize. If not, keep trying!";
-	mes "That's all that there is to this event.";
+	mes "Si vous avez raison, vous recevrez";
+	mes "un ^131AF3Event Ticket^000000!";
 	close;
 
 OnInit:
@@ -147,7 +143,7 @@ OnInit:
 	    "2100,2101,2012,2103,2104,2105,2106,2107,2108,2109,2110,2111,2112,2113," +
 	    "2114,2115,2116,2117,2118,2119,2120,2121,2123,2124,2125,1496,";
 	end;
-OnClock0000:
+/*OnClock0000:
 OnClock0200:
 OnClock0400:
 OnClock0600:
@@ -156,15 +152,16 @@ OnClock1000:
 OnClock1200:
 OnClock1400:
 OnClock1600:
-OnClock1800:
+OnClock1802:
 OnClock2000:
 OnClock2200:
+*/
 	set .ResetCounter,.ResetCounter+1;
 	set .EventON,1;
 	set .Timer,1;
 	set .Wait,1;
-	announce "The Disguise Event will begin in 3 minutes.",bc_all | bc_blue;
-	announce "The Event is being held in Prontera.",bc_all | bc_blue;
+	announce "L'event disguise va commencer dans 3 minuets.",bc_all | bc_blue;
+	announce "L'event aura lieu au sud du centre de Gonryun.",bc_all | bc_blue;
 	setnpctimer 0;
 	initnpctimer;
 	end;
@@ -177,7 +174,7 @@ OnTimer30000:
 	if (.Timer) end;
 	set .Change,0;
 	setnpcdisplay "Disguise Event", 4_M_NFDEADMAN;
-	npctalk "You took too long to guess what I was. Please wait 10 seconds while I disguise again.";
+	npctalk "Vous avez pris trop de temps pour deviner. Attendez 10 secondes pour que je me déguise à nouveau.";
 	specialeffect 725;
 	set $MonsterName$,"";
 	deletepset 1;
@@ -187,18 +184,18 @@ OnTimer30000:
 	end;
 OnTimer60000:
 	if (.Timer!=1) end;
-	announce "The Disguise Event will begin in 2 minutes.",bc_all | bc_blue;
-	announce "The Event is being held in Prontera.",bc_all | bc_blue;
+	announce "L'event disguise va commencer dans 2 minuets.",bc_all | bc_blue;
+	announce "L'event aura lieu au sud du centre de Gonryun.",bc_all | bc_blue;
 	end;
 OnTimer120000:
 	if (.Timer!=1) end;
-	announce "The Disguise Event will begin 1 minute.",bc_all | bc_blue;
-	announce "The Event is being held in Prontera.",bc_all | bc_blue;
+	announce "L'event disguise va commencer dans 1 minuets.",bc_all | bc_blue;
+	announce "L'event aura lieu au sud du centre de Gonryun.",bc_all | bc_blue;
 	end;
 OnTimer180000:
 	if (.Timer!=1) end;
-	announce "The Disguise Event has begun!",bc_all | bc_blue;
-	announce "The Event is being held in Prontera.",bc_all | bc_blue;
+	announce "L'event disguise commence !",bc_all | bc_blue;
+	announce "L'event a lieu au sud du centre de Gonryun.",bc_all | bc_blue;
 	set .Timer,0; stopnpctimer;
 	setnpctimer 0; initnpctimer;
 iDisguise:
@@ -225,7 +222,7 @@ iDisguise:
 	end;
 iCorrect:
 	if (.Winner) {
-		dispbottom "Someone has already won this round.";
+		dispbottom "Quelqu'un a déjà gagné ce round.";
 		end;
 	}
 	set .Winner,1;
@@ -233,12 +230,12 @@ iCorrect:
 	deletepset 1;
 	activatepset 1;
 	getitem .Prize,.PrizeAmt;
-	announce strcharinfo(0)+" is correct! I was disguised as: "+$MonsterName$+"",bc_map | bc_blue;
+	announce strcharinfo(0)+" a trouvé! J'étais déguisé en: "+$MonsterName$+"",bc_map | bc_blue;
 	if (.RoundCount>=.Rounds) {
 		setnpcdisplay "Disguise Event", 4_M_NFDEADMAN;
 		set .RoundCount,0; set .Change,0; set .EventON,0;
 		setnpctimer 0; stopnpctimer;
-		npctalk "Thank you all for playing. That was the last round of the Disguise Event. Come play again later.";
+		npctalk "Merci à tous d'avoir joué, c'était le dernier round, l'event est terminé!";
 		end;
 	}
 	setnpcdisplay "Disguise Event", 4_M_NFDEADMAN;

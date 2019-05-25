@@ -48,3 +48,13 @@
 1873,Beelzebub,1000000
 1885,Gopinich,1000000
 2022,Nidhoggur's Shadow,1000000
+1646,Lord Knight Seyren,1000000
+1647,Assassin Cross Eremes,1000000
+1648,Whitesmith Harword,1000000
+1649,High Priest Magaleta,1000000
+1650,Sniper Shecil,1000000
+1651,High Wizard Katrinn,1000000
+
+
+
+

@@ -1,7 +1,7 @@
 // Shop NPCs -- supplying no argument displays entire menu.
 //	callfunc "crownqshop"{,<shop ID>{,<shop ID>{,...}}};
 //============================================================
-gonryun,132,94,4	script	Joaillier Ambulant#1	4_M_MANAGER,{ callfunc "crownqshop"; }
+gonryun,211,123,4	script	Joaillier Ambulant#1	4_M_MANAGER,{ callfunc "crownqshop"; }
 
 
 // Script Core

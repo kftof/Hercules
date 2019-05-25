@@ -3642,7 +3642,7 @@ static int skill_check_unit_range2_sub(struct block_list *bl, va_list ap)
 	if( skill_id == HP_BASILICA && bl->type == BL_PC )
 		return 0;
 
-	if (skill_id == AM_DEMONSTRATION && bl->type == BL_MOB && BL_UCCAST(BL_MOB, bl)->class_ == MOBID_EMPELIUM)
+	if (skill_id == AM_DEMONSTRATION && bl->type == BL_MOB && BL_UCCAST(BL_MOB, bl)->class_ == MOBID_EMPELIUM || skill_id == AM_DEMONSTRATION && bl->type == BL_MOB && BL_UCCAST(BL_MOB, bl)->class_ == MOBID_EMPELIUM99)
 		return 0; //Allow casting Bomb/Demonstration Right under emperium [Skotlex]
 	return 1;
 }
@@ -5692,7 +5692,7 @@ static int skill_castend_id(int tid, int64 tick, int id, intptr_t data)
 			}
 
 			if (ud->skill_id >= SL_SKE && ud->skill_id <= SL_SKA && target->type == BL_MOB) {
-				if (BL_UCCAST(BL_MOB, target)->class_ == MOBID_EMPELIUM)
+				if (BL_UCCAST(BL_MOB, target)->class_ == MOBID_EMPELIUM || BL_UCCAST(BL_MOB, target)->class_ == MOBID_EMPELIUM99)
 					break;
 			} else if (inf && battle->check_target(src, target, inf) <= 0) {
 				if (sd) clif->skill_fail(sd, ud->skill_id, USESKILL_FAIL_LEVEL, 0, 0);
@@ -6100,7 +6100,7 @@ static int skill_castend_nodamage_id(struct block_list *src, struct block_list *
 				if (skill_id == AB_HIGHNESSHEAL) {
 					heal = heal * (17 + 3 * skill_lv) / 10;
 				}
-				if (status->isimmune(bl) || (dstmd != NULL && (dstmd->class_ == MOBID_EMPELIUM || mob_is_battleground(dstmd))))
+				if (status->isimmune(bl) || (dstmd != NULL && (dstmd->class_ == MOBID_EMPELIUM || dstmd->class_ == MOBID_EMPELIUM99 || mob_is_battleground(dstmd))))
 					heal = 0;
 
 				if (sd != NULL && dstsd != NULL && sd->status.partner_id == dstsd->status.char_id && (sd->job & MAPID_UPPERMASK) == MAPID_SUPER_NOVICE && sd->status.sex == 0)
@@ -7370,7 +7370,7 @@ static int skill_castend_nodamage_id(struct block_list *src, struct block_list *
 				clif->skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0, 0);
 				break;
 			}
-			if (dstmd && dstmd->class_ == MOBID_EMPELIUM)
+			if (dstmd && dstmd->class_ == MOBID_EMPELIUM || dstmd && dstmd->class_ == MOBID_EMPELIUM99)
 				break; // Cannot be Used on Emperium
 
 			clif->skill_nodamage(src, bl, skill_id, skill_lv, 1);
@@ -7563,7 +7563,7 @@ static int skill_castend_nodamage_id(struct block_list *src, struct block_list *
 			{
 				int i,sp = 0;
 				int64 hp = 0;
-				if (dstmd && dstmd->class_ == MOBID_EMPELIUM) {
+				if (dstmd && dstmd->class_ == MOBID_EMPELIUM || dstmd && dstmd->class_ == MOBID_EMPELIUM99) {
 					map->freeblock_unlock();
 					return 1;
 				}
@@ -8345,7 +8345,7 @@ static int skill_castend_nodamage_id(struct block_list *src, struct block_list *
 		// Slim Pitcher
 		case CR_SLIMPITCHER:
 			// Updated to block Slim Pitcher from working on barricades and guardian stones.
-			if (dstmd != NULL && (dstmd->class_ == MOBID_EMPELIUM || (dstmd->class_ >= MOBID_BARRICADE && dstmd->class_ <= MOBID_S_EMPEL_2)))
+			if (dstmd != NULL && (dstmd->class_ == MOBID_EMPELIUM || dstmd->class_ == MOBID_EMPELIUM99 || (dstmd->class_ >= MOBID_BARRICADE && dstmd->class_ <= MOBID_S_EMPEL_2)))
 				break;
 			if (script->potion_hp || script->potion_sp) {
 				int hp = script->potion_hp, sp = script->potion_sp;
@@ -8425,7 +8425,7 @@ static int skill_castend_nodamage_id(struct block_list *src, struct block_list *
 					map->freeblock_unlock();
 					return 0;
 				}
-				if (rnd() % 100 > skill_lv * 8 || (dstmd && ((dstmd->guardian_data && dstmd->class_ == MOBID_EMPELIUM) || mob_is_battleground(dstmd)))) {
+				if (rnd() % 100 > skill_lv * 8 || (dstmd && ((dstmd->guardian_data && dstmd->class_ == MOBID_EMPELIUM) || (dstmd && ((dstmd->guardian_data && dstmd->class_ == MOBID_EMPELIUM99) || mob_is_battleground(dstmd)))))) {
 					if (sd != NULL)
 						clif->skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0, 0);
 
@@ -12792,7 +12792,7 @@ static int skill_unit_onplace_timer(struct skill_unit *src, struct block_list *b
 				int heal = skill->calc_heal(ss,bl,sg->skill_id,sg->skill_lv,true);
 				struct mob_data *md = BL_CAST(BL_MOB, bl);
 #ifdef RENEWAL
-				if (md != NULL && md->class_ == MOBID_EMPELIUM)
+				if (md != NULL && md->class_ == MOBID_EMPELIUM || md != NULL && md->class_ == MOBID_EMPELIUM99)
 					break;
 #endif
 				if (md && mob_is_battleground(md))
@@ -13016,7 +13016,7 @@ static int skill_unit_onplace_timer(struct skill_unit *src, struct block_list *b
 			int heal;
 #ifdef RENEWAL
 			struct mob_data *md = BL_CAST(BL_MOB, bl);
-			if (md && md->class_ == MOBID_EMPELIUM)
+			if (md && md->class_ == MOBID_EMPELIUM || md && md->class_ == MOBID_EMPELIUM99)
 				break;
 #endif
 			// Don't buff themselves!
@@ -14646,7 +14646,7 @@ static int skill_check_condition_castbegin(struct map_session_data *sd, uint16 s
 		case SR_CURSEDCIRCLE:
 			if (map_flag_gvg2(sd->bl.m)) {
 				if (map->foreachinrange(mob->count_sub, &sd->bl, skill->get_splash(skill_id, skill_lv), BL_MOB,
-				                        MOBID_EMPELIUM, MOBID_S_EMPEL_1, MOBID_S_EMPEL_2)) {
+				                        MOBID_EMPELIUM, MOBID_EMPELIUM99, MOBID_S_EMPEL_1, MOBID_S_EMPEL_2)) {
 					char output[128];
 					sprintf(output, "You're too close to a stone or emperium to do this skill"); /* TODO official response? or message.conf it */
 					clif->messagecolor_self(sd->fd, COLOR_RED, output);

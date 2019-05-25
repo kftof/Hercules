@@ -509,7 +509,7 @@ gonryun,166,125,4	script	Kafra Employee::kaf_gonryun	4_F_KAFRA2,{
 	mes "[Kafra Employee]";
 	mes "Bonjour, que puis-je faire pour vous ?";
 	callfunc "F_Kafra",5,3,1,50,700;
-	savepoint "gonryun",160,62;
+	savepoint "gonryun",159,122;
 	callfunc "F_KafEnd",0,1,"in the city of Kunlun";
 }
 

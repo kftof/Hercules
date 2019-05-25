@@ -13,7 +13,10 @@ yuno,360,309,4	script	Brokk	4_M_DWARF,{
 		mes "[^FF4000Brokk^000000]";
 		mes "Je vais avoir besoin de beaucoup de matériaux. Un tel chef d'oeuvre ne se fait pas comme cela.";
 		next;
-		switch(select("De quoi as-tu besoin ?:Ah vraiment ?")) {
+		mes "[^FF4000Brokk^000000]";
+		mes "Je pourrais te confectionner un Light of Darkness Crown, Darkness Crown ou Lightness Crown si tu m'apportais les objets suivants :";
+		next;
+		switch(select("Dis moi en plus !:Ah vraiment ?")) {
 		case 1:
 			mes "[^FF4000Brokk^000000]";
 			mes "500 Black Dyestuffs";
@@ -28,9 +31,10 @@ yuno,360,309,4	script	Brokk	4_M_DWARF,{
 			mes "[^FF4000Brokk^000000]";
 			mes "Alors ?";
 			next;
-			switch(select("Lui donner les items.:Ne pas lui donner.")) {
+			switch(select("Light of Darkness Crown:Lightness Crown:Darkness Crown:Ne pas lui donner.")) {
 			case 1: // (zeny > 99999999) && 
-				if ((countitem(675) > 2) && (countitem(983) > 499) && (countitem(982) > 499) && (countitem(7205) > 2499) && (countitem(7751) > 2499) && (countitem(29291) > 1) && (countitem(29292) > 1) && (countitem(7809) > 0)) {
+				if ((countitem(675) > 2) && (countitem(983) > 499) && (countitem(982) > 499) && (countitem(7205) > 2499)
+				&& (countitem(7751) > 2499) && (countitem(29291) > 1) && (countitem(29292) > 1) && (countitem(7809) > 0)) {
 					mes "[^FF4000Brokk^000000]";
 					mes "Magnifique, mettons-nous au travail.";
 					next;
@@ -61,7 +65,73 @@ yuno,360,309,4	script	Brokk	4_M_DWARF,{
 					mes "Malheureusement, il manque des objets.";
 					close;
 				}
-			case 2:
+			case 2: // (zeny > 99999999) && 
+				if ((countitem(675) > 2) && (countitem(983) > 499) && (countitem(982) > 499) && (countitem(7205) > 2499)
+				&& (countitem(7751) > 2499) && (countitem(29291) > 1) && (countitem(29292) > 1) && (countitem(7809) > 0)) {
+					mes "[^FF4000Brokk^000000]";
+					mes "Magnifique, mettons-nous au travail.";
+					next;
+					specialeffect EF_EXIT;
+					next;
+					mes "[^FF4000Brokk^000000]";
+					mes "Laisse moi te montrer l'etendue de mon talent !";
+					next;
+					specialeffect EF_LORD;
+					next;
+					specialeffect EF_LIGHTSPHERE;
+					next;
+					delitem 983,500;
+					delitem 982,500;
+					delitem 7205,2500;
+					delitem 7751,2500;
+					delitem 29291,2;
+					delitem 29292,2;
+					delitem 7809,1;
+					delitem 675,3;
+					getitem 29421,1;
+					mes "[^FF4000Brokk^000000]";
+					mes "Prends en soin.";
+					close;
+				}
+				else {
+					mes "[^FF4000Brokk^000000]";
+					mes "Malheureusement, il manque des objets.";
+					close;
+				}
+			case 3: // (zeny > 99999999) && 
+				if ((countitem(675) > 2) && (countitem(983) > 499) && (countitem(982) > 499) && (countitem(7205) > 2499)
+				&& (countitem(7751) > 2499) && (countitem(29291) > 1) && (countitem(29292) > 1) && (countitem(7809) > 0)) {
+					mes "[^FF4000Brokk^000000]";
+					mes "Magnifique, mettons-nous au travail.";
+					next;
+					specialeffect EF_EXIT;
+					next;
+					mes "[^FF4000Brokk^000000]";
+					mes "Laisse moi te montrer l'etendue de mon talent !";
+					next;
+					specialeffect EF_LORD;
+					next;
+					specialeffect EF_LIGHTSPHERE;
+					next;
+					delitem 983,500;
+					delitem 982,500;
+					delitem 7205,2500;
+					delitem 7751,2500;
+					delitem 29291,2;
+					delitem 29292,2;
+					delitem 7809,1;
+					delitem 675,3;
+					getitem 29422,1;
+					mes "[^FF4000Brokk^000000]";
+					mes "Prends en soin.";
+					close;
+				}
+				else {
+					mes "[^FF4000Brokk^000000]";
+					mes "Malheureusement, il manque des objets.";
+					close;
+				}
+			case 4:
 				mes "[^FF4000Brokk^000000]";
 				mes "Je ne comprends pas, pourquoi me faire perdre du temps ?";
 				close;	

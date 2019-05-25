@@ -52,14 +52,14 @@
 		mes "ownership of this castle.";
 		close;
 	}
-	if (getcharid(CHAR_ID_GUILD) == .@GID) {
+	if (getcharid(2) == .@GID) {
 		mes "[ Echoing Voice ]";
 		mes "Brave ones...";
 		mes "Do you wish to return to your honorable place?";
 		next;
 		if(select("Return to the guild castle.", "Quit.") == 1) {
 			close2;
-			if (getcharid(CHAR_ID_GUILD) == getcastledata("payg_cas05",1)) {
+			if (getcharid(2) == getcastledata("payg_cas05",1)) {
 					warp "payg_cas05",243,27;
 				end;
 			}
@@ -83,12 +83,6 @@ OnRecvCastlePy05:
 	flagemblem getcastledata("payg_cas05",1);
 	end;
 }
-
-pay_gld,208,268,4	duplicate(OutsideFlagsPA5)	Bamboo Grove Hill#1-2	GUILD_FLAG
-pay_gld,199,268,4	duplicate(OutsideFlagsPA5)	Bamboo Grove Hill#2	GUILD_FLAG
-pay_gld,190,277,3	duplicate(OutsideFlagsPA5)	Bamboo Grove Hill#3	GUILD_FLAG
-pay_gld,187,294,2	duplicate(OutsideFlagsPA5)	Bamboo Grove Hill#4	GUILD_FLAG
-
 //== Guild Flags (Inside Castle) ===========================
 -	script	Bamboo Grove Hill#5::InsideFlagsPA5	GUILD_FLAG,{
 	end;
@@ -97,6 +91,13 @@ OnRecvCastlePy05:
 	flagemblem getcastledata("payg_cas05",1);
 	end;
 }
+
+pay_gld,208,268,4	duplicate(InsideFlagsPA5)	Bamboo Grove Hill#1-2	GUILD_FLAG
+pay_gld,199,268,4	duplicate(InsideFlagsPA5)	Bamboo Grove Hill#2	GUILD_FLAG
+pay_gld,190,277,3	duplicate(InsideFlagsPA5)	Bamboo Grove Hill#3	GUILD_FLAG
+pay_gld,187,294,2	duplicate(InsideFlagsPA5)	Bamboo Grove Hill#4	GUILD_FLAG
+
+
 
 payg_cas05,32,249,4	duplicate(InsideFlagsPA5)	Bamboo Grove Hill#5-2	GUILD_FLAG
 payg_cas05,24,249,4	duplicate(InsideFlagsPA5)	Bamboo Grove Hill#6	GUILD_FLAG

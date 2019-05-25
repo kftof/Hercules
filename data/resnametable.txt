@@ -2305,3 +2305,13 @@ pvp_fri.gnd#pvp_fri.gnd#
 pvp_fri.gat#pvp_fri.gat#
 pvp_fri.rsw#pvp_fri.rsw#
 유저인터페이스\map\pvp_fri.bmp#유저인터페이스\map\pvp_fri.bmp#
+
+1@haunt.gnd#haunt_e.gnd#
+1@haunt.gat#haunt_e.gat#
+1@haunt.rsw#haunt_e.rsw#
+유저인터페이스\map\1@haunt.bmp#유저인터페이스\map\blank.bmp#
+
+2@haunt.gnd#haunt_h.gnd#
+2@haunt.gat#haunt_h.gat#
+2@haunt.rsw#haunt_h.rsw#
+유저인터페이스\map\1@haunt.bmp#유저인터페이스\map\blank.bmp#

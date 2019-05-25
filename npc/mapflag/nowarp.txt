@@ -96,3 +96,18 @@ bat_a02	mapflag	nowarp
 // Poring War ==================
 poring_w01	mapflag	nowarp
 poring_w02	mapflag	nowarp
+
+//Endless Tower 2 HR ==================
+1@new	mapflag	nowarp
+2@new	mapflag	nowarp
+3@new	mapflag	nowarp
+4@new	mapflag	nowarp
+5@new	mapflag	nowarp
+
+//Endless Tower ==================
+1@tower	mapflag	nowarp
+2@tower	mapflag	nowarp
+3@tower	mapflag	nowarp
+4@tower	mapflag	nowarp
+5@tower	mapflag	nowarp
+6@tower	mapflag	nowarp

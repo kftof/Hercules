@@ -33,7 +33,9 @@ gon_in,42,17,2	script	Dorie	4_F_06,{
 			next;
 			switch(select("Lui donner les items.:Ne pas lui donner.")) {
 			case 1:
-				if ((countitem(7830) > 0) && (countitem(7008) > 14) && (countitem(7292) > 29) && (countitem(7294) > 29) && (countitem(720) > 74) && (countitem(749) > 499) && (countitem(7441) > 499) && (countitem(7162) > 2999)) {
+				if ((countitem(7830) > 0) && (countitem(7008) > 14) && (countitem(7292) > 29)
+				&& (countitem(7294) > 29) && (countitem(720) > 74) && (countitem(749) > 499)
+				&& (countitem(7441) > 499) && (countitem(7162) > 2999)) {
 					mes "[^29AFD6Dorie^000000]";
 					mes "Waouh ! Tu gagnes !";
 					mes "On fait la revanche quand tu veux !";

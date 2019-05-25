@@ -53,7 +53,7 @@ OnMobKill:
 if (.Opengr == 1)
 	{
 	getitem 969,1;
-	monster .Map$,0,0,"Gold",3300,1,strnpcinfo(0)+"::OnMobKill";
+	monster .Map$,0,0,"Gold",3977,1,strnpcinfo(0)+"::OnMobKill";
 	}
 end;
 
@@ -65,7 +65,7 @@ end;
 OnClock2030:
 
 announce "La Gold Room est ouverte !",0;
-monster .Map$,0,0,"Gold",3300,60,strnpcinfo(0)+"::OnMobKill";
+monster .Map$,0,0,"Gold",3977,60,strnpcinfo(0)+"::OnMobKill";
 set .Opengr, "1";
 end;
 

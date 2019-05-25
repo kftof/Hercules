@@ -34,7 +34,7 @@ gonryun,186,119,3	script	Enfant Caché	4_M_MIKID,{
 				}
 				else {
 					mes "[^B40431Enfant Caché^000000]";
-					mes "Mais, qu'est-ce que c'est ? Ce ne sont pas les objets qu'elle demande ?";
+					mes "Merci, j'attends ici !";
 					close;
 				}
 		case 2:

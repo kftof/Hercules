@@ -29,6 +29,45 @@
 //   base drop rates in mob_db.
 // - This file is reloaded by @reloadmobdb.
 
+710,100 // illusion flower
+7442,100 // cursed seal
+5116,100 // banana hat
+2700,100 // red silk seal bacso
+
+1167,100 // egnigem cenia sword
+
+// angel stuff (eclipse etc)
+5125,100
+2420,100
+2521,100
+2116,100
+2355,100
+
+7089,100 // stormy knight tempest item
+
+704,100 // alloe
+
+// Geffenia
+2613,100 // diamond ring
+2610,100 // gold ring
+
+2235,100 // crown [0]
+
+//[ring [0] etc
+2601,100
+2602,100
+2603,100
+2604,100
+2605,100
+
+// ring [1] etc
+2621,100
+2622,100
+2623,100
+2624,100
+2625,100
+2626,100
+
 747,100 // cristal mirror
 
 673,100 // copper coin
@@ -72,9 +111,16 @@
 
 2268,100 // Smoking_Pipe
 
+7472,100
+7473,100
+7474,100
+7475,100
+7476,100
+7477,100
 7478,100 // CookBook07
 7479,100 // Cookbook08
 7480,100 // Cookbook09
+7481,100
 
 2254,100 // Angelic_Chain
 2255,100 // Satanic_Chain
@@ -190,3 +236,4 @@
 
 2424,100 // tidal shoes
 2528,100 // wool scarf
+

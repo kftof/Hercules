@@ -1,5 +1,5 @@
 // Pierre d'invocation
-5@tower,100,105,4	script	Magic Stone	2_MONEMUS,{
+hu_fild05,293,266,4	script	Magic Stone	2_MONEMUS,{
 	mes "Approcher l'anneau de la pierre ?";
 	next;
 	switch(select("Oui:Non")) {
@@ -9,11 +9,11 @@
 			delitem 29497,1;
 			getitem 29498,1;
 				if ( mobcount("<map name>","lol") > 0 ) {
-				mes "Je ne peux prodiguer de soin tant que la salle n'est pas vide.";
+				mes "Le dragon est déjà là.";
 				close;
 				}
 				else {
-				monster ("5@tower"),82,85,"Lost Dragon",2131,1,"lol";
+				monster ("hu_fild05"),295,286,"Lost Dragon",2131,1,"lol";
 				close;
 				}
 			}
@@ -72,7 +72,7 @@ hu_fild05,177,200,4	script	Horamros Dryadson	JP_SABIKU,{
 			if ((countitem(29497) > 0)) {
 			mes "Horamros Dryadson";
 			mes "Bonne chance.";	
-			warp "5@tower",98,103;
+			warp "hu_fild05",297,269;
 			close;
 			}
 			else {
@@ -99,7 +99,7 @@ hu_fild05,177,200,4	script	Horamros Dryadson	JP_SABIKU,{
 			if ((countitem(29498) > 0)) {
 			mes "Horamros Dryadson";
 			mes "Bonne chance.";	
-			warp "5@tower",100,105;
+			warp "hu_fild05",297,269;
 			close;
 			}
 			else {

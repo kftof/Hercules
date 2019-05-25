@@ -1,0 +1,25 @@
+//============================================================
+gonryun,170,91,3	script	Event Capsule Trader	4_M_FAIRYKID,{
+	mes "[Event Capsule Trader]";
+	mes "Bonjour! Je suis capable d'échanger 3 ^131AF3Event Ticket^000000 contre une ^131AF3Capsule d'Event^000000.";
+	next;
+	switch(select("Échanger.:Quitter.")) {
+	case 1:
+		if ((countitem(7711) > 2)) {
+					mes "[Event Capsule Trader]";
+					mes "Merci!";
+					delitem 7711,3; //Event Ticket
+					getitem 29496,1; //Event capsule
+					close;
+				}
+				else {
+					mes "[Event Capsule Trader]";
+					mes "Tu n'as pas assez d'Event Ticket.";
+					close;
+				}
+	case 2:
+		mes "[Event Capsule Trader]";
+		close;
+	}
+	end;
+}

@@ -1,0 +1,252 @@
+/*
+	Id: 2318
+	SpriteName: "BANGUNGOT_2"
+	Name: "Bangungot"
+1@pop3,54,46 = spawn
+61,44 = emplacement stone
+55,68 = spawn
+*/
+//7837 (Seal_Of_Witch)
+///////////////////////////////////////////////////////////
+// Pierre d'invocation
+1@pop3,61,44,4	script	Valys	4_MAN_LAVAIL,{
+	if ((countitem(7178) > 0)) {
+	mes "[^2F7ECDValys^000000]";
+	mes "Vous l'avez fait... C'est incroyable.";
+	next;
+	mes "[^2F7ECDValys^000000]";
+	mes "Retrouvez-moi à Gonryun.";
+	next;
+	warp "gonryun",21,84;
+	close;
+	}
+	else {
+	mes "Utiliser la larme pour l'invocation?";
+	next;
+	switch(select("Oui:Non")) {
+		case 1:
+			if (countitem(6144) > 0) {
+			mes "... Elle arrive.";
+			delitem 6144,1; // trade Tear VS blue gemstone
+			getitem 7710,1; // = black gemstone (défaite)
+				if ( mobcount("1@pop3","::OnBrina") > 0 ) {
+				mes "Bonne chance.";
+				close;
+				}
+				else {
+				monster ("1@pop3"),55,68,"Brinaranea",3091,1,.@label$+"::OnBrina";
+				monster ("1@pop3"),44,66,"Bangungot",2318,1;
+				monster ("1@pop3"),44,59,"Bangungot",2318,1;
+				monster ("1@pop3"),68,59,"Bangungot",2318,1;
+				monster ("1@pop3"),63,65,"Bangungot",2318,1;
+			sleep2 1000;			
+			mapannounce("1@pop3", _("L'heure de votre fin est arrivée."), bc_map, "0xD41D1D");
+			close;
+				}
+			}
+			else
+			{
+			mes "Vous cherchez dans votre inventaire, mais la larme n'y est plus.";
+			close;
+			}			
+		case 2:
+		close;	
+		}
+	}
+	end;
+}
+/*
+1 Sobbing Starlight 7178 (Star's_Sob) = ring de la victoire
+Regrettable Tears    Item ID# 6144 (Heartbroken_Tears) = ring pour invoquer = 29497
+29498 = item de défaite == nouveau = 7710 (Black_Gemstone)
+*/
+// true npc de la mort
+gonryun,19,86,4	script	Valys#2	4_MAN_LAVAIL,{
+	// check si le joueur possède la sobbing starlight
+	if ((countitem(7178) > 0)) {
+	mes "[^2F7ECDValys^000000]";
+	mes "Je sens que le ciel s'est calmé, au moins pour le moment.";
+	next;
+	mes "[^2F7ECDValys^000000]";
+	mes "Vous avez réussi, Rune-Midgard vous est redevable. Vous méritez une récompense à la hauteur de votre exploit.";
+	next;	
+		switch(select("Allons-y.")) {
+			case 1:
+			if ((countitem(7178) > 0) && (countitem(7710) > 0) && (countitem(7837) > 9)) {
+			mes "[^2F7ECDValys^000000]";
+			mes "Merci encore.";
+			delitem 7178,1;
+			delitem 7710,1;
+			delitem 7837,10;
+			getitem 29466,1;
+			next;
+			close;
+			}
+			else {
+			mes "[^2F7ECDValys^000000]";
+			mes "Il te manque quelque chose.";
+			mes "[soit la sobbing starlight, soit la Regrettable Tears, soit les 10 Cold Moonlight]";
+			close;
+			}
+		}
+	}
+	// première essai, check le premier dragon ring
+	else if ((countitem(6144) > 0)) { // rajouter le check OU Cold Moonlight
+	mes "[^2F7ECDValys^000000]";
+	mes "N'oublie pas, la Tyran est d'une puissance incroyable, j'espère que toi et ton équipe êtes bien préparés.";
+	next;
+	mes "[^2F7ECDValys^000000]";
+	mes "Veux-tu vraiment aller combattre maintenant? En cas d'échec, tu pourras y retourner.";
+	next;
+		switch(select("Oui:Non")) {
+			case 1:
+			if ((countitem(6144) > 0)) {
+			mes "[^2F7ECDValys^000000]";
+			mes "Bonne chance.";	
+			warp "1@pop3",54,46;
+			close;
+			}
+			else {
+			mes "[^2F7ECDValys^000000]";
+			mes "Où est la larme ?.";	
+			close;				
+			}
+			case 2:
+			mes "[^2F7ECDValys^000000]";
+			mes "Comme tu voudras.";	
+			close;	
+		}
+	}
+	else if ((countitem(7837) > 0)) { // check l'item pour venir avec les alliés Cold Moonlight
+	mes "[^2F7ECDValys^000000]";
+	mes "N'oublie pas, la Tyran est d'une puissance incroyable, j'espère que toi et ton équipe êtes bien préparés.";
+	next;
+	mes "[^2F7ECDValys^000000]";
+	mes "Veux-tu vraiment aller combattre maintenant? En cas d'échec, tu pourras y retourner.";
+	next;
+		switch(select("Oui:Non")) {
+			case 1:
+			if ((countitem(7837) > 0)) {
+			mes "[^2F7ECDValys^000000]";
+			mes "Bonne chance.";	
+			warp "1@pop3",54,46;
+			close;
+			}
+			else {
+			mes "[^2F7ECDValys^000000]";
+			mes "Où est la Cold Moonlight ?.";	
+			close;				
+			}
+			case 2:
+			mes "[^2F7ECDValys^000000]";
+			mes "Comme tu voudras.";	
+			close;	
+		}
+	}
+	// check si le joueur a le ring de la défaite 
+	else if ((countitem(7710) > 0)) {
+	mes "[^2F7ECDValys^000000]";
+	mes "Vous avez échoué...";
+	next;
+	mes "[^2F7ECDValys^000000]";
+	mes "Il faut absolument mettre fin à son reigne, voulez-vous y retourner maintenant?";
+	next;
+		switch(select("Oui, téléportez-moi.:Non.")) {
+			case 1:
+			if ((countitem(7710) > 0)) {
+			mes "[^2F7ECDValys^000000]";
+			mes "Bonne chance.";	
+			warp "1@pop3",54,46;
+			close;
+			}
+			else {
+			mes "[^2F7ECDValys^000000]";
+			mes "Mais où est la black gemstone?.";	
+			close;				
+			}
+			case 2:
+			mes "[^2F7ECDValys^000000]";
+			mes "Je comprends, cela demande du courage.";
+			close;			
+		}
+	}
+	else {
+		mes "[^2F7ECDValys^000000]";
+		mes "Les étoiles s'alignent et le ciel se déchire. Vous aussi, vous l'entendez?";
+		next;
+		mes "[^2F7ECDValys^000000]";
+		mes "Les étoiles tremblent et la tempête gronde au delà des cieux.";
+		next;
+		mes "[^2F7ECDValys^000000]";
+		mes "Nous ressentirons bientôt tous le déluge stelaire si nous ne faisons rien.";
+		next;
+		switch(select("Comment puis-je aider ?:Passer son chemin.")) {
+		case 1:
+		mes "[^2F7ECDValys^000000]";
+		mes "Il est possible de créer une larme ensorcelée par le coeur des tempêtes.";
+		next;
+		mes "[^2F7ECDValys^000000]";
+		mes "La légende raconte qu'elle permettrait d'invoquer la source de ce mal pour la combattre.";
+		mes "Malheureusement, cela nécessite d'aller vaincre le guerrier des tempêtes, Stormy Knight, et je n'en suis pas capable.";
+		next;
+		mes "[^2F7ECDValys^000000]";
+		mes "Cependant, je suis capable de créer la larme, si vous me rapportez les objets suivants:";
+		mes "1 Omen of Tempest (ID: 7089)";
+		mes "1 Box of Storm (ID: 12032)";
+		mes "250 Aquamarine (ID: 720)";
+		mes "1000 Blue Bijou (ID: 7446)";
+		mes "1000 Blue Hair (ID: 1034)";
+		mes "150 Blue crystal (ID: 991)";
+		mes "750 Witch's Starsand (ID: 1061)";
+		mes "750 Stardust (ID: 1001)";
+		next;
+		mes "[^2F7ECDValys^000000]";
+		mes "Apportez-moi les objets, sans eux, je ne pourrai pas créer la larme.";
+		mes "Une fois la larme en notre possession, nous irons invoquer la Tyran des tempêtes.";
+		next;
+		switch(select("J'ai les objets.:Non, j'ai besoin de plus de temps.")) {
+			case 1:
+			if ((countitem(7089) > 0) && (countitem(12032) > 0)
+				&& (countitem(720) > 249) && (countitem(7446) > 999)
+			    && (countitem(1034) > 999) && (countitem(991) > 149)
+			    && (countitem(1061) > 749) && (countitem(1001) > 749)
+				 && (countitem(1178) > 0)) {
+				mes "[^2F7ECDValys^000000]";
+				mes "Parfait, je n'ai besoin que de quelque secondes pour créer la larme.";
+				next;
+				mes "[^2F7ECDValys^000000]";
+				mes "Je te donne également 10 ^4D9EEFCold Moonlight^000000. Donnes-en une à chaque personne qui t'accompagnera.";
+				mes "Car tu auras besoin d'aide, la Tyran ne pourra être vaincu que par un groupe de héro. Je ne pense pas qu'il soit possible de la vaincre tout seul.";
+				next;
+				mes "[^2F7ECDValys^000000]";
+				mes "Attention cependant, tu devras me rendre les 10 ^4D9EEFCold Moonlight^000000 après la bataille.";
+				next;
+				delitem 7089,1;
+				delitem 12032,1;
+				delitem 720,250;
+				delitem 7446,1000;
+				delitem 1034,1000;
+				delitem 991,150;
+				delitem 1061,750;
+				delitem 1001,750;
+				delitem 1178,1;
+				getitem 6144,1;
+				getitem 7837,10;
+				close;
+				}
+				else {
+				mes "[^2F7ECDValys^000000]";
+				mes "Tu n'as pas tous les objets requis.";
+				close;				
+				}
+			case 2:
+			mes "[^2F7ECDValys^000000]";
+			mes "Faites vite, le temps presse.";
+			close;
+		}
+		case 2:
+		close;
+		}
+	}
+end;
+}

@@ -15,18 +15,21 @@ gonryun,191,77,4	script	Kookai	4_CAT_3COLOR,{
 		switch(select("D'argent chat ?:Non.")) {
 		case 1:
 			mes "[Kookai]";
-			mes "Oui tout à fait ! J'ai besoin de 1000 exemplaires de ce que vous les humains, appellez 'Cat's Eye'.";
+			mes "Oui tout à fait ! J'ai besoin de 300 exemplaires de ce que vous les humains, appellez 'Cat's Eye'.";
 			next;
 			mes "[Kookai]";
 			mes "Oh ! Maintenant que j'y pense, j'ai aussi entendu parler d'une histoire de broche, que portait autrefois une Déesse de la chance.";
+			mes "Je crois qu'elle portait ça comme un accessoire...";
+			next;
+			mes "[Kookai]";
 			mes "Il me la faut ! Apporte-la moi !";
 			next;
 			switch(select("Lui donner les items:Ne pas lui donner.")) {
 			case 1:
-				if ((countitem(7263) > 999) && (countitem(2652) > 0)) {
+				if ((countitem(7263) > 299) && (countitem(2652) > 0)) {
 					mes "[Kookai]";
 					mes "Oui...C'est parfait !";
-					delitem 7263,1000; //Cat's Eye
+					delitem 7263,300; //Cat's Eye
 					delitem 2652,1; //Goddess of Fortune Broch
 					getitem 5446,1; //Catfoot Hairpin
 					close;

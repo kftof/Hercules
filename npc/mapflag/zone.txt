@@ -27,10 +27,22 @@
 //=========================================================================
 //= Mapflag: Zone.
 //================= Current Version =======================================
-//= 1.0
+//= prtg_cas01 | guild_vs2 | guild_vs3
+//200 // payg_cas01 | pvp_n_1-5
+//aru_gld | guild_vs1
 //================= Description ===========================================
 //= Flags maps as part of zones defined in map_zone_db.txt
 //=========================================================================
+payg_cas05	mapflag	zone	woe99
+guild_vs2	mapflag	zone	woe99
+guild_vs3	mapflag	zone	woe99
+
+payg_cas01	mapflag	zone	woe200
+pvp_n_1-5	mapflag	zone	woe200
+
+arug_cas05	mapflag	zone	woe999
+guild_vs1	mapflag	zone	pvp999
+
 
 //Aldebaran Turbo Track
 alde_tt02	mapflag	zone	Aldebaran Turbo Track
@@ -75,6 +87,31 @@ prt_are_in	mapflag	zone	Izlude Battle Arena
 1@nyd	mapflag	zone	Memorial Dungeon
 2@nyd	mapflag	zone	Memorial Dungeon
 
+// Misty Forest Labyrinth ===========
+1@mist	mapflag	zone	Memorial Dungeon
+
+// Octopus Cave ===========
+1@cash	mapflag	zone	Memorial Dungeon
+
+// Drain ===========
+1@pump	mapflag	zone	Memorial Dungeon
+2@pump	mapflag	zone	Memorial Dungeon
+
+// Somatology Laboratory ===========
+1@lhz	mapflag	zone	Memorial Dungeon
+
+// Bangungot Hospital F2 ===========
+1@ma_h	mapflag	zone	Memorial Dungeon
+
+// Buwaya Cave ===========
+1@ma_c	mapflag	zone	Memorial Dungeon
+
+// Bakonawa Hideout ===========
+1@ma_b	mapflag	zone	Memorial Dungeon
+
+// Inside Eclage ===========
+1@ecl	mapflag	zone	Memorial Dungeon
+
 //Towns
 alberta	mapflag	zone	Towns
 aldebaran	mapflag	zone	Towns
@@ -106,15 +143,3 @@ umbala	mapflag	zone	Towns
 veins	mapflag	zone	Towns
 xmas	mapflag	zone	Towns
 yuno	mapflag	zone	Towns
-
-// WoE SE
-arug_cas01	mapflag	zone	GvG2
-arug_cas02	mapflag	zone	GvG2
-arug_cas03	mapflag	zone	GvG2
-arug_cas04	mapflag	zone	GvG2
-arug_cas05	mapflag	zone	GvG2
-schg_cas01	mapflag	zone	GvG2
-schg_cas02	mapflag	zone	GvG2
-schg_cas03	mapflag	zone	GvG2
-schg_cas04	mapflag	zone	GvG2
-schg_cas05	mapflag	zone	GvG2

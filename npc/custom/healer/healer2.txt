@@ -1,0 +1,61 @@
+//-	script	Healer	-1,5,10,{
+gonryun,156,126,4	script	Healer2	4_F_ARUNA_POP,{	
+/*	sc_end SC_STONE;
+	sc_end SC_FREEZE;
+	sc_end SC_STUN;
+	sc_end SC_SLEEP;
+	sc_end SC_POISON;
+	sc_end SC_CURSE;
+	sc_end SC_SILENCE;
+	sc_end SC_CONFUSION;
+	sc_end SC_BLIND;
+	sc_end SC_BLEEDING;*/
+	specialeffect(EF_INCAGILITY, AREA, playerattached());
+	sc_start SC_INC_AGI,240000,10;
+	specialeffect(EF_BLESSING, AREA, playerattached()); 
+	sc_start SC_BLESSING,240000,10;
+	percentheal 100,100;
+	mes "[Healer]";
+	mes "Bon courage.";		
+//	next;
+	close;
+
+	
+	end;
+}
+/*
+alberta,27,240,6	duplicate(Healer)	Healer#alb	936
+aldebaran,138,121,6	duplicate(Healer)	Healer#alde	936
+amatsu,197,131,4	duplicate(Healer)	Healer#ama	936
+ayothaya,148,121,6	duplicate(Healer)	Healer#ayo	936
+brasilis,194,185,6	duplicate(Healer)	Healer#bra	936
+comodo,196,143,6	duplicate(Healer)	Healer#com	936
+dewata,198,185,6	duplicate(Healer)	Healer#dew	936
+eclage,105,35,4	duplicate(Healer)	Healer#ecl	936
+einbech,172,131,4	duplicate(Healer)	Healer#einbe	936
+einbroch,62,201,6	duplicate(Healer)	Healer#einbr	936
+dicastes01,196,224,4	duplicate(Healer)	Healer#dic	936
+geffen,118,65,6	duplicate(Healer)	Healer#gef	936
+gonryun,157,122,6	duplicate(Healer)	Healer#gon	936
+hugel,96,148,6	duplicate(Healer)	Healer#hug	936
+izlude,126,113,5	duplicate(Healer)	Healer#izl	936
+lighthalzen,157,101,6	duplicate(Healer)	Healer#li	936
+louyang,216,104,4	duplicate(Healer)	Healer#lou	936
+malangdo,128,134,4	duplicate(Healer)	Healer#mal	936
+malaya,193,223,6	duplicate(Healer)	Healer#malay	936
+manuk,275,221,6	duplicate(Healer)	Healer#man	936
+mid_camp,213,229,6	duplicate(Healer)	Healer#mid	936
+mora,108,99,6	duplicate(Healer)	Healer#mora	936
+morocc,152,97,6	duplicate(Healer)	Healer#mor	936
+moscovia,222,198,6	duplicate(Healer)	Healer#mos	936
+payon,154,234,4	duplicate(Healer)	Healer#pay	936
+prontera,154,193,4	duplicate(Healer)	Healer#pront	936
+rachel,120,145,6	duplicate(Healer)	Healer#rac	936
+splendide,195,148,4	duplicate(Healer)	Healer#spl	936
+thor_camp,249,74,4	duplicate(Healer)	Healer#thor	936
+umbala,123,132,4	duplicate(Healer)	Healer#umb	936
+veins,215,129,4	duplicate(Healer)	Healer#ve	936
+xmas,146,133,6	duplicate(Healer)	Healer#xmas	936
+yuno,156,187,4	duplicate(Healer)	Healer#yuno	936
+jawaii,239,198,4	duplicate(Healer)	Healer#jawaii	936
+*/

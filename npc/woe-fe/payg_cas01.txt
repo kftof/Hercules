@@ -52,14 +52,14 @@
 		mes "ownership of this castle.";
 		close;
 	}
-	if (getcharid(CHAR_ID_GUILD) == .@GID) {
+	if (getcharid(2) == .@GID) {
 		mes "[ Echoing Voice ]";
 		mes "Brave ones...";
 		mes "Do you wish to return to your honorable place?";
 		next;
 		if(select("Return to the guild castle.", "Quit.") == 1) {
 			close2;
-			if (getcharid(CHAR_ID_GUILD) == getcastledata("payg_cas01",1)) {
+			if (getcharid(2) == getcastledata("payg_cas01",1)) {
 					warp "payg_cas01",54,144;
 				end;
 			}
@@ -84,11 +84,6 @@ OnRecvCastlePy01:
 	end;
 }
 
-pay_gld,125,236,4	duplicate(OutsideFlagsPA1)	Bright Arbor#1-2	GUILD_FLAG
-pay_gld,110,233,4	duplicate(OutsideFlagsPA1)	Bright Arbor#2	GUILD_FLAG
-pay_gld,116,233,4	duplicate(OutsideFlagsPA1)	Bright Arbor#3	GUILD_FLAG
-pay_gld,91,239,2	duplicate(OutsideFlagsPA1)	Bright Arbor#4	GUILD_FLAG
-
 //== Guild Flags (Inside Castle) ===========================
 -	script	Bright Arbor#5::InsideFlagsPA1	GUILD_FLAG,{
 	end;
@@ -97,6 +92,13 @@ OnRecvCastlePy01:
 	flagemblem getcastledata("payg_cas01",1);
 	end;
 }
+
+pay_gld,125,236,4	duplicate(InsideFlagsPA1)	Bright Arbor#1-2	GUILD_FLAG
+pay_gld,110,233,4	duplicate(InsideFlagsPA1)	Bright Arbor#2	GUILD_FLAG
+pay_gld,116,233,4	duplicate(InsideFlagsPA1)	Bright Arbor#3	GUILD_FLAG
+pay_gld,91,239,2	duplicate(InsideFlagsPA1)	Bright Arbor#4	GUILD_FLAG
+
+
 
 payg_cas01,238,67,4	duplicate(InsideFlagsPA1)	Bright Arbor#5-2	GUILD_FLAG
 payg_cas01,233,67,4	duplicate(InsideFlagsPA1)	Bright Arbor#6	GUILD_FLAG

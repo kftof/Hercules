@@ -559,7 +559,7 @@ static int mob_once_spawn(struct map_session_data *sd, int16 m, int16 x, int16 y
 		if (!md)
 			continue;
 
-		if (class_ == MOBID_EMPELIUM && !no_guardian_data) {
+		if (class_ == MOBID_EMPELIUM && !no_guardian_data || class_ == MOBID_EMPELIUM99 && !no_guardian_data) {
 			struct guild_castle* gc = guild->mapindex2gc(map_id2index(m));
 			struct guild* g = (gc) ? guild->search(gc->guild_id) : NULL;
 			if( gc ) {
@@ -665,7 +665,7 @@ static int mob_spawn_guardian_sub(int tid, int64 tick, int id, intptr_t data)
 	if( g == NULL ) { //Liberate castle, if the guild is not found this is an error! [Skotlex]
 		ShowError("mob_spawn_guardian_sub: Couldn't load guild %d!\n", (int)data);
 		//Not sure this is the best way, but otherwise we'd be invoking this for ALL guardians spawned later on.
-		if (md->class_ == MOBID_EMPELIUM && md->guardian_data) {
+		if (md->class_ == MOBID_EMPELIUM && md->guardian_data || md->class_ == MOBID_EMPELIUM99 && md->guardian_data) {
 			md->guardian_data->g = NULL;
 			if( md->guardian_data->castle->guild_id ) {//Free castle up.
 				ShowNotice("Clearing ownership of castle %d (%s)\n", md->guardian_data->castle->castle_id, md->guardian_data->castle->castle_name);
@@ -2681,7 +2681,7 @@ static int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		logs->mvpdrop(mvp_sd, md->class_, log_mvp);
 	}
 
-	if (type&2 && !sd && md->class_ == MOBID_EMPELIUM && md->guardian_data) {
+	if (type&2 && !sd && md->class_ == MOBID_EMPELIUM && md->guardian_data || type & 2 && !sd && md->class_ == MOBID_EMPELIUM99 && md->guardian_data) {
 		//Emperium destroyed by script. Discard mvp character. [Skotlex]
 		mvp_sd = NULL;
 	}
@@ -2809,7 +2809,7 @@ static int mob_guardian_guildchange(struct mob_data *md)
 
 	if (md->guardian_data->castle->guild_id == 0) {
 		//Castle with no owner? Delete the guardians.
-		if (md->class_ == MOBID_EMPELIUM) {
+		if (md->class_ == MOBID_EMPELIUM || md->class_ == MOBID_EMPELIUM99) {
 			//But don't delete the emperium, just clear it's guild-data
 			md->guardian_data->g = NULL;
 		} else {

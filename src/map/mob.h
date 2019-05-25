@@ -35,7 +35,7 @@ struct hplugin_data_store;
 // Change this to increase the table size in your mob_db to accommodate a larger mob database.
 // Be sure to note that IDs 4001 to 4048 are reserved for advanced/baby/expanded classes.
 // Notice that the last 1000 entries are used for player clones, so always set this to desired value +1000
-#define MAX_MOB_DB 5000
+#define MAX_MOB_DB 9000
 
 //The number of drops all mobs have and the max drop-slot that the steal skill will attempt to steal from.
 #define MAX_MOB_DROP 10
@@ -302,6 +302,7 @@ enum mob_id {
 	MOBID_MARINE_SPHERE    = 1142, ///<    MARINE_SPHERE / Marine Sphere
 
 	MOBID_EMPELIUM         = 1288, ///<         EMPELIUM / Emperium
+	MOBID_EMPELIUM99       = 3982, ///<         EMPELIUM / Emperium99
 
 	MOBID_GIANT_HONET      = 1303, ///<      GIANT_HONET / Giant Hornet
 
@@ -427,7 +428,7 @@ struct item_drop_list {
 #define mob_stop_attack(md)        (unit->stop_attack(&(md)->bl))
 
 #define mob_is_battleground(md) (map->list[(md)->bl.m].flag.battleground && ((md)->class_ == MOBID_BARRICADE_ || ((md)->class_ >= MOBID_OBJ_A && (md)->class_ <= MOBID_OBJ_B2)))
-#define mob_is_gvg(md) (map->list[(md)->bl.m].flag.gvg_castle && ( (md)->class_ == MOBID_EMPELIUM || (md)->class_ == MOBID_BARRICADE || (md)->class_ == MOBID_S_EMPEL_1 || (md)->class_ == MOBID_S_EMPEL_2))
+#define mob_is_gvg(md) (map->list[(md)->bl.m].flag.gvg_castle && ( (md)->class_ == MOBID_EMPELIUM || (md)->class_ == MOBID_EMPELIUM99 || (md)->class_ == MOBID_BARRICADE || (md)->class_ == MOBID_S_EMPEL_1 || (md)->class_ == MOBID_S_EMPEL_2))
 #define mob_is_treasure(md) (((md)->class_ >= MOBID_TREASURE_BOX1 && (md)->class_ <= MOBID_TREASURE_BOX40) || ((md)->class_ >= MOBID_TREASURE_BOX41 && (md)->class_ <= MOBID_TREASURE_BOX49))
 
 struct mob_interface {

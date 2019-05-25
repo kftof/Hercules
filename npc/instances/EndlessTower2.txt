@@ -2,7 +2,7 @@
 //= Endless Tower 2
 //============================================================ 
 
-e_tower,81,104,0	script	Endless Tower 2	2_MONEMUS,{
+e_tower,81,109,0	script	Endless Tower 2	2_MONEMUS,{
 
 
 	.@party_id = getcharid(1);
@@ -569,7 +569,7 @@ function	script	F_Tower_Monster2	{
 		areamonster .@map$,349,177,395,203,"Byorgue",1839,15,.@label$;
 		break;
 	case 73:
-		areamonster .@map$,91,94,137,119,"Buwaya",2319,1,.@label$;
+		areamonster .@map$,91,94,137,119,"DAEHYON",2253,1,.@label$;
 		break;
 	case 74:
 		areamonster .@map$,179,94,225,119,"Paladin Randel",2228,1,.@label$;

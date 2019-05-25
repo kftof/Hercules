@@ -1,0 +1,30 @@
+gonryun,169,103,4	script	Event#1	4_M_OLDFRIAR,2,2,{
+
+			mes "[Event NPC]";
+			mes "Je suis blabla,blabla";
+			input .@input$;
+			if (.@input$ == "PASS") {
+			mes "[Event NPC]";
+			mes "BRAVO !";
+
+			specialeffect EF_LORD;
+			specialeffect(EF_FLOWERLEAF, AREA, playerattached());
+			specialeffect(EF_ELECTRIC, AREA, playerattached());
+			specialeffect(EF_MVP, AREA, playerattached());
+			
+			getitem 12103,1;
+			disablenpc "Event#1";
+			
+			sleep2 1000;			
+			announce strcharinfo(0)+" a réussi à résoudre l'énigme !",0;
+			close;
+			}
+	else {
+	close;
+	}
+//OnClock1552:
+//disablenpc "Event#1";
+		
+}
+
+

@@ -2,7 +2,7 @@
 
 // Valkyrie Circlet 
 //============================================================
-hugel,142,102,5	script	Céleste	4_F_MAYSEL,{
+hugel,142,102,5	script	Elsa	4_F_MAYSEL,{
 	mes "C'est une femme aux nombreux ornements. Sa robe est chic et inspire la richesse. Elle semble être une aristocrate.";
 	next;
 	switch(select("Bonjour !:...")) {
@@ -10,29 +10,29 @@ hugel,142,102,5	script	Céleste	4_F_MAYSEL,{
 		mes "Elle vous regarde de haut en bas et semble juger votre apparence.";
 		next;
 		if (Zeny > 99999999) {
-		mes "[^FF62B0Céleste^000000]";
+		mes "[^FF62B0Elsa^000000]";
 		mes "Vous m'avez l'air de quelqu'un de respectable. Il faut me comprendre, je ne peux me permettre de converser avec les vulgaires roturiers de ce monde, je ne m'adresse qu'à ceux qui sortent du commun.";
 		next;
-		mes "[^FF62B0Céleste^000000]";
+		mes "[^FF62B0Elsa^000000]";
 		mes "Vous comprenez, je fais partie d'une importante dynastie. Ma famille a fait fortune de son talent le plus cher.";
 		switch(select("Et quel est-il ?:Peu m'importe.")) {
 		next;
 		case 1:
-			mes "[^FF62B0Céleste^000000]";
+			mes "[^FF62B0Elsa^000000]";
 			mes "Nous fabriquons des ornements pour les grands de ce monde.";
 			mes "Mais ce n'est pas accessible au premier venu.";
 			next;
-			mes "[^FF62B0Céleste^000000]";
+			mes "[^FF62B0Elsa^000000]";
 			mes "En effet, combien de fois avez-vous pu comtempler un sublime ^3300FFValkyrie Circlet^000000 ?";
 			mes "Rarement, hmm ?";
 			next;
-			mes "[^FF62B0Céleste^000000]";
+			mes "[^FF62B0Elsa^000000]";
 			mes "Mais ne vous en faites pas, je peux vous aider.";
 			next;
-			mes "[^FF62B0Céleste^000000]";
+			mes "[^FF62B0Elsa^000000]";
 			mes "Rapportez-moi ces objets rares, et je ferai de vous quelqu'un de respectable, digne des plus grands.";
 			next;
-			mes "[^FF62B0Céleste^000000]";
+			mes "[^FF62B0Elsa^000000]";
 			mes "5 Bloody Edge";
 			mes "30 Valhalla's Flower";
 			mes "100 Sapphire";
@@ -46,7 +46,7 @@ hugel,142,102,5	script	Céleste	4_F_MAYSEL,{
 			mes "1000 Fur";
 			mes "10 Silver Coin";
 			next;
-			mes "[^FF62B0Céleste^000000]";
+			mes "[^FF62B0Elsa^000000]";
 			mes "Alors, voulez-vous sortir du lot ?";
 			next;
 			switch(select("Absolument !:Je suis bien comme je suis.")) {
@@ -55,7 +55,7 @@ hugel,142,102,5	script	Céleste	4_F_MAYSEL,{
 				&&	(countitem(726) > 99)	&&	(countitem(720) > 299)	&&	(countitem(7510) > 29)
 				&&	(countitem(7024) > 4)	&&	(countitem(29291) > 2)	&&	(countitem(2421) > 4)
 				&&	(countitem(2524) > 4)	&&	(countitem(2357) > 4)	&&	(countitem(7809) > 0)) {
-					mes "[^FF62B0Céleste^000000]";
+					mes "[^FF62B0Elsa^000000]";
 					mes "C'est parfait ! Sublime ! Magnifique !";
 					mes "Vous allez finalement avoir un objet à la hauteur de votre prestance !";
 					delitem 6020,1000; //Fur
@@ -74,31 +74,31 @@ hugel,142,102,5	script	Céleste	4_F_MAYSEL,{
 					close;
 				}
 				else {
-					mes "[^FF62B0Céleste^000000]";
+					mes "[^FF62B0Elsa^000000]";
 					mes "Je crains qu'il ne vous manque certain objet...";
 					close;
 				}
 			case 2:
-				mes "[^FF62B0Céleste^000000]";
+				mes "[^FF62B0Elsa^000000]";
 				mes "Cessez de me faire perdre mon temps.";
 				close;	
 			}
 		case 3:
-			mes "[^FF62B0Céleste^000000]";
+			mes "[^FF62B0Elsa^000000]";
 			mes "Hm. D'accord.";
 			mes "Tant pis pour vous.";
 			close;
 		}
 		}
 		else {
-			mes "[^FF62B0Céleste^000000]";
+			mes "[^FF62B0Elsa^000000]";
 			mes "Vous osez m'adresser la parole ? Revenez lorsque vous aurez un peu plus de ... classe ?";
 			next;
 			mes "*Il semblerait que vous n'ayez pas assez d'argent pour l'impressionner.*";
 			close;
 		}
 	case 2:
-		mes "[^FF62B0Céleste^000000]";
+		mes "[^FF62B0Elsa^000000]";
 		mes "Allez-donc jouer ailleurs, freluquet !";
 		close;
 	}

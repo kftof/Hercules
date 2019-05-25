@@ -199,7 +199,7 @@ alberta,214,77,6	script	Captain Janssen	4_M_SEAMAN,{
 	}
 }
 
-e_tower,81,105,0	script	Tower Protection Stone	2_MONEMUS,{
+e_tower,81,105,0	script	Endless1	2_MONEMUS,{
 
 	.@party_id = getcharid(CHAR_ID_PARTY);
 	.@p_name$ = getpartyname(.@party_id);

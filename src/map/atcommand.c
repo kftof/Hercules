@@ -2147,7 +2147,7 @@ ACMD(monster)
 	for (i = 0; i < number; i++) {
 		int k;
 		map->search_freecell(&sd->bl, 0, &mx,  &my, range, range, 0);
-		k = mob->once_spawn(sd, sd->bl.m, mx, my, name, mob_id, 1, eventname, size, AI_NONE|(mob_id == MOBID_EMPELIUM?0x200:0x0));
+		k = mob->once_spawn(sd, sd->bl.m, mx, my, name, mob_id, 1, eventname, size, AI_NONE|(mob_id == MOBID_EMPELIUM?0x200:0x0 || mob_id == MOBID_EMPELIUM99 ? 0x200 : 0x0));
 		count += (k != 0) ? 1 : 0;
 	}
 

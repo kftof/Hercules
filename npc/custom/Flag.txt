@@ -57,7 +57,7 @@ end;
 */
 // 999 Banadis :
 
-gonryun,149,134,4	script	Bandis (lvl 999)	GUILD_FLAG,{
+gonryun,149,134,4	script	Bandis (lvl 600)	GUILD_FLAG,{
 
 	.@GID = getcastledata("arug_cas05",1);
 			mes "[Drapeau]";

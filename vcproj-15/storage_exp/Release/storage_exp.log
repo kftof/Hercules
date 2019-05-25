@@ -1,0 +1,5 @@
+﻿  storage_exp.c
+c:\users\administrator\source\repos\hercules\src\plugins\storage_exp.c(89): warning C4244: '=' : conversion de 'double' en 'int16', perte possible de données
+c:\users\administrator\source\repos\hercules\src\plugins\storage_exp.c(286): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
+     Création de la bibliothèque storage_exp\Release\storage_exp.lib et de l'objet storage_exp\Release\storage_exp.exp
+  storage_exp.vcxproj -> C:\Users\Administrator\source\repos\Hercules\vcproj-15\..\plugins\storage_exp.dll

@@ -2715,8 +2715,8 @@ niflheim,187,280,3	script	Hein#lv4	4_M_NFDEADMAN,{
 			mes "work is complete!";
 			mes "This weapon's name";
 			if (lv4_weapon == 47) {
-				mes "is Excalibur!";
-				getitem Excalibur,1;
+				mes "is Edge!";
+				getitem Edge,1;
 			}
 			else {
 				mes "is Schweizersabel!";

@@ -3,10 +3,10 @@ end;
 	
 OnInit:
     startnpctimer;
-	announce "Scripts KillMvp Activé...", bc_all;
+	announce "Kill mvp script", bc_all;
     end; 
 	
-OnTimer6000:
+OnTimer10000:
 	atcommand "@killmonster2 abbey02";       // Fallen Bishop Hibram
 	atcommand "@killmonster2 abbey03";       // Beelzebub
 	atcommand "@killmonster2 abyss_03";      // Detale
@@ -95,10 +95,10 @@ OnTimer6000:
 	atcommand "@killmonster2 cmd_fild08";
 	atcommand "@killmonster2 um_fild03";
 	
-	announce "Les MVP ont été éradiqués.", bc_all;
+	announce "Les MVP ont été tués suite au reload pour éviter tout abus.", bc_all;
 	end;
 
-OnTimer8000:
+OnTimer12000:
     stopnpctimer;
     end;
 }

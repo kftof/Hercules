@@ -53,10 +53,20 @@ gonryun,179,118,4	trader	Tool Dealer#gon	2_VENDING_MACHINE1,{
 OnInit:
 	sellitem Arrow;
 	sellitem Iron_Arrow;
+	sellitem Kunai_Of_Black_Soil;
+	sellitem Kunai_Of_Deadly_Poison;
+	sellitem Kunai_Of_Furious_Wind;
+	sellitem Kunai_Of_Icicle;
+	sellitem Flash_Shuriken;
 	sellitem Bullet;
 	sellitem Silver_Bullet;
+	sellitem Leaf_Of_Yggdrasil;
 	sellitem Spectacles;
 	sellitem Green_Potion;
+	sellitem Elemental_Fire;
+	sellitem Elemental_Water;
+	sellitem Elemental_Earth;
+	sellitem Elemental_Wind;
 	sellitem White_Potion;
 	sellitem Center_Potion;
 	sellitem Awakening_Potion;
@@ -70,11 +80,25 @@ OnInit:
 	sellitem Flame_Stone;
 	sellitem Ice_Stone;
 	sellitem Wind_Stone;
+	sellitem Shadow_Orb;
 	sellitem Acid_Bottle;
 	sellitem Fire_Bottle;
+	sellitem Holy_Water;
 	sellitem Poison_Bottle;
 	sellitem Fruit_Of_Mastela;
 	sellitem Light_Blue_Pot;
+	sellitem Coating_Bottle;
+	sellitem Resist_Water;
+	sellitem Resist_Earth;
+	sellitem Resist_Fire;
+	sellitem Resist_Wind;
+	sellitem Spiderweb;
+	sellitem Gloomy_Box;
+	sellitem Box_Of_Storm;
+	sellitem Box_Of_Sunlight;
+	sellitem Box_Of_Thunder;
+	sellitem Box_Of_Grudge;
+	sellitem Sleepy_Box;
 }
 
 //== Alberta ===============================================

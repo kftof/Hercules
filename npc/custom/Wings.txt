@@ -3,7 +3,9 @@
 gonryun,135,113,5	script	Brynhildr#1	4_F_VALKYRIE,{
 	mes "[Brynhildr]";
 	mes "Je suis Brynhild.";
-	mes "J'ai le pouvoir de confectionner des ailes. Que veux-tu ?";
+	mes "[^0E5BE8Valkyrie/Butterfly Wings [+10 allstats, 1 slot, middle]";
+	mes "Animated Angel Wings/Little Wings [+5 allstats, 1 slot, low]";
+	mes "Un preview des wings est disponible sur le site, section quêtes spéciales.^000000]";
 	next;
 	switch(select("Que dois-je faire ?:Rien.")) {
 	case 1:

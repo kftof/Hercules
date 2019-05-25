@@ -13604,7 +13604,7 @@ static int buildin_maprespawnguildid_sub_mob(struct block_list *bl, va_list ap)
 	Assert_ret(bl->type == BL_MOB);
 	md = BL_UCAST(BL_MOB, bl);
 
-	if (md->guardian_data == NULL && md->class_ != MOBID_EMPELIUM)
+	if (md->guardian_data == NULL && md->class_ != MOBID_EMPELIUM || md->guardian_data == NULL && md->class_ != MOBID_EMPELIUM99)
 		status_kill(bl);
 
 	return 0;

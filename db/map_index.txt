@@ -1120,3 +1120,8 @@ gl_cas01_
 pvp_fri
 poring_c01
 poring_c02
+
+haunt_e 1328
+haunt_h 1329
+1@haunt 1330
+2@haunt 1331

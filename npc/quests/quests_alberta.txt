@@ -681,12 +681,14 @@ alberta,136,79,1	script	Hat store girl#new30	1_F_LIBRARYGIRL,{
 				mes "I have";
 				mes "^0000FFSunday Hat^000000,";
 				mes "^0000FFMage Hat^000000 and...";
-				mes "^0000FFMagician Hat^000000 and more in my room.";
+				mes "^0000FFMagician Hat^000000 and...";
+				mes "^0000FFHat of the Sun^000000";
+				mes "^0000FFHat of the Moon Goddess^000000 and more in my room.";
 				next;
 				mes "[Tempestra]";
 				mes "I brought these hats so I can sell them and use the money for my vacation here, but now it looks like I have to wear one~";
 				next;
-				switch(select("Sunday Hat!!?", "Mage Hat?!?", "Magician Hat??!??")) {
+				switch(select("Sunday Hat", "Mage Hat", "Magician Hat", "Hat of the Sun", "Hat of the Moon Goddess", "Bloody Hat of the Sun")) {
 				case 1:
 					mes "[Tempestra]";
 					mes "Oh? Didn't you know? I'm a hat merchant. Didn't I tell you that before?";
@@ -856,6 +858,207 @@ alberta,136,79,1	script	Hat store girl#new30	1_F_LIBRARYGIRL,{
 							mes "How about that?";
 							mes "Do you like it?";
 							getitem Magician_Hat,1;
+							next;
+							mes "[Tempestra]";
+							mes "Once again, thank you for your favour. I'll see you later~";
+							close;
+						case 2:
+							next;
+							mes "[Tempestra]";
+							mes "Oh alright~";
+							next;
+							mes "[Tempestra]";
+							mes "If by any chance you visit me later, I'd be more than happy to make a hat for you~";
+							next;
+							mes "[Tempestra]";
+							mes "Well then, see you later~";
+							close;
+						}
+					}
+					else {
+						mes "[Tempestra]";
+						mes "I will tell you a secret, beause you gave me the Yellow Potion~";
+						next;
+						mes "[Tempestra]";
+						mes "I'm looking forward seeing you again~~";
+						close;
+					}
+				case 4:
+					mes "[Tempestra]";
+					mes "Oh? Didn't you know? I'm a hat merchant. Didn't I tell you that before?";
+					next;
+					mes "[Tempestra]";
+					mes "Hmm, I guess I didn't. I apologize. Ooh! You know what, I could make you a Hat of the Sun~!";
+					next;
+					mes "[Tempestra]";
+					mes "I'd need...";
+					mes "^0000FF1 Emblem of the sun God^000000";
+					mes "^0000FF10 Gold^000000";
+					mes "^0000FF40 Steel^000000";
+					mes "^0000FF50 Coal^000000";
+					mes "^0000FF2 Oridecon^000000";
+					next;
+					if ((countitem(7086) > 0) && (countitem(969) > 9) && (countitem(999) > 39) && (countitem(1003) > 49) && (countitem(984) > 1)) {
+						mes "[Tempestra]";
+						mes "What?!? ";
+						mes "You have all the items already? If there are forged items or slotted items with monster cards, then put them into your storage.";
+						next;
+						mes "[Tempestra]";
+						mes "I just want to make something for the Yellow Potion, so I won't charge you any zeny for my hat making service.";
+						switch(select("Oh, please do.", "No thanks.")) {
+						case 1:
+							next;
+							mes "[Tempestra]";
+							mes "Alrighty. Just give me a moment...";
+							next;
+							mes "^3355FF*Thud! Boot!*";
+							mes "*Thic-Tac!*^000000";
+							next;
+							mes "^3355FF*Beeeeeeeh~~~*^000000";
+							next;
+							delitem 7086,1;
+							delitem 969,10;
+							delitem 999,40;
+							delitem 1003,50;
+							delitem 984,2;
+							getitem 5022,1;
+							mes "[Tempestra]";
+							mes "Here it is, tee hee~";
+							mes "How about that? Do you like it?";
+							next;
+							mes "[Tempestra]";
+							mes "Once again, thank you for your favour. I'll see you later~";
+							close;
+						case 2:
+							next;
+							mes "[Tempestra]";
+							mes "Oh alright~";
+							next;
+							mes "[Tempestra]";
+							mes "If by any chance you visit me later, I'd be more than happy to make a hat for you~";
+							next;
+							mes "[Tempestra]";
+							mes "Well then, see you later~";
+							close;
+						}
+					}
+					else {
+						mes "[Tempestra]";
+						mes "I will tell you a secret, beause you gave me the Yellow Potion~";
+						next;
+						mes "[Tempestra]";
+						mes "I'm looking forward seeing you again~~";
+						close;
+					}
+				case 5:
+					mes "[Tempestra]";
+					mes "Oh? Didn't you know? I'm a hat merchant. Didn't I tell you that before?";
+					next;
+					mes "[Tempestra]";
+					mes "Hmm, I guess I didn't. I apologize. Ooh! You know what, I could make you a Hat of the Moon Goddess~!";
+					next;
+					mes "[Tempestra]";
+					mes "I'd need...";
+					mes "^0000FF1 Emblem of the sun Moon Goddess^000000";
+					mes "^0000FF10 Gold^000000";
+					mes "^0000FF40 Steel^000000";
+					mes "^0000FF50 Coal^000000";
+					mes "^0000FF2 Oridecon^000000";
+					next;
+					if ((countitem(29373) > 0) && (countitem(969) > 9) && (countitem(999) > 39) && (countitem(1003) > 49) && (countitem(984) > 1)) {
+						mes "[Tempestra]";
+						mes "What?!? ";
+						mes "You have all the items already? If there are forged items or slotted items with monster cards, then put them into your storage.";
+						next;
+						mes "[Tempestra]";
+						mes "I just want to make something for the Yellow Potion, so I won't charge you any zeny for my hat making service.";
+						switch(select("Oh, please do.", "No thanks.")) {
+						case 1:
+							next;
+							mes "[Tempestra]";
+							mes "Alrighty. Just give me a moment...";
+							next;
+							mes "^3355FF*Thud! Boot!*";
+							mes "*Thic-Tac!*^000000";
+							next;
+							mes "^3355FF*Beeeeeeeh~~~*^000000";
+							next;
+							delitem 29373,1;
+							delitem 969,10;
+							delitem 999,40;
+							delitem 1003,50;
+							delitem 984,2;
+							getitem 29371,1;
+							mes "[Tempestra]";
+							mes "Here it is, tee hee~";
+							mes "How about that? Do you like it?";
+							next;
+							mes "[Tempestra]";
+							mes "Once again, thank you for your favour. I'll see you later~";
+							close;
+						case 2:
+							next;
+							mes "[Tempestra]";
+							mes "Oh alright~";
+							next;
+							mes "[Tempestra]";
+							mes "If by any chance you visit me later, I'd be more than happy to make a hat for you~";
+							next;
+							mes "[Tempestra]";
+							mes "Well then, see you later~";
+							close;
+						}
+					}
+					else {
+						mes "[Tempestra]";
+						mes "I will tell you a secret, beause you gave me the Yellow Potion~";
+						next;
+						mes "[Tempestra]";
+						mes "I'm looking forward seeing you again~~";
+						close;
+					}
+				case 6:
+					mes "[Tempestra]";
+					mes "Oh? Didn't you know? I'm a hat merchant. Didn't I tell you that before?";
+					next;
+					mes "[Tempestra]";
+					mes "Hmm, I guess I didn't. I apologize. Ooh! You know what, I could make you a Bloody Hat of the Sun~!";
+					next;
+					mes "[Tempestra]";
+					mes "I'd need...";
+					mes "^0000FF1 Emblem of Fury^000000";
+					mes "^0000FF10 Gold^000000";
+					mes "^0000FF40 Steel^000000";
+					mes "^0000FF50 Coal^000000";
+					mes "^0000FF2 Oridecon^000000";
+					next;
+					if ((countitem(29401) > 0) && (countitem(969) > 9) && (countitem(999) > 39) && (countitem(1003) > 49) && (countitem(984) > 1)) {
+						mes "[Tempestra]";
+						mes "What?!? ";
+						mes "You have all the items already? If there are forged items or slotted items with monster cards, then put them into your storage.";
+						next;
+						mes "[Tempestra]";
+						mes "I just want to make something for the Yellow Potion, so I won't charge you any zeny for my hat making service.";
+						switch(select("Oh, please do.", "No thanks.")) {
+						case 1:
+							next;
+							mes "[Tempestra]";
+							mes "Alrighty. Just give me a moment...";
+							next;
+							mes "^3355FF*Thud! Boot!*";
+							mes "*Thic-Tac!*^000000";
+							next;
+							mes "^3355FF*Beeeeeeeh~~~*^000000";
+							next;
+							delitem 29401,1;
+							delitem 969,10;
+							delitem 999,40;
+							delitem 1003,50;
+							delitem 984,2;
+							getitem 29371,1;
+							mes "[Tempestra]";
+							mes "Here it is, tee hee~";
+							mes "How about that? Do you like it?";
 							next;
 							mes "[Tempestra]";
 							mes "Once again, thank you for your favour. I'll see you later~";

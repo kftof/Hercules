@@ -12,6 +12,43 @@
 //===== Additional Comments: =================================
 //= 1.0 First version, edited. [Euphy]
 //============================================================
+gonryun,145,109,4	script	Ella	4_MAN_NITT,{
+	mes "[Vendeuse de Bloody Branch]";
+	mes "Bonjour !";
+	mes "Je vends mes Bloody Branch 3M.";
+	mes "Alors, ça t'intéresse ?";
+	next;
+	switch(select("J'en prends une !", "J'en prends 10 !", "Peut-être plus tard.")) {
+		case 1:
+			if (Zeny < 3000000) {
+				mes "[Vendeuse de Bloody Branch]";
+				mes "Malheureusement, tu n'as pas assez d'argent !";
+				mes "Reviens quand tu en auras assez.";
+				close;
+			}
+			Zeny -= 3000000;
+			getitem Bloody_Dead_Branch,1;
+			mes "[Vendeuse de Bloody Branch]";
+			mes "Et voilà ! Bonne chance !";
+			close;
+		case 2:
+			if (Zeny < 30000000) {
+				mes "[Vendeuse de Bloody Branch]";
+				mes "Malheureusement, tu n'as pas assez d'argent !";
+				mes "Reviens quand tu en auras assez.";
+				close;
+			}
+			Zeny -= 30000000;
+			getitem Bloody_Dead_Branch,10;
+			mes "[Vendeuse de Bloody Branch]";
+			mes "Et voilà ! Bonne chance !";;
+			close;
+		case 3:
+			mes "Une prochaine fois !";
+			close;
+	}
+}
+
 
 gonryun,156,131,4	script	Private MVP/DB Room	4_MAN_GALTUN1,{
 	mes "[Private MVP/DB Room]";
@@ -243,7 +280,7 @@ OnInit:
 	//	Options setting inside MVP room
 	set .@menu[1], 1;	// Turn Heal option On/Off
 	set .@menu[2], 1;	// Turn MVP Summoning On/Off
-	set .@menu[3], 1;	// Turn Mini boss Summoning On/Off
+	set .@menu[3], 0;	// Turn Mini boss Summoning On/Off
 	set .@menu[4], 1;	// Sell items (branches) On/Off (see shop below, before the mapflags)
 
 	setarray .mvpid[0],
@@ -268,7 +305,8 @@ OnInit:
 		1492,//	Incantation Samurai
 		1251,//	Knight of Windstorm
 		1312,//	Turtle General
-		1685;// Vesper
+		1685,// Vesper
+		1630;// White Lady
 
 	setarray .bossid[0],
 		1957,// ENTWEIHEN
