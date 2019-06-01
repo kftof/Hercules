@@ -56,7 +56,7 @@ gonryun,147,142,4	script	Deslotteuse	1_F_ORIENT_04,{
 			close;
 		}
 		mes "[Deslotteuse]";
-		mes "This item has " + .@cardcount + " cards compounded on it. To perform my magic, I will need " + (.zenycost+(.@cardcount * .percardcost)) + " zeny, a ^0000FFStar Crumb^000000, and a ^0000FFYellow Gemstone^000000.";
+		mes "Cet item a " + .@cardcount + " cards. J'ai besoin de" + (.zenycost+(.@cardcount * .percardcost)) + " zeny, ^0000FFStar Crumb^000000, et 1 ^0000FFYellow Gemstone^000000.";
 		next;
 		if(select("Very well. Do it.", "Nevermind.") == 2) {
 			mes "[Deslotteuse]";
@@ -69,140 +69,8 @@ gonryun,147,142,4	script	Deslotteuse	1_F_ORIENT_04,{
 			close;
 		}
 		mes "[Deslotteuse]";
-		mes "Il n'y a aucune chance que je casse vos items... mais dans l'hypothèse où j'en casserais un, lequel préférez-vous?";
-		next;
-		switch(select("J'ai changé d'avis.", "L'équipement.", "Les cards.")) {
-		case 1:
-			mes "[Deslotteuse]";
-			mes "Au revoir.";
-			close;
-		case 2:
-			set .@failtype,1;
-			break;
-		case 3:
-			set .@failtype,2;
-		}
-		mes "[Deslotteuse]";
-		mes "Very well. I shall begin.";
-		Zeny -= (.zenycost+(.@cardcount * .percardcost));
-		delitem 1000,1;
-		delitem 715,1;
-
-		// Replace the constants in the next 3 lines with failure chance values defined in refine_db.txt
-		// First value = Total failure chance (item and cards destroyed)
-		// Second value = Partial failure chance (one or the other is destroyed, player decides which one is safe)
-		// Third value = Harmless failure chance (all that's lost is your investment)
-
-		set .@failchance,rand(100);
-		if (.faildestroy==1) {
-			if(.@failchance < 2) {
-				next;
-				failedremovecards .@part,0;
-				mes "[Deslotteuse]";
-				mes "The process was a total failure. I am afraid the item and the cards were destroyed.";
-				close;
-			}
-
-			if(.@failchance < 8) {
-				if (.@failtype == 1) {
-					next;
-					failedremovecards .@part,1;
-					mes "[Deslotteuse]";
-					mes "While I have managed to remove the cards from the item, they were destroyed in the process. The item, however, is okay.";
-					close;
-				}
-
-				if (.@failtype == 2) {
-					next;
-					failedremovecards .@part,2;
-					mes "[Deslotteuse]";
-					mes "Most unfortunate. I succeeded at removing the cards, but the item itself was destroyed in the process.";
-					close;
-				}
-			}
-		}
-
-		if(.@failchance < 10) {
-			next;
-			failedremovecards .@part,3;
-			mes "[Deslotteuse]";
-			mes "I have failed to remove the cards. Luckily, however, both the item and the cards are still okay.";
-			close;
-		}
-		next;
-		successremovecards .@part;
-		mes "[Deslotteuse]";
-		mes "C'est un succès, au revoir!";
-		close;
-	case 2:
-		mes "[Deslotteuse]";
-		mes "Je vais avoir besoin de "+.zenycost+" zeny, plus "+.percardcost+" zeny pour chaque card. J'ai aussi besoin d'un star crumb et d'une yellow gemstone.";
-		close;
-	case 3:
-		mes "[Deslotteuse]";
-		mes "Très bien, au revoir.";
-		close;
-	}
-}
-
-gon_in,90,24,4	script	NpcDeslotteuse	1_F_ORIENT_04,{
-
-	set .zenycost,50000; // Set base cost in zeny of the card remover services
-	set .percardcost,10000; // set cost per card of the card remover services
-	set .faildestroy,0; // Should the card remover have a chance of failure that destroys items? 1 = Yes, 0 = No.
-
-	disable_items;
-	mes "[Deslotteuse]";
-	mes "Bonjour, je peux retirer les cards de vos équipements.";
-	next;
-	switch(select("Procéder à un deslot", "Quel est le prix?", "Non merci.")) {
-	case 1:
-		mes "[Deslotteuse]";
-		mes "Quel item dois-je examiner?";
-		next;
-
-		setarray .@position$[1], "Head","Body","Left hand","Right hand","Robe","Shoes","Accessory 1","Accessory 2","Head 2","Head 3";
-		set .@menu$,"";
-		for( set .@i,1; .@i <= 10; set .@i,.@i+1 )
-		{
-			if( getequipisequiped(.@i) )
-			set .@menu$, .@menu$ + .@position$[.@i] + "-" + "[" + getequipname(.@i) + "]";
-
-			set .@menu$, .@menu$ + ":";
-		}
-		set .@part,select(.@menu$);
-		if(!getequipisequiped(.@part)) {
-			mes "[Deslotteuse]";
-			mes "Vous n'avez rien d'équipé ici.";
-			close;
-		}
-		if(getequipcardcnt(.@part) == 0) {
-			mes "[Deslotteuse]";
-			mes "Il n'y a aucune card dans l'équipement indiqué.";
-			close;
-		}
-		set .@cardcount,getequipcardcnt(.@part);
-
-		if (!checkweight(Knife_,(.@cardcount+1))) {
-			mes "^3355FFJust a minute!";
-			mes "Revenez lorsque vous aurez fait un peu plus de place dans votre inventaire!";
-			close;
-		}
-		mes "[Deslotteuse]";
-		mes "This item has " + .@cardcount + " cards compounded on it. To perform my magic, I will need " + (.zenycost+(.@cardcount * .percardcost)) + " zeny, a ^0000FFStar Crumb^000000, and a ^0000FFYellow Gemstone^000000.";
-		next;
-		if(select("Very well. Do it.", "Nevermind.") == 2) {
-			mes "[Deslotteuse]";
-			mes "A une prochaine fois.";
-			close;
-		}
-		if((Zeny < (.zenycost+(.@cardcount * .percardcost))) || (countitem(Star_Crumb) < 1) || (countitem(Yellow_Gemstone) < 1)) {
-			mes "[Deslotteuse]";
-			mes "Il vous manque des objets!";
-			close;
-		}
-		mes "[Deslotteuse]";
-		mes "Il n'y a aucune chance que je casse vos items... mais dans l'hypothèse où j'en casserais un, lequel préférez-vous?";
+		mes "Il y a un ^0000FFrisque que l'opération échoue^000000 et que je casse votre item. Dans cette hypothèse, lequel préférez-vous sauver ?";
+		mes "^0000FFLes items cassés ne seront pas rendus^000000, si vous voulez deslot une MVP, merci de prévenir un GM (en attendant qu'une solution au npc soit trouvée).";
 		next;
 		switch(select("J'ai changé d'avis.", "L'équipement.", "Les cards.")) {
 		case 1:

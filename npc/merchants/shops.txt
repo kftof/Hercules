@@ -94,11 +94,14 @@ OnInit:
 	sellitem Resist_Wind;
 	sellitem Spiderweb;
 	sellitem Gloomy_Box;
+	sellitem White_Slim_Potion;
+	sellitem MenEater_Plant_Bottle;
 	sellitem Box_Of_Storm;
 	sellitem Box_Of_Sunlight;
 	sellitem Box_Of_Thunder;
 	sellitem Box_Of_Grudge;
 	sellitem Sleepy_Box;
+	sellitem Cold_Scroll_1_3;
 }
 
 //== Alberta ===============================================

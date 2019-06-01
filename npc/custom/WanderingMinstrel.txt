@@ -1,4 +1,4 @@
-//gonryun,186,119,3	script	Enfant Caché	4_M_MIKID,{
+	//gonryun,186,119,3	script	Enfant Caché	4_M_MIKID,{
 gonryun,186,119,3	script	Enfant Caché	4_M_MIKID,{
 	mes "[^B40431Enfant Caché^000000]";
 	mes "...";
@@ -13,7 +13,8 @@ gonryun,186,119,3	script	Enfant Caché	4_M_MIKID,{
 		next;
 		switch(select("Pourquoi pas !:Non.")) {
 		case 1:
-			if ((countitem(7203) > 49) && (countitem(714) > 4) && (countitem(997) > 49) && (countitem(12043) > 49)) {
+			if ((countitem(7203) > 49) && (countitem(714) > 4)
+			&& (countitem(997) > 49) && (countitem(12043) > 49)) {
 				mes "[^B40431Enfant Caché^000000]";
 				mes "Merci beaucoup ! Maintenant que tu m'as aidé, je vais te rendre la pareille.";
 				mes "Attention, note bien ce que je vais te dire, je ne le répéterai pas !";
@@ -21,7 +22,7 @@ gonryun,186,119,3	script	Enfant Caché	4_M_MIKID,{
 				delitem 714,5; //Emperium
 				delitem 997,50; //Great Nature
 				delitem 12043,50; //Bomber Steak
-				getitem 7776,1; // Gym pass
+				getitem 7776,2; // Gym pass
 				getitem 29478,1; // Event Candy
 				next;
 				mes "[^B40431Enfant Caché^000000]";

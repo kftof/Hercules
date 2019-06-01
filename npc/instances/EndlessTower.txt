@@ -262,7 +262,7 @@ e_tower,81,105,0	script	Endless1	2_MONEMUS,{
 		}
 	} else if (.@etower_timer == 1 && .@etower_timer2 == 2) {
 
-		.@dun_lim_time = etower_timer + 604800; // 1 week
+		.@dun_lim_time = etower_timer + 259200; // 3 jours
 		.@dun_lim_time2 = etower_timer + 14400; // 4 hours
 		.@dun_cur_time = gettimetick(2);
 		.@dun_ent_t = .@dun_lim_time - .@dun_cur_time;

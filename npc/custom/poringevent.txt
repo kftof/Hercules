@@ -5,6 +5,7 @@
 -	script	PoringEvent	FAKE_NPC,{
 
 //OnMinute480:
+OnClock8000:
 OnClock1000:
 OnClock1300:
 OnClock1700:

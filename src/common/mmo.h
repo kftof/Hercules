@@ -226,7 +226,7 @@
 #define MAX_WALK_SPEED 1000
 #endif
 #ifndef MAX_STORAGE
-#define MAX_STORAGE 1000
+#define MAX_STORAGE 700
 #endif
 #ifndef MAX_GUILD_STORAGE
 #define MAX_GUILD_STORAGE 600

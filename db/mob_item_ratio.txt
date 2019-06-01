@@ -29,6 +29,12 @@
 //   base drop rates in mob_db.
 // - This file is reloaded by @reloadmobdb.
 
+14533,100 // Battle_Manual100
+29456,100 // _wings_elemental
+7372,100 // Lotto12
+29496,100 // Test_Box
+6004,100 // Bapho_Doll
+
 710,100 // illusion flower
 7442,100 // cursed seal
 5116,100 // banana hat

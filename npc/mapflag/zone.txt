@@ -43,6 +43,8 @@ pvp_n_1-5	mapflag	zone	woe200
 arug_cas05	mapflag	zone	woe999
 guild_vs1	mapflag	zone	pvp999
 
+1@ge_st	mapflag	zone	woe200
+
 
 //Aldebaran Turbo Track
 alde_tt02	mapflag	zone	Aldebaran Turbo Track

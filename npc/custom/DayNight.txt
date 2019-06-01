@@ -42,7 +42,7 @@ OnClock0900:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
-OnClock1000:
+OnClock1005:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
@@ -54,7 +54,7 @@ OnClock1200:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
-OnClock1300:
+OnClock1305:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
@@ -70,7 +70,7 @@ OnClock1600:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
-OnClock1700:
+OnClock1705:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
@@ -82,7 +82,7 @@ OnClock1900:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
-OnClock2000:
+OnClock2005:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 
@@ -95,7 +95,7 @@ announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blu
 night;
 end;
 
-OnClock2300:
+OnClock2305:
 announce "Pensez à voter pour le serveur, des récompenses sont à la clé!",bc_blue|bc_all;;
 end;
 

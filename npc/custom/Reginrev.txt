@@ -1,0 +1,40 @@
+// Cat FootHairpin
+//============================================================
+alberta,44,196,4	script	Line	4_F_MAYSEL,{
+	mes "[^DF01D7Line^000000]";
+	mes "Bonjour, êtes vous venu pour mon célèbre hat, le ^DF01D7Hairband Of Reginleif^000000 (costume)?";
+	next;
+		switch(select("Oui!:Non.")) {
+		case 1:
+			mes "[^DF01D7Line^000000]";
+			mes "Très bien, alors voici les objets dont j'ai besoin pour sa confection :";
+			mes "1 Leo Crown";
+			mes "1 Angel wing ears[1]";
+			mes "1 Sigrun Wings [1]";
+			mes "40 Ruby (ID 723)";
+			next;
+			switch(select("Lui donner les items:Ne pas lui donner.")) {
+			case 1:
+				if ((countitem(29291) > 0) && (countitem(29358) > 0) && (countitem(5588) > 0) && (countitem(723) > 39)) {
+					mes "[Line]";
+					mes "Oui...C'est parfait !";
+					delitem 29291,1;
+					delitem 29358,1;
+					delitem 5588,1;
+					delitem 723,40;
+					getitem 5471,1; 
+					close;
+				}
+				else {
+					mes "[^DF01D7Line^000000]";
+					mes "...Non... Ce n'est pas ce que je veux !";
+					close;
+				}
+			case 2:
+				close;	
+			}
+		case 2:
+			close;
+		}
+	end;
+}
